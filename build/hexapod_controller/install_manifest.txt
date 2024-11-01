@@ -1,0 +1,17 @@
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/hexapod_controllers.yaml
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/launch/controller.launch.py
+/home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/package_run_dependencies/hexapod_controller
+/home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/parent_prefix_path/hexapod_controller
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/ament_prefix_path.sh
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/ament_prefix_path.dsv
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/path.sh
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/path.dsv
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.bash
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.sh
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.zsh
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.dsv
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.dsv
+/home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/packages/hexapod_controller
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/cmake/hexapod_controllerConfig.cmake
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/cmake/hexapod_controllerConfig-version.cmake
+/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.xml

@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/bryan/pico_ws/install/whycon/include/**",
+        "/home/bryan/pico_ws/install/waypoint_navigation/include/**",
+        "/home/bryan/pico_ws/install/swift_msgs/include/**",
+        "/home/bryan/pico_ws/install/rotors_control/include/**",
+        "/home/bryan/pico_ws/install/pid_msg/include/**",
+        "/home/bryan/pico_ws/install/mav_system_msgs/include/**",
+        "/home/bryan/pico_ws/install/mav_state_machine_msgs/include/**",
+        "/home/bryan/pico_ws/install/mav_planning_msgs/include/**",
+        "/home/bryan/pico_ws/install/mav_msgs/include/**",
+        "/home/bryan/turtlesim_ws/install/turtlesim/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/bryan/hexapod_ws/src/hexapod_description/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

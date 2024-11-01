@@ -1,0 +1,44 @@
+[0.010s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_controller -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/install/hexapod_controller
+[0.089s] -- The C compiler identification is GNU 11.4.0
+[0.136s] -- The CXX compiler identification is GNU 11.4.0
+[0.144s] -- Detecting C compiler ABI info
+[0.201s] -- Detecting C compiler ABI info - done
+[0.205s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.206s] -- Detecting C compile features
+[0.206s] -- Detecting C compile features - done
+[0.208s] -- Detecting CXX compiler ABI info
+[0.274s] -- Detecting CXX compiler ABI info - done
+[0.281s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.281s] -- Detecting CXX compile features
+[0.282s] -- Detecting CXX compile features - done
+[0.285s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.400s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.467s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.522s] -- Added test 'lint_cmake' to check CMake code style
+[0.523s] -- Added test 'xmllint' to check XML markup files
+[0.524s] -- Configuring done
+[0.525s] -- Generating done
+[0.525s] -- Build files have been written to: /home/bryan/hexapod_ws/build/hexapod_controller
+[0.529s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_controller -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/install/hexapod_controller
+[0.530s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16
+[0.560s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16
+[0.580s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_controller
+[0.586s] -- Install configuration: ""
+[0.586s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config
+[0.586s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/hexapod_controllers.yaml
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/package_run_dependencies/hexapod_controller
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/parent_prefix_path/hexapod_controller
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/ament_prefix_path.sh
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/ament_prefix_path.dsv
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/path.sh
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/path.dsv
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.bash
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.sh
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.zsh
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.dsv
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.dsv
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/packages/hexapod_controller
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/cmake/hexapod_controllerConfig.cmake
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/cmake/hexapod_controllerConfig-version.cmake
+[0.587s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.xml
+[0.589s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_controller
