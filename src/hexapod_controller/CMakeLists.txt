@@ -7,12 +7,26 @@ endif()
 
 
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+
+add_executable(inverse_kinematics src/inverse_kinematics.cpp)
+ament_target_dependencies(inverse_kinematics rclcpp geometry_msgs std_msgs)
+
+install(TARGETS
+inverse_kinematics
+  DESTINATION lib/${PROJECT_NAME}/
+)
 
 install(
     DIRECTORY config launch
     DESTINATION share/${PROJECT_NAME}
 )
-
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

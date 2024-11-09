@@ -1,0 +1,8 @@
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package):
+  _ament_cmake_python_install_package Function invoked with incorrect
+  arguments for function named: _ament_cmake_python_install_package
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (ament_python_install_package)
+
+[0m
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

@@ -705,4 +705,22 @@
         <parent link="t6" />
         <child link="e6" />
     </joint>
+
+    <!-- imu -->
+     <link name="imu_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="0.01"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+     </link>
+     <joint name="joint_name" type="fixed">
+        <origin xyz="0.0 0.0 0.040" rpy="0.0 0.0 0.0"/>
+        <parent link="body"/>
+        <child link="imu_link"/>
+     </joint>
 </robot>

@@ -1,0 +1,11 @@
+[0.014s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16
+[0.062s] [35m[1mConsolidate compiler generated dependencies of target inverse_kinematics[0m
+[0.079s] [ 50%] [32mBuilding CXX object CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o[0m
+[2.169s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:[m[K In member function ‘[01m[Kvoid HexapodIKNode::tipPosesCallback(std_msgs::msg::Float64MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.169s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:47:16:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float64MultiArray[m[K’ {aka ‘[01m[Kstd_msgs::msg::Float64MultiArray_<std::allocator<void> >[m[K’}
+[2.169s]    47 |             cmd[01;31m[K->[m[Kdata = {J1, J2, J3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+[2.169s]       |                [01;31m[K^~[m[K
+[4.420s] gmake[2]: *** [CMakeFiles/inverse_kinematics.dir/build.make:76: CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o] Error 1
+[4.420s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/inverse_kinematics.dir/all] Error 2
+[4.420s] gmake: *** [Makefile:146: all] Error 2
+[4.423s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16

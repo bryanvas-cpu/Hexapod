@@ -83,6 +83,7 @@
 /home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/urdf/hexapod.urdf.xacro
 /home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/urdf/hexapod_ros2_control.xacro
 /home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/urdf/hexapod_gazebo.xacro
+/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/rviz/hexapod.rviz
 /home/bryan/hexapod_ws/install/hexapod_description/share/ament_index/resource_index/package_run_dependencies/hexapod_description
 /home/bryan/hexapod_ws/install/hexapod_description/share/ament_index/resource_index/parent_prefix_path/hexapod_description
 /home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/environment/ament_prefix_path.sh

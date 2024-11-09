@@ -1,0 +1,15 @@
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/ament_index/resource_index/package_run_dependencies/hexapod_kinematics
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/ament_index/resource_index/parent_prefix_path/hexapod_kinematics
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/ament_prefix_path.sh
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/ament_prefix_path.dsv
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/path.sh
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/path.dsv
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.bash
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.sh
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.zsh
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.dsv
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.dsv
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/ament_index/resource_index/packages/hexapod_kinematics
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/cmake/hexapod_kinematicsConfig.cmake
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/cmake/hexapod_kinematicsConfig-version.cmake
+/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.xml

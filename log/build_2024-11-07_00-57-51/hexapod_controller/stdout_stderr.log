@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target inverse_kinematics[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o[0m
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:[m[K In member function ‘[01m[Kvoid HexapodIKNode::tipPosesCallback(std_msgs::msg::Float64MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:47:16:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float64MultiArray[m[K’ {aka ‘[01m[Kstd_msgs::msg::Float64MultiArray_<std::allocator<void> >[m[K’}
+   47 |             cmd[01;31m[K->[m[Kdata = {J1, J2, J3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+      |                [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/inverse_kinematics.dir/build.make:76: CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/inverse_kinematics.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

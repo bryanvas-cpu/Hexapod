@@ -87,12 +87,48 @@
             <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
                 <parameters>$(find hexapod_controller)/config/hexapod_controllers.yaml</parameters>
             </plugin>
+            <plugin filename="ignition-gazebo-imu-system" name="ignition::gazebo::systems::Imu"/>
         </xacro:if>
         <xacro:unless value="$(arg is_ignition)">
             <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
                 <parameters>$(find hexapod_controller)/config/hexapod_controllers.yaml</parameters>
             </plugin>
+            <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
         </xacro:unless>
+    </gazebo>
+
+    <gazebo reference="imu_link">
+        <sensor name="imu" type="imu">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <gz_frame_id>imu_link</gz_frame_id>
+            <topic>imu</topic>
+            <imu>
+                <!-- Orientation (roll, pitch, yaw) -->
+                <orientation>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>0.001</stddev> <!-- Adjust for orientation noise level -->
+                    </noise>
+                </orientation>
+                
+                <!-- Angular Velocity (rate of rotation around each axis) -->
+                <angular_velocity>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>2e-4</stddev> <!-- Noise standard deviation for angular velocity -->
+                    </noise>
+                </angular_velocity>
+    
+                <!-- Linear Acceleration (simulates linear velocity indirectly through integration) -->
+                <linear_acceleration>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>1.7e-2</stddev> <!-- Noise standard deviation for linear acceleration -->
+                    </noise>
+                </linear_acceleration>
+            </imu>
+        </sensor>
     </gazebo>
  
 </robot>

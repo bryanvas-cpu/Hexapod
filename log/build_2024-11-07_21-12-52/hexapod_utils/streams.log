@@ -1,0 +1,10 @@
+[0.018s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16
+[0.033s] [31mCMake Error at CMakeLists.txt:29:
+[0.033s]   Parse error.  Expected a command name, got unquoted argument with text
+[0.033s]   "hexapod_utils/hexapod_utils/keyboard_pubisher.py".
+[0.033s] 
+[0.033s] [0m
+[0.033s] -- Configuring incomplete, errors occurred!
+[0.034s] See also "/home/bryan/hexapod_ws/build/hexapod_utils/CMakeFiles/CMakeOutput.log".
+[0.034s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.036s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '2': /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16

@@ -1,0 +1,29 @@
+[0.012s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16
+[0.058s] [35m[1mConsolidate compiler generated dependencies of target inverse_kinematics[0m
+[0.076s] [ 50%] [32mBuilding CXX object CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o[0m
+[2.214s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:[m[K In member function ‘[01m[Kvoid HexapodIKNode::tipPosesCallback(std_msgs::msg::Float64MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.214s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:22:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<std_msgs::msg::Float64MultiArray_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdata[m[K’
+[2.214s]    22 |         double X = msg.[01;31m[Kdata[m[K[0];
+[2.214s]       |                        [01;31m[K^~~~[m[K
+[2.214s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:23:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<std_msgs::msg::Float64MultiArray_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdata[m[K’
+[2.214s]    23 |         double Y = msg.[01;31m[Kdata[m[K[1];
+[2.214s]       |                        [01;31m[K^~~~[m[K
+[2.215s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:24:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<std_msgs::msg::Float64MultiArray_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdata[m[K’
+[2.215s]    24 |         double Z = msg.[01;31m[Kdata[m[K[2];
+[2.215s]       |                        [01;31m[K^~~~[m[K
+[2.221s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:41:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kservo_no[m[K’ was not declared in this scope
+[2.221s]    41 |             UpdatePosition(J1, J2, J3, [01;31m[Kservo_no[m[K);
+[2.221s]       |                                        [01;31m[K^~~~~~~~[m[K
+[2.228s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:41:13:[m[K [01;31m[Kerror: [m[K‘[01m[KUpdatePosition[m[K’ was not declared in this scope
+[2.228s]    41 |             [01;31m[KUpdatePosition[m[K(J1, J2, J3, servo_no);
+[2.228s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.228s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:47:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kstd_msgs[m[K’
+[2.228s]    47 |             [01;31m[Kstd_msgs[m[K::msg::Float64MultiArray cmd;
+[2.228s]       |             [01;31m[K^~~~~~~~[m[K
+[2.232s] [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:48:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmd[m[K’ was not declared in this scope
+[2.232s]    48 |             [01;31m[Kcmd[m[K.data = {J1, J2, J3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+[2.232s]       |             [01;31m[K^~~[m[K
+[4.504s] gmake[2]: *** [CMakeFiles/inverse_kinematics.dir/build.make:76: CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o] Error 1
+[4.504s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/inverse_kinematics.dir/all] Error 2
+[4.504s] gmake: *** [Makefile:146: all] Error 2
+[4.506s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16

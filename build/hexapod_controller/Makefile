@@ -197,6 +197,43 @@ hexapod_controller_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod_controller_uninstall.dir/build.make CMakeFiles/hexapod_controller_uninstall.dir/build
 .PHONY : hexapod_controller_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named inverse_kinematics
+
+# Build rule for target.
+inverse_kinematics: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inverse_kinematics
+.PHONY : inverse_kinematics
+
+# fast build rule for target.
+inverse_kinematics/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inverse_kinematics.dir/build.make CMakeFiles/inverse_kinematics.dir/build
+.PHONY : inverse_kinematics/fast
+
+src/inverse_kinematics.o: src/inverse_kinematics.cpp.o
+.PHONY : src/inverse_kinematics.o
+
+# target to build an object file
+src/inverse_kinematics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inverse_kinematics.dir/build.make CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o
+.PHONY : src/inverse_kinematics.cpp.o
+
+src/inverse_kinematics.i: src/inverse_kinematics.cpp.i
+.PHONY : src/inverse_kinematics.i
+
+# target to preprocess a source file
+src/inverse_kinematics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inverse_kinematics.dir/build.make CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.i
+.PHONY : src/inverse_kinematics.cpp.i
+
+src/inverse_kinematics.s: src/inverse_kinematics.cpp.s
+.PHONY : src/inverse_kinematics.s
+
+# target to generate assembly for a file
+src/inverse_kinematics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inverse_kinematics.dir/build.make CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.s
+.PHONY : src/inverse_kinematics.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... hexapod_controller_uninstall"
 	@echo "... uninstall"
+	@echo "... inverse_kinematics"
+	@echo "... src/inverse_kinematics.o"
+	@echo "... src/inverse_kinematics.i"
+	@echo "... src/inverse_kinematics.s"
 .PHONY : help
 
 

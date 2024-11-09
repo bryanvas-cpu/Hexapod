@@ -1,0 +1,16 @@
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:[m[K In member function ‘[01m[Kvoid HexapodIKNode::tipPosesCallback(std_msgs::msg::Float64MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:41:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kservo_no[m[K’ was not declared in this scope
+   41 |             UpdatePosition(J1, J2, J3, [01;31m[Kservo_no[m[K);
+      |                                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:41:13:[m[K [01;31m[Kerror: [m[K‘[01m[KUpdatePosition[m[K’ was not declared in this scope
+   41 |             [01;31m[KUpdatePosition[m[K(J1, J2, J3, servo_no);
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:47:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kstd_msgs[m[K’
+   47 |             [01;31m[Kstd_msgs[m[K::msg::Float64MultiArray cmd;
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/inverse_kinematics.cpp:48:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmd[m[K’ was not declared in this scope
+   48 |             [01;31m[Kcmd[m[K->data = {J1, J2, J3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+      |             [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/inverse_kinematics.dir/build.make:76: CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/inverse_kinematics.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

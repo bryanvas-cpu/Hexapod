@@ -18,5 +18,12 @@
         "/home/bryan/turtlesim_ws/install/turtlesim/local/lib/python3.10/dist-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ]
+    ],
+    "cmake.configureSettings": {
+    "CMAKE_PREFIX_PATH": "/opt/ros/humble",
+    "CMAKE_BUILD_TYPE": "Debug"
+    },
+    "cmake.generator": "Ninja",
+    "cmake.ignoreCMakeListsMissing": true // or "Unix Makefiles" based on your preference
+
 }
