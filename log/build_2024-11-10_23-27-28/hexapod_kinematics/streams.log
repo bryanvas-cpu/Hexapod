@@ -1,0 +1,20 @@
+[0.019s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_kinematics -- -j16 -l16
+[0.051s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_kinematics -- -j16 -l16
+[0.085s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_kinematics
+[0.103s] -- Install configuration: ""
+[0.103s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/ament_index/resource_index/package_run_dependencies/hexapod_kinematics
+[0.103s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/ament_index/resource_index/parent_prefix_path/hexapod_kinematics
+[0.103s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/ament_prefix_path.sh
+[0.103s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/ament_prefix_path.dsv
+[0.103s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/path.sh
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/environment/path.dsv
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.bash
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.sh
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.zsh
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/local_setup.dsv
+[0.104s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.dsv
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/ament_index/resource_index/packages/hexapod_kinematics
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/cmake/hexapod_kinematicsConfig.cmake
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/cmake/hexapod_kinematicsConfig-version.cmake
+[0.104s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.xml
+[0.116s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_kinematics

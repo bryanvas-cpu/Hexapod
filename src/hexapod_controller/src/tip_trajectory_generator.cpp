@@ -9,17 +9,18 @@
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/LinearMath/Matrix3x3.h>
 #include "pid_controller.hpp"
+#include "hexapod_interfaces/msg/point_array.hpp"
 
 using namespace std::placeholders;
 
-class HexapodManualPoseNode : public rclcpp::Node {
+class HexapodTrajectoryGenNode : public rclcpp::Node {
 public:
-    HexapodManualPoseNode() : Node("hexapod_manual_pose_generator") {
+    HexapodTrajectoryGenNode() : Node("hexapod_trajectory_generator") {
         subscription_joystick = this->create_subscription<std_msgs::msg::Float64MultiArray>(
-            "/hexapod_controller/array_commands", 10, std::bind(&HexapodManualPoseNode::updateTrajectory, this, _1));
-        publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/trajectory_poses", 10);
+            "/hexapod_controller/array_commands", 10, std::bind(&HexapodTrajectoryGenNode::updateTrajectory, this, _1));
+        publisher_ = this->create_publisher<hexapod_interfaces::msg::PointArray>("/trajectory_poses", 10);
         timer_ = this->create_wall_timer(std::chrono::milliseconds((int)(1000.0 / this->publish_frequency)),
-                                                std::bind(&HexapodManualPoseNode::publish_leg_positions, this));
+                                                std::bind(&HexapodTrajectoryGenNode::publish_leg_positions, this));
     }
 
 private:
@@ -46,8 +47,8 @@ private:
     }
     void updateTrajectory(const std_msgs::msg::Float64MultiArray::SharedPtr msg)
     {
-        if (msg->data.size() == 10) {
-            for (size_t i = 0; i < 3; i++) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw
+        if (msg->data.size() == 11) {
+            for (size_t i = 0; i < 3; i++) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw, gait, mode
                 this->velocity[i] = msg->data[i];
             }
             this->gait = gaits[msg->data[9]];
@@ -65,7 +66,7 @@ private:
             update_leg_position(i, this->t_global, this->gait);
         }
         
-        std_msgs::msg::float64_multi_array transformed_leg_positions = transformed_leg_positions(leg_positions);
+        hexapod_interfaces::msg::PointArray transformed_leg_positions = transform_leg_positions(leg_positions);
 
         publisher_->publish(transformed_leg_positions);
         t_global++;
@@ -95,6 +96,34 @@ private:
             point = quadraticBezier3D(end, control, start, t_g + offset, gait);
         }
         leg_positions[leg_no] = point;
+    }
+
+    hexapod_interfaces::msg::PointArray transform_leg_positions(std::vector<geometry_msgs::msg::Point> leg_positions){
+        hexapod_interfaces::msg::PointArray transformed_leg_positions;
+        transformed_leg_positions[0].x = leg_positions[0].x += 0.093;
+        transformed_leg_positions[0].y = leg_positions[0].y += 0.161;
+        transformed_leg_positions[0].z = leg_positions[0].z -= 0.047;
+
+        transformed_leg_positions[1].x = leg_positions[1].x += 0.186;
+        transformed_leg_positions[1].y = leg_positions[1].y += 0.0;
+        transformed_leg_positions[1].z = leg_positions[1].z -= 0.047;
+
+        transformed_leg_positions[2].x = leg_positions[2].x += 0.093;
+        transformed_leg_positions[2].y = leg_positions[2].y -= 0.161;
+        transformed_leg_positions[2].z = leg_positions[2].z -= 0.047;
+
+        transformed_leg_positions[3].x = leg_positions[3].x -= 0.093;
+        transformed_leg_positions[3].y = leg_positions[3].y -= 0.161;
+        transformed_leg_positions[3].z = leg_positions[3].z -= 0.047;
+
+        transformed_leg_positions[4].x = leg_positions[4].x -= 0.186;
+        transformed_leg_positions[4].y = leg_positions[4].y += 0.0;
+        transformed_leg_positions[4].z = leg_positions[4].z -= 0.047;
+
+        transformed_leg_positions[5].x = leg_positions[5].x -= 0.093;
+        transformed_leg_positions[5].y = leg_positions[5].y += 0.161;
+        transformed_leg_positions[5].z = leg_positions[5].z -= 0.047;
+        return transform_leg_positions;
     }
 
     std::vector<geometry_msgs::msg::Point> leg_positions(6);
@@ -129,14 +158,14 @@ private:
 
 
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr subscription_joystick;
-    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;
+    rclcpp::Publisher<hexapod_interfaces::msg::PointArray>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
 
 };
 
 int main(int argc, char *argv[]) {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<HexapodManualPoseNode>());
+    rclcpp::spin(std::make_shared<HexapodTrajectoryGenNode>());
     rclcpp::shutdown();
     return 0;
 }

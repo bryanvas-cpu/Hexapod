@@ -1,0 +1,6 @@
+{
+  "package_name": "hexapod_interfaces",
+  "non_idl_tuples": [
+    "/home/bryan/hexapod_ws/src/hexapod_interfaces:msg/PointArray.msg"
+  ]
+}

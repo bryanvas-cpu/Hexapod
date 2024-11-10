@@ -26,8 +26,8 @@ public:
 private:
     void updateTargetPoseValues(const std_msgs::msg::Float64MultiArray::SharedPtr msg)
     {
-        if (msg->data.size() == 9) {
-            for (size_t i = 6; i < 9; ++i) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw
+        if (msg->data.size() == 11) {
+            for (size_t i = 6; i < 9; ++i) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw, gait, mode
                 this->target_orient_values[i-6] = msg->data[i];
                 this->target_transl_values[i-6] = msg->data[i-3];
             }
@@ -64,9 +64,18 @@ private:
         double control_signal_pitch = this->pitch.compute(target_orient_values[1], current_orient_values[1], 1.0/this->publish_frequency);
         double control_signal_yaw = this->yaw.compute(target_orient_values[2], current_orient_values[2], 1.0/this->publish_frequency);
 
-        msg.data = {control_signal_roll, 
-                    control_signal_pitch, 
-                    control_signal_yaw,
+        // INCASE PID HAS TO BE USED
+        // msg.data = {current_orient_values[0] + (1/publish_frequency)*control_signal_roll, 
+        //             current_orient_values[1] + (1/publish_frequency)*control_signal_pitch, 
+        //             current_orient_values[2] + (1/publish_frequency)*control_signal_yaw,
+        //             this->target_transl_values[0],
+        //             this->target_transl_values[1],
+        //             this->target_transl_values[2]
+        //             };
+
+        msg.data = {target_orient_values[0] - current_orient_values[0], 
+                    target_orient_values[1] - current_orient_values[1], 
+                    target_orient_values[2] - current_orient_values[2],
                     this->target_transl_values[0],
                     this->target_transl_values[1],
                     this->target_transl_values[2]

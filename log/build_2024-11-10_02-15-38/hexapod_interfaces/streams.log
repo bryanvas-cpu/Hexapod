@@ -1,0 +1,52 @@
+[0.019s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_interfaces -- -j16 -l16
+[0.039s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.145s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.148s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.150s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.172s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.189s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.323s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.323s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[0.323s]   hexapod_interfaces --arguments-file
+[0.323s]   /home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_adapter__arguments__hexapod_interfaces.json
+[0.323s]   --output-dir
+[0.323s]   /home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_adapter/hexapod_interfaces
+[0.323s]   --output-file
+[0.323s]   /home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_adapter/hexapod_interfaces.idls)
+[0.323s]   returned error code 1:
+[0.323s] 
+[0.323s]   Error processing 'geometry_msgs/msg/Point[] points' of
+[0.323s]   'hexapod_interfaces/PointArray': 'geometry_msgs/msg/Point'
+[0.323s] 
+[0.324s]   Traceback (most recent call last):
+[0.324s] 
+[0.324s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[0.324s]       return _run_code(code, main_globals, None,
+[0.324s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[0.324s]       exec(code, run_globals)
+[0.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.324s]       sys.exit(main())
+[0.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[0.324s]       abs_idl_file = convert_to_idl(
+[0.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.324s]       return convert_msg_to_idl(
+[0.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.324s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[0.324s]       Type(type_string, context_package_name=pkg_name),
+[0.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 277, in __init__
+[0.324s]       super(Type, self).__init__(
+[0.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 190, in __init__
+[0.324s]       raise InvalidResourceName(type_string)
+[0.324s] 
+[0.324s]   rosidl_adapter.parser.InvalidResourceName: geometry_msgs/msg/Point
+[0.324s] 
+[0.324s] Call Stack (most recent call first):
+[0.324s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.324s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[0.324s] 
+[0.324s] [0m
+[0.324s] -- Configuring incomplete, errors occurred!
+[0.324s] See also "/home/bryan/hexapod_ws/build/hexapod_interfaces/CMakeFiles/CMakeOutput.log".
+[0.327s] gmake: *** [Makefile:747: cmake_check_build_system] Error 1
+[0.329s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_interfaces -- -j16 -l16

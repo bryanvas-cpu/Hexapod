@@ -17,6 +17,7 @@
                 "/home/bryan/pico_ws/install/mav_msgs/include/**",
                 "/home/bryan/turtlesim_ws/install/turtlesim/include/**",
                 "/home/bryan/hexapod_ws/src/hexapod_controller/include/**",
+                "/home/bryan/hexapod_ws/install/hexapod_interfaces/include/hexapod_interfaces/**",
                 "/opt/ros/humble/include/**",
                 "/usr/include/**"
             ],

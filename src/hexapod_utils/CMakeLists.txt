@@ -22,6 +22,7 @@ endif()
 # Install the Python script (keyboard_publisher.py)
 install(PROGRAMS
     ${PROJECT_NAME}/keyboard_publisher.py
+    ${PROJECT_NAME}/joy_teleop_utility.py
     DESTINATION lib/${PROJECT_NAME}
 )
 

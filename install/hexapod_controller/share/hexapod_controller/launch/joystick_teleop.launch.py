@@ -9,9 +9,8 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     joy_teleop = Node(
-        package="joy_teleop",
-        executable="joy_teleop",
-        parameters=[os.path.join(get_package_share_directory("hexapod_controller"), "config", "joy_teleop.yaml")],
+        package="hexapod_utils",
+        executable="joy_teleop_utility.py"
     )
 
     joy_node = Node(

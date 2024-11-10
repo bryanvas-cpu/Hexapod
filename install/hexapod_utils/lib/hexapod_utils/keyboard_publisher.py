@@ -10,7 +10,7 @@ class KeyboardToFloat64MultiArray(Node):
         super().__init__('keyboard_to_float64multiarray')
         self.publisher_ = self.create_publisher(Float64MultiArray, 'hexapod_controller/array_commands', 10)
         self.msg = Float64MultiArray()
-        self.msg.data = [0.0] * 9
+        self.msg.data = [0.0] * 10
 
         self.lin_vel_x = 0.0
         self.lin_vel_y = 0.0
@@ -21,6 +21,7 @@ class KeyboardToFloat64MultiArray(Node):
         self.orient_pitch = 0.0
         self.orient_roll = 0.0
         self.orient_yaw = 0.0
+        self.gait = 0
 
         # Map keys to specific float values
         self.key_map = {
@@ -59,7 +60,7 @@ class KeyboardToFloat64MultiArray(Node):
             'u': 0.174533,
             'o': -0.174533,
                   
-            'k': 0.0
+            'k': 0.0,
         }
 
         # Initialize listener for the keyboard
@@ -108,11 +109,14 @@ class KeyboardToFloat64MultiArray(Node):
             self.orient_roll = self.key_map[key_str]
             self.orient_pitch = self.key_map[key_str]
             self.orient_yaw = self.key_map[key_str]
+        
+        elif key_str == "z":
+            self.gait = (self.gait + 1 if self.gait<3 else 0)
 
         self.msg.data = [
             self.lin_vel_x, self.lin_vel_y, self.ang_vel_z, 
             self.trans_x, self.trans_y, self.trans_z, 
-            self.orient_pitch, self.orient_roll, self.orient_yaw
+            self.orient_roll, self.orient_pitch, self.orient_yaw, self.gait
         ]
         
         self.publisher_.publish(self.msg)

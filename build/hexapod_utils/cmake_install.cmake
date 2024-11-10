@@ -43,7 +43,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hexapod_utils" TYPE PROGRAM FILES "/home/bryan/hexapod_ws/src/hexapod_utils/hexapod_utils/keyboard_publisher.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hexapod_utils" TYPE PROGRAM FILES
+    "/home/bryan/hexapod_ws/src/hexapod_utils/hexapod_utils/keyboard_publisher.py"
+    "/home/bryan/hexapod_ws/src/hexapod_utils/hexapod_utils/joy_teleop_utility.py"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

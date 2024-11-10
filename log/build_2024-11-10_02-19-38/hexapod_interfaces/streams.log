@@ -1,0 +1,54 @@
+[0.018s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_interfaces -- -j16 -l16
+[0.038s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.156s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.176s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.177s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.181s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.187s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.195s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.216s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.337s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.337s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[0.337s]   hexapod_interfaces --arguments-file
+[0.337s]   /home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_adapter__arguments__hexapod_interfaces.json
+[0.337s]   --output-dir
+[0.337s]   /home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_adapter/hexapod_interfaces
+[0.337s]   --output-file
+[0.337s]   /home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_adapter/hexapod_interfaces.idls)
+[0.337s]   returned error code 1:
+[0.338s] 
+[0.338s]   Error processing 'geometry_msgs/msg/Point[] points' of
+[0.338s]   'hexapod_interfaces/PointArray': 'geometry_msgs/msg/Point'
+[0.338s] 
+[0.338s]   Traceback (most recent call last):
+[0.338s] 
+[0.338s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[0.338s]       return _run_code(code, main_globals, None,
+[0.338s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[0.338s]       exec(code, run_globals)
+[0.338s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.338s]       sys.exit(main())
+[0.338s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[0.338s]       abs_idl_file = convert_to_idl(
+[0.338s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.338s]       return convert_msg_to_idl(
+[0.338s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.339s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.339s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[0.339s]       Type(type_string, context_package_name=pkg_name),
+[0.339s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 277, in __init__
+[0.339s]       super(Type, self).__init__(
+[0.339s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 190, in __init__
+[0.339s]       raise InvalidResourceName(type_string)
+[0.339s] 
+[0.339s]   rosidl_adapter.parser.InvalidResourceName: geometry_msgs/msg/Point
+[0.339s] 
+[0.339s] Call Stack (most recent call first):
+[0.339s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.339s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[0.339s] 
+[0.339s] [0m
+[0.340s] -- Configuring incomplete, errors occurred!
+[0.340s] See also "/home/bryan/hexapod_ws/build/hexapod_interfaces/CMakeFiles/CMakeOutput.log".
+[0.341s] gmake: *** [Makefile:747: cmake_check_build_system] Error 1
+[0.343s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_interfaces -- -j16 -l16

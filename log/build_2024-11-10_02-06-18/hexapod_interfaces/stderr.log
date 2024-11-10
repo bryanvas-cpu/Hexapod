@@ -1,0 +1,32 @@
+In file included from [01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_generator_c/hexapod_interfaces/msg/detail/point_array__functions.h:19[m[K,
+                 from [01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_generator_c/hexapod_interfaces/msg/detail/point_array__functions.c:4[m[K:
+[01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_generator_c/hexapod_interfaces/msg/detail/point_array__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/point__struct.h: No such file or directory
+   22 | #include [01;31m[K"geometry_msgs/msg/detail/point__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/hexapod_interfaces__rosidl_generator_c.dir/build.make:105: CMakeFiles/hexapod_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hexapod_interfaces/msg/detail/point_array__functions.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/hexapod_interfaces__rosidl_generator_c.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_typesupport_cpp/hexapod_interfaces/msg/point_array__type_support.cpp:7[m[K:
+[01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_generator_cpp/hexapod_interfaces/msg/detail/point_array__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/point__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"geometry_msgs/msg/detail/point__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/hexapod_interfaces__rosidl_typesupport_cpp.dir/build.make:86: CMakeFiles/hexapod_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hexapod_interfaces/msg/point_array__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/hexapod_interfaces__rosidl_typesupport_cpp.dir/all] Error 2
+In file included from [01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_typesupport_introspection_cpp/hexapod_interfaces/msg/detail/point_array__type_support.cpp:12[m[K:
+[01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_generator_cpp/hexapod_interfaces/msg/detail/point_array__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/point__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"geometry_msgs/msg/detail/point__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/hexapod_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:91: CMakeFiles/hexapod_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hexapod_interfaces/msg/detail/point_array__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/hexapod_interfaces__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+In file included from [01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_typesupport_fastrtps_cpp/hexapod_interfaces/msg/detail/point_array__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_typesupport_fastrtps_cpp/hexapod_interfaces/msg/detail/dds_fastrtps/point_array__type_support.cpp:4[m[K:
+[01m[K/home/bryan/hexapod_ws/build/hexapod_interfaces/rosidl_generator_cpp/hexapod_interfaces/msg/detail/point_array__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/point__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"geometry_msgs/msg/detail/point__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/hexapod_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:91: CMakeFiles/hexapod_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hexapod_interfaces/msg/detail/dds_fastrtps/point_array__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/hexapod_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
