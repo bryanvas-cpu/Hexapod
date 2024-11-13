@@ -1,0 +1,24 @@
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:136:68:[m[K [01;31m[Kerror: [m[Kmacro "RCLCPP_INFO_STREAM" passed 3 arguments, but takes just 2
+  136 |         RCLCPP_INFO_STREAM(this->get_logger(), "offset: %f", offset[01;31m[K)[m[K;
+      |                                                                    [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:722:[m[K [01;36m[Knote: [m[Kmacro "RCLCPP_INFO_STREAM" defined here
+  722 | #define RCLCPP_INFO_STREAM(logger, stream_arg) \
+      | 
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:[m[K In member function ‘[01m[Kvoid HexapodTrajectoryGenNode::set_control_point(int, double, int, int)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:136:9:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_INFO_STREAM[m[K’ was not declared in this scope
+  136 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(this->get_logger(), "offset: %f", offset);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/tip_trajectory_generator.dir/build.make:76: CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/tip_trajectory_generator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

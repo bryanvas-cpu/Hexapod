@@ -1,6 +1,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
+#include <unistd.h>
 // #include "sensor_msgs/msg/Imu.hpp"
 // #include <array>
 #include <vector>
@@ -16,21 +17,21 @@ using namespace std::placeholders;
 class HexapodTrajectoryGenNode : public rclcpp::Node {
 public:
     HexapodTrajectoryGenNode() : Node("hexapod_trajectory_generator") {
-        RCLCPP_INFO_STREAM(this->get_logger(), "Reached constructor _1");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Reached constructor _1");
 
         subscription_joystick = this->create_subscription<std_msgs::msg::Float64MultiArray>(
             "/hexapod_controller/joy_commands", 10, std::bind(&HexapodTrajectoryGenNode::updateTrajectory, this, _1));
         
-        RCLCPP_INFO_STREAM(this->get_logger(), "created subscription_joystick subscriber");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "created subscription_joystick subscriber");
 
         publisher_ = this->create_publisher<hexapod_interfaces::msg::PointArray>("/trajectory_poses", 10);
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "created publisher_ publisher");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "created publisher_ publisher");
 
         timer_ = this->create_wall_timer(std::chrono::milliseconds((int)(1000.0 / this->publish_frequency)),
                                                 std::bind(&HexapodTrajectoryGenNode::publish_leg_positions, this));
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "created created timer");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "created created timer");
 
     }
 
@@ -39,6 +40,8 @@ private:
     geometry_msgs::msg::Point quadraticBezier3D(geometry_msgs::msg::Point start, geometry_msgs::msg::Point control, geometry_msgs::msg::Point end, double t, int gait) {  // S
         geometry_msgs::msg::Point point;
         t = (t-num_stance_control_points_vec[gait].second)/(this->num_swing_control_points_vec[gait].second);
+        // RCLCPP_INFO(this->get_logger(), "t_quadratic_bezier_3d %f", t);
+
         double one_minus_t = 1.0-t;
         // Calculate the point on the curve using the formula
         point.x = one_minus_t * one_minus_t * start.x + 2 * one_minus_t * t * control.x + t * t * end.x;
@@ -48,7 +51,10 @@ private:
     }
     geometry_msgs::msg::Point linearBezier3D(geometry_msgs::msg::Point start, geometry_msgs::msg::Point end, double t, int gait) {
         geometry_msgs::msg::Point point;
+
         t = t/(this->num_stance_control_points_vec[gait].second);
+        // RCLCPP_INFO(this->get_logger(), "t_linear_bezier_3d %f",t);
+
         // Calculate the point on the curve using the linear interpolation formula
         point.x = start.x + t * (end.x - start.x);
         point.y = start.y + t * (end.y - start.y);
@@ -58,23 +64,26 @@ private:
     }
     void updateTrajectory(const std_msgs::msg::Float64MultiArray& msg)
     {
-        RCLCPP_INFO_STREAM(this->get_logger(), "update trraectory calback called");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "update trraectory calback called");
 
         if (msg.data.size() == 11) {
             for (size_t i = 0; i < 3; i++) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw, gait, mode
                 this->velocity[i] = msg.data[i];
             }
-            this->gait = this->gaits[(int)(msg.data[9])];
+            this->gait = (int)(msg.data[9]);
         } else {
             RCLCPP_WARN(this->get_logger(), "Received target pose message with incorrect size");
         }
+
+        // RCLCPP_INFO(this->get_logger(), "lin_xy, ang_z velocity  %f, %f, - %f", this->velocity[0], velocity[1], velocity[2]);
+
     }
 
     void publish_leg_positions()
     {   
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered publish leg positions");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered publish leg positions");
 
-        if(this->t_global > total_control_points)
+        if(this->t_global > this->total_control_points)
             this->t_global = 0;
 
         for(int i=0 ; i<6 ; i++){
@@ -84,25 +93,32 @@ private:
         hexapod_interfaces::msg::PointArray transformed_leg_positions = transform_leg_positions(leg_positions);
 
         publisher_->publish(transformed_leg_positions);
-        t_global++;
+        // RCLCPP_INFO(this->get_logger(), "t_global  %d", this->t_global);
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "finished publish leg positions");
+        this->t_global++;
+
+        // RCLCPP_INFO_STREAM(this->get_logger(), "finished publish leg positions");
 
     }
 
     void update_leg_position(int leg_no, int t_g, int gait){
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered update leg position");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered update leg position");
 
         generate_3_points(); // sets start, control, end points;
-        set_control_point(leg_no, this->offsets[gait].second * leg_no, gait, t_g);
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "finished update leg position");
+        // RCLCPP_INFO(this->get_logger(), "start: (%f, %f, %f) \n control: (%f, %f, %f) \n end: (%f, %f, %f)", this->start.x, this->start.y, this->start.z, this->control.x, this->control.y, this->control.z, this->end.x, this->end.y, this->end.z);
+
+        set_control_point(leg_no, this->offsets[gait].second * leg_no, gait, t_g);
+        
+        
+
+        // RCLCPP_INFO_STREAM(this->get_logger(), "finished update leg position");
     }
 
     void generate_3_points() {
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered generate 3 points");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered generate 3 points");
 
         this->start.x = velocity[0];
         this->start.y = velocity[1];
@@ -115,36 +131,40 @@ private:
         this->end.x = -velocity[0];
         this->end.y = -velocity[1];
         this->end.z = 0.0;
-        RCLCPP_INFO_STREAM(this->get_logger(), "finished generate 3 points");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "finished generate 3 points");
 }
     
     void set_control_point(int leg_no, double offset, int gait, int t_g){
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered set control point");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered set control point");
 
         geometry_msgs::msg::Point point; 
 
-        if(t_g + offset > this->total_control_points){
+        while(offset >= this->total_control_points){
             offset = offset - total_control_points;
         }
 
-        if (t_g < this->num_stance_control_points_vec[gait].second) {
-            point = linearBezier3D(start, control, t_g + offset, gait);
-        } else if (t_g <= this->total_control_points) {
+        // RCLCPP_INFO(this->get_logger(), "offset: %f", offset);
+
+        if (t_g + offset < this->num_stance_control_points_vec[gait].second) {
+            point = linearBezier3D(start, end, t_g + offset, gait);
+        } else if (t_g + offset <= this->total_control_points) {
             point = quadraticBezier3D(end, control, start, t_g + offset, gait);
         }
+        
         leg_positions[leg_no] = point;
-
-        RCLCPP_INFO_STREAM(this->get_logger(), "finished set control point");
+        // RCLCPP_INFO(this->get_logger(), "leg[%d] position (%f,%f,%f)",leg_no,leg_positions[leg_no].x,leg_positions[leg_no].y,leg_positions[leg_no].z);
+        // usleep(100000);
+        // RCLCPP_INFO_STREAM(this->get_logger(), "finished set control point");
 
     }
 
     hexapod_interfaces::msg::PointArray transform_leg_positions(std::vector<geometry_msgs::msg::Point>& leg_positions){
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered transform_leg_position");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered transform_leg_position");
 
         hexapod_interfaces::msg::PointArray transformed_leg_positions;
-        transformed_leg_positions.points.resize(18);
+        transformed_leg_positions.points.resize(6);
         transformed_leg_positions.points[0].x = leg_positions[0].x += 0.093;
         transformed_leg_positions.points[0].y = leg_positions[0].y += 0.161;
         transformed_leg_positions.points[0].z = leg_positions[0].z -= 0.047;
@@ -169,7 +189,7 @@ private:
         transformed_leg_positions.points[5].y = leg_positions[5].y += 0.161;
         transformed_leg_positions.points[5].z = leg_positions[5].z -= 0.047;
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "finished transform_leg_position");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "finished transform_leg_position");
 
         return transformed_leg_positions;
     }
@@ -198,7 +218,7 @@ private:
     double num_swing_control_points = num_swing_control_points_vec[gait].second;
 
     std::vector<std::pair<int,double>> offsets {{0,total_control_points/2.0},{1,total_control_points/6.0},{2,total_control_points/6.0},{3,total_control_points/3.0}};
-    double offset = offsets[gait].second;
+    double offset_ = offsets[gait].second;
 
     geometry_msgs::msg::Point start;
     geometry_msgs::msg::Point control;

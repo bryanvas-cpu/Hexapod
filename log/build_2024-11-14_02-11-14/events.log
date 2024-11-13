@@ -1,0 +1,166 @@
+[0.000000] (-) TimerEvent: {}
+[0.000449] (-) JobUnselected: {'identifier': 'hexapod_description'}
+[0.000592] (-) JobUnselected: {'identifier': 'hexapod_interfaces'}
+[0.000630] (-) JobUnselected: {'identifier': 'hexapod_kinematics'}
+[0.000641] (-) JobUnselected: {'identifier': 'hexapod_utils'}
+[0.000654] (hexapod_controller) JobQueued: {'identifier': 'hexapod_controller', 'dependencies': OrderedDict([('hexapod_interfaces', '/home/bryan/hexapod_ws/install/hexapod_interfaces')])}
+[0.000671] (hexapod_controller) JobStarted: {'identifier': 'hexapod_controller'}
+[0.013881] (hexapod_controller) JobProgress: {'identifier': 'hexapod_controller', 'progress': 'cmake'}
+[0.014309] (hexapod_controller) JobProgress: {'identifier': 'hexapod_controller', 'progress': 'build'}
+[0.014854] (hexapod_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bryan/hexapod_ws/build/hexapod_controller', '--', '-j16', '-l16'], 'cwd': '/home/bryan/hexapod_ws/build/hexapod_controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GZ_SIM_RESOURCE_PATH', '/home/bryan/pico_ws/src/swift_pico_description/models'), ('LANGUAGE', 'en_IN:en'), ('USER', 'bryan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib:/home/bryan/pico_ws/install/whycon/lib:/home/bryan/pico_ws/install/waypoint_navigation/lib:/home/bryan/pico_ws/install/rotors_control/lib:/home/bryan/pico_ws/install/mav_planning_msgs/lib:/home/bryan/turtlesim_ws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/local/lib:/home/bryan/pico_ws/install/swift_msgs/lib:/home/bryan/pico_ws/install/pid_msg/lib:/home/bryan/pico_ws/install/mav_system_msgs/lib:/home/bryan/pico_ws/install/mav_state_machine_msgs/lib:/home/bryan/pico_ws/install/mav_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bryan'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1741'), ('SYSTEMD_EXEC_PID', '2104'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4216'), ('COLCON_PREFIX_PATH', '/home/bryan/hexapod_ws/install:/home/bryan/turtlesim_ws/install:/home/bryan/pico_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'bryan'), ('ONSHAPE_SECRET_KEY', 'ZpURN8jAuNHf5E6j1fJuirVHgdgwpUEnJeSjcpGLyLsA75dD'), ('JOURNAL_STREAM', '8:18236'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bryan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/bryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/bryan/.local/share/JetBrains/Toolbox/scripts'), ('SESSION_MANAGER', 'local/bryan-Aspire-A515-57G:@/tmp/.ICE-unix/2077,unix/bryan-Aspire-A515-57G:/tmp/.ICE-unix/2077'), ('INVOCATION_ID', '3f084bd820d94228b787c21bba235f56'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:7d02ba27-a646-4255-b55e-7620743b5533'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bryan/hexapod_ws/build/hexapod_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'Gjv1CYUJMoO9DVnjdaXSUgaj'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/bryan/pico_ws/install/waypoint_navigation/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/swift_msgs/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/pid_msg/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/mav_planning_msgs/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/mav_msgs/local/lib/python3.10/dist-packages:/home/bryan/hexapod_ws/install/hexapod_interfaces/local/lib/python3.10/dist-packages:/home/bryan/turtlesim_ws/install/turtlesim/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble')]), 'shell': False}
+[0.068834] (hexapod_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target tip_trajectory_generator\x1b[0m\n'}
+[0.083618] (hexapod_controller) StdoutLine: {'line': b'[ 25%] Built target inverse_kinematics\n'}
+[0.084210] (hexapod_controller) StdoutLine: {'line': b'[ 50%] Built target tip_pose_generator\n'}
+[0.085287] (hexapod_controller) StdoutLine: {'line': b'[ 75%] Built target body_pose_generator\n'}
+[0.085503] (hexapod_controller) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o\x1b[0m\n'}
+[0.099855] (-) TimerEvent: {}
+[0.200145] (-) TimerEvent: {}
+[0.300478] (-) TimerEvent: {}
+[0.400748] (-) TimerEvent: {}
+[0.501075] (-) TimerEvent: {}
+[0.601656] (-) TimerEvent: {}
+[0.702030] (-) TimerEvent: {}
+[0.802575] (-) TimerEvent: {}
+[0.903148] (-) TimerEvent: {}
+[1.003463] (-) TimerEvent: {}
+[1.103726] (-) TimerEvent: {}
+[1.204103] (-) TimerEvent: {}
+[1.304504] (-) TimerEvent: {}
+[1.404863] (-) TimerEvent: {}
+[1.505358] (-) TimerEvent: {}
+[1.605791] (-) TimerEvent: {}
+[1.706401] (-) TimerEvent: {}
+[1.806964] (-) TimerEvent: {}
+[1.907402] (-) TimerEvent: {}
+[2.007986] (-) TimerEvent: {}
+[2.108507] (-) TimerEvent: {}
+[2.209000] (-) TimerEvent: {}
+[2.309547] (-) TimerEvent: {}
+[2.393597] (hexapod_controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.394033] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.394154] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.394251] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.394350] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.394490] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.394591] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.394668] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.394745] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.394824] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.394896] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.394972] (hexapod_controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:1\x1b[m\x1b[K:\n'}
+[2.395045] (hexapod_controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg::Point HexapodTrajectoryGenNode::quadraticBezier3D(geometry_msgs::msg::Point, geometry_msgs::msg::Point, geometry_msgs::msg::Point, double, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.395140] (hexapod_controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:43:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktoo many arguments for format [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args\x07-Wformat-extra-args\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.395224] (hexapod_controller) StderrLine: {'line': b'   43 |         RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K"t_quadratic_bezier_3d"\x1b[m\x1b[K, t);\n'}
+[2.395295] (hexapod_controller) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.409644] (-) TimerEvent: {}
+[2.510013] (-) TimerEvent: {}
+[2.610352] (-) TimerEvent: {}
+[2.710765] (-) TimerEvent: {}
+[2.811224] (-) TimerEvent: {}
+[2.911558] (-) TimerEvent: {}
+[3.011922] (-) TimerEvent: {}
+[3.112238] (-) TimerEvent: {}
+[3.212624] (-) TimerEvent: {}
+[3.312968] (-) TimerEvent: {}
+[3.413326] (-) TimerEvent: {}
+[3.513629] (-) TimerEvent: {}
+[3.613964] (-) TimerEvent: {}
+[3.714301] (-) TimerEvent: {}
+[3.814608] (-) TimerEvent: {}
+[3.914900] (-) TimerEvent: {}
+[4.015194] (-) TimerEvent: {}
+[4.115495] (-) TimerEvent: {}
+[4.215813] (-) TimerEvent: {}
+[4.316107] (-) TimerEvent: {}
+[4.416378] (-) TimerEvent: {}
+[4.516658] (-) TimerEvent: {}
+[4.616961] (-) TimerEvent: {}
+[4.717257] (-) TimerEvent: {}
+[4.817710] (-) TimerEvent: {}
+[4.918219] (-) TimerEvent: {}
+[5.018547] (-) TimerEvent: {}
+[5.119546] (-) TimerEvent: {}
+[5.220041] (-) TimerEvent: {}
+[5.320350] (-) TimerEvent: {}
+[5.420728] (-) TimerEvent: {}
+[5.521089] (-) TimerEvent: {}
+[5.621601] (-) TimerEvent: {}
+[5.722363] (-) TimerEvent: {}
+[5.823006] (-) TimerEvent: {}
+[5.923473] (-) TimerEvent: {}
+[6.024030] (-) TimerEvent: {}
+[6.124635] (-) TimerEvent: {}
+[6.225075] (-) TimerEvent: {}
+[6.325537] (-) TimerEvent: {}
+[6.425993] (-) TimerEvent: {}
+[6.526390] (-) TimerEvent: {}
+[6.626923] (-) TimerEvent: {}
+[6.727326] (-) TimerEvent: {}
+[6.827659] (-) TimerEvent: {}
+[6.927965] (-) TimerEvent: {}
+[7.028264] (-) TimerEvent: {}
+[7.128543] (-) TimerEvent: {}
+[7.228840] (-) TimerEvent: {}
+[7.329176] (-) TimerEvent: {}
+[7.429514] (-) TimerEvent: {}
+[7.529795] (-) TimerEvent: {}
+[7.630085] (-) TimerEvent: {}
+[7.730379] (-) TimerEvent: {}
+[7.830698] (-) TimerEvent: {}
+[7.930991] (-) TimerEvent: {}
+[8.031276] (-) TimerEvent: {}
+[8.131557] (-) TimerEvent: {}
+[8.231846] (-) TimerEvent: {}
+[8.332159] (-) TimerEvent: {}
+[8.432479] (-) TimerEvent: {}
+[8.532757] (-) TimerEvent: {}
+[8.633058] (-) TimerEvent: {}
+[8.733431] (-) TimerEvent: {}
+[8.833939] (-) TimerEvent: {}
+[8.887927] (hexapod_controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable tip_trajectory_generator\x1b[0m\n'}
+[8.934170] (-) TimerEvent: {}
+[9.034557] (-) TimerEvent: {}
+[9.135322] (-) TimerEvent: {}
+[9.235715] (-) TimerEvent: {}
+[9.336047] (-) TimerEvent: {}
+[9.369654] (hexapod_controller) StdoutLine: {'line': b'[100%] Built target tip_trajectory_generator\n'}
+[9.382807] (hexapod_controller) CommandEnded: {'returncode': 0}
+[9.436143] (-) TimerEvent: {}
+[9.437288] (hexapod_controller) JobProgress: {'identifier': 'hexapod_controller', 'progress': 'install'}
+[9.448560] (hexapod_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/bryan/hexapod_ws/build/hexapod_controller'], 'cwd': '/home/bryan/hexapod_ws/build/hexapod_controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GZ_SIM_RESOURCE_PATH', '/home/bryan/pico_ws/src/swift_pico_description/models'), ('LANGUAGE', 'en_IN:en'), ('USER', 'bryan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib:/home/bryan/pico_ws/install/whycon/lib:/home/bryan/pico_ws/install/waypoint_navigation/lib:/home/bryan/pico_ws/install/rotors_control/lib:/home/bryan/pico_ws/install/mav_planning_msgs/lib:/home/bryan/turtlesim_ws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/local/lib:/home/bryan/pico_ws/install/swift_msgs/lib:/home/bryan/pico_ws/install/pid_msg/lib:/home/bryan/pico_ws/install/mav_system_msgs/lib:/home/bryan/pico_ws/install/mav_state_machine_msgs/lib:/home/bryan/pico_ws/install/mav_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bryan'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1741'), ('SYSTEMD_EXEC_PID', '2104'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4216'), ('COLCON_PREFIX_PATH', '/home/bryan/hexapod_ws/install:/home/bryan/turtlesim_ws/install:/home/bryan/pico_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'bryan'), ('ONSHAPE_SECRET_KEY', 'ZpURN8jAuNHf5E6j1fJuirVHgdgwpUEnJeSjcpGLyLsA75dD'), ('JOURNAL_STREAM', '8:18236'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bryan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/bryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/bryan/.local/share/JetBrains/Toolbox/scripts'), ('SESSION_MANAGER', 'local/bryan-Aspire-A515-57G:@/tmp/.ICE-unix/2077,unix/bryan-Aspire-A515-57G:/tmp/.ICE-unix/2077'), ('INVOCATION_ID', '3f084bd820d94228b787c21bba235f56'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:7d02ba27-a646-4255-b55e-7620743b5533'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bryan/hexapod_ws/build/hexapod_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'Gjv1CYUJMoO9DVnjdaXSUgaj'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/bryan/pico_ws/install/waypoint_navigation/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/swift_msgs/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/pid_msg/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/mav_planning_msgs/local/lib/python3.10/dist-packages:/home/bryan/pico_ws/install/mav_msgs/local/lib/python3.10/dist-packages:/home/bryan/hexapod_ws/install/hexapod_interfaces/local/lib/python3.10/dist-packages:/home/bryan/turtlesim_ws/install/turtlesim/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble')]), 'shell': False}
+[9.460187] (hexapod_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.460462] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/include/include\n'}
+[9.460515] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/include/include/hexapod_controller\n'}
+[9.460554] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/include/include/hexapod_controller/pid_controller.hpp\n'}
+[9.460594] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/inverse_kinematics\n'}
+[9.460672] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/body_pose_generator\n'}
+[9.460756] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/tip_pose_generator\n'}
+[9.460954] (hexapod_controller) StdoutLine: {'line': b'-- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/tip_trajectory_generator\n'}
+[9.464307] (hexapod_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/tip_trajectory_generator" to ""\n'}
+[9.464412] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config\n'}
+[9.464464] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/hexapod_controllers.yaml\n'}
+[9.464538] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/joy_teleop.yaml\n'}
+[9.464581] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/joy_config.yaml\n'}
+[9.464621] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/launch\n'}
+[9.464702] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/launch/controller.launch.py\n'}
+[9.464742] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/launch/joystick_teleop.launch.py\n'}
+[9.464783] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/launch/keyboard_teleop.launch.py\n'}
+[9.464863] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/package_run_dependencies/hexapod_controller\n'}
+[9.464902] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/parent_prefix_path/hexapod_controller\n'}
+[9.464939] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/ament_prefix_path.sh\n'}
+[9.464975] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/ament_prefix_path.dsv\n'}
+[9.465011] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/path.sh\n'}
+[9.465048] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/environment/path.dsv\n'}
+[9.465084] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.bash\n'}
+[9.465119] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.sh\n'}
+[9.465154] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.zsh\n'}
+[9.465242] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/local_setup.dsv\n'}
+[9.465278] (hexapod_controller) StdoutLine: {'line': b'-- Installing: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.dsv\n'}
+[9.465315] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/ament_index/resource_index/packages/hexapod_controller\n'}
+[9.465356] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/cmake/hexapod_controllerConfig.cmake\n'}
+[9.465391] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/cmake/hexapod_controllerConfig-version.cmake\n'}
+[9.465426] (hexapod_controller) StdoutLine: {'line': b'-- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.xml\n'}
+[9.466396] (hexapod_controller) CommandEnded: {'returncode': 0}
+[9.536252] (-) TimerEvent: {}
+[9.543022] (hexapod_controller) JobEnded: {'identifier': 'hexapod_controller', 'rc': 0}
+[9.543833] (-) EventReactorShutdown: {}

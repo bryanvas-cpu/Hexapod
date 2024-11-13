@@ -1,0 +1,403 @@
+[0.106s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.106s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fb31b3843d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb31b357910>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb31b357910>>, mixin_verb=('build',))
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.270s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/bryan/hexapod_ws'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_controller) by extension 'ros'
+[0.288s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hexapod_controller' with type 'ros.ament_cmake' and name 'hexapod_controller'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['ignore', 'ignore_ament_install']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'ignore'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'colcon_pkg'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['colcon_meta']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'ros'
+[0.293s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hexapod_description' with type 'ros.ament_cmake' and name 'hexapod_description'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_interfaces) by extension 'ros'
+[0.294s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hexapod_interfaces' with type 'ros.ament_cmake' and name 'hexapod_interfaces'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_kinematics) by extension 'ros'
+[0.311s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hexapod_kinematics' with type 'ros.ament_cmake' and name 'hexapod_kinematics'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extension 'ignore'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extension 'ignore_ament_install'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extensions ['colcon_pkg']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extension 'colcon_pkg'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extensions ['colcon_meta']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extension 'colcon_meta'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extensions ['ros']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_utils) by extension 'ros'
+[0.312s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hexapod_utils' with type 'ros.ament_cmake' and name 'hexapod_utils'
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.343s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/bryan/hexapod_ws/install
+[0.343s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/bryan/turtlesim_ws/install
+[0.344s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 16 installed packages in /home/bryan/pico_ws/install
+[0.345s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 352 installed packages in /opt/ros/humble
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_target' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.386s] DEBUG:colcon.colcon_core.verb:Building package 'hexapod_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/hexapod_ws/build/hexapod_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/hexapod_ws/install/hexapod_description', 'merge_install': False, 'path': '/home/bryan/hexapod_ws/src/hexapod_description', 'symlink_install': False, 'test_result_base': None}
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'hexapod_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.386s] DEBUG:colcon.colcon_core.verb:Building package 'hexapod_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/hexapod_ws/build/hexapod_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/hexapod_ws/install/hexapod_interfaces', 'merge_install': False, 'path': '/home/bryan/hexapod_ws/src/hexapod_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'cmake_target' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'cmake_clean_cache' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'cmake_clean_first' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'cmake_force_configure' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'ament_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'catkin_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_kinematics' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.387s] DEBUG:colcon.colcon_core.verb:Building package 'hexapod_kinematics' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/hexapod_ws/build/hexapod_kinematics', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/hexapod_ws/install/hexapod_kinematics', 'merge_install': False, 'path': '/home/bryan/hexapod_ws/src/hexapod_kinematics', 'symlink_install': False, 'test_result_base': None}
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'cmake_target' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'cmake_clean_first' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'cmake_force_configure' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'ament_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.388s] DEBUG:colcon.colcon_core.verb:Building package 'hexapod_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/hexapod_ws/build/hexapod_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/hexapod_ws/install/hexapod_utils', 'merge_install': False, 'path': '/home/bryan/hexapod_ws/src/hexapod_utils', 'symlink_install': False, 'test_result_base': None}
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'cmake_target' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hexapod_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.388s] DEBUG:colcon.colcon_core.verb:Building package 'hexapod_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/hexapod_ws/build/hexapod_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/hexapod_ws/install/hexapod_controller', 'merge_install': False, 'path': '/home/bryan/hexapod_ws/src/hexapod_controller', 'symlink_install': False, 'test_result_base': None}
+[0.388s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.390s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.390s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/hexapod_ws/src/hexapod_interfaces' with build type 'ament_cmake'
+[0.390s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/hexapod_ws/src/hexapod_interfaces'
+[0.392s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.392s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.392s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.396s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/hexapod_ws/src/hexapod_description' with build type 'ament_cmake'
+[0.396s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/hexapod_ws/src/hexapod_description'
+[0.396s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.397s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.402s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/hexapod_ws/src/hexapod_kinematics' with build type 'ament_cmake'
+[0.403s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/hexapod_ws/src/hexapod_kinematics'
+[0.403s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.403s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.408s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/hexapod_ws/src/hexapod_utils' with build type 'ament_cmake'
+[0.408s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/hexapod_ws/src/hexapod_utils'
+[0.409s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.409s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.420s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_interfaces -- -j16 -l16
+[0.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_description -- -j16 -l16
+[0.434s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_kinematics -- -j16 -l16
+[0.442s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16
+[0.489s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_description -- -j16 -l16
+[0.497s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_kinematics -- -j16 -l16
+[0.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16
+[0.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_description
+[0.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_utils
+[0.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_kinematics
+[0.595s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_description)
+[0.618s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_description
+[0.619s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description' for CMake module files
+[0.620s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description' for CMake config files
+[0.621s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_description', 'cmake_prefix_path')
+[0.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/hook/cmake_prefix_path.ps1'
+[0.623s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/hook/cmake_prefix_path.dsv'
+[0.624s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/hook/cmake_prefix_path.sh'
+[0.627s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/bin'
+[0.627s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/lib/pkgconfig/hexapod_description.pc'
+[0.627s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/lib/python3.10/site-packages'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/bin'
+[0.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.ps1'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.dsv'
+[0.631s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.sh'
+[0.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.bash'
+[0.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.zsh'
+[0.636s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_description/share/colcon-core/packages/hexapod_description)
+[0.640s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_utils)
+[0.641s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils' for CMake module files
+[0.642s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_utils
+[0.643s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils' for CMake config files
+[0.644s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_utils', 'cmake_prefix_path')
+[0.644s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/hook/cmake_prefix_path.ps1'
+[0.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/hook/cmake_prefix_path.dsv'
+[0.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/hook/cmake_prefix_path.sh'
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/lib'
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/bin'
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/lib/pkgconfig/hexapod_utils.pc'
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/lib/python3.10/site-packages'
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/bin'
+[0.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.ps1'
+[0.648s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.dsv'
+[0.648s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.sh'
+[0.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.bash'
+[0.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.zsh'
+[0.650s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_utils/share/colcon-core/packages/hexapod_utils)
+[0.651s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_kinematics)
+[0.651s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics' for CMake module files
+[0.652s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_kinematics
+[0.652s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics' for CMake config files
+[0.652s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_kinematics', 'cmake_prefix_path')
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/hook/cmake_prefix_path.ps1'
+[0.653s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/hook/cmake_prefix_path.dsv'
+[0.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/hook/cmake_prefix_path.sh'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/bin'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/lib/pkgconfig/hexapod_kinematics.pc'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/lib/python3.10/site-packages'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/bin'
+[0.655s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.ps1'
+[0.655s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.dsv'
+[0.655s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.sh'
+[0.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.bash'
+[0.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.zsh'
+[0.657s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_kinematics/share/colcon-core/packages/hexapod_kinematics)
+[0.677s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_description)
+[0.678s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description' for CMake module files
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description' for CMake config files
+[0.680s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_description', 'cmake_prefix_path')
+[0.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/hook/cmake_prefix_path.ps1'
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/hook/cmake_prefix_path.dsv'
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/hook/cmake_prefix_path.sh'
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/bin'
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/lib/pkgconfig/hexapod_description.pc'
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/lib/python3.10/site-packages'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_description/bin'
+[0.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.ps1'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.dsv'
+[0.689s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.sh'
+[0.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.bash'
+[0.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_description/share/hexapod_description/package.zsh'
+[0.691s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_description/share/colcon-core/packages/hexapod_description)
+[0.693s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_utils)
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils' for CMake module files
+[0.694s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils' for CMake config files
+[0.694s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_utils', 'cmake_prefix_path')
+[0.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/hook/cmake_prefix_path.ps1'
+[0.695s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/hook/cmake_prefix_path.dsv'
+[0.695s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/hook/cmake_prefix_path.sh'
+[0.696s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/lib'
+[0.696s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/bin'
+[0.696s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/lib/pkgconfig/hexapod_utils.pc'
+[0.696s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/lib/python3.10/site-packages'
+[0.696s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_utils/bin'
+[0.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.ps1'
+[0.697s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.dsv'
+[0.698s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.sh'
+[0.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.bash'
+[0.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.zsh'
+[0.699s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_utils/share/colcon-core/packages/hexapod_utils)
+[0.701s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_kinematics)
+[0.702s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics' for CMake module files
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics' for CMake config files
+[0.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_kinematics', 'cmake_prefix_path')
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/hook/cmake_prefix_path.ps1'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/hook/cmake_prefix_path.dsv'
+[0.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/hook/cmake_prefix_path.sh'
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/bin'
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/lib/pkgconfig/hexapod_kinematics.pc'
+[0.710s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/lib/python3.10/site-packages'
+[0.710s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_kinematics/bin'
+[0.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.ps1'
+[0.713s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.dsv'
+[0.715s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.sh'
+[0.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.bash'
+[0.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_kinematics/share/hexapod_kinematics/package.zsh'
+[0.718s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_kinematics/share/colcon-core/packages/hexapod_kinematics)
+[1.045s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_interfaces -- -j16 -l16
+[1.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_interfaces
+[1.228s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_interfaces)
+[1.229s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces' for CMake module files
+[1.231s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces' for CMake config files
+[1.233s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_interfaces
+[1.233s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_interfaces', 'cmake_prefix_path')
+[1.234s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/cmake_prefix_path.ps1'
+[1.234s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/cmake_prefix_path.dsv'
+[1.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/cmake_prefix_path.sh'
+[1.237s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib'
+[1.237s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_interfaces', 'ld_library_path_lib')
+[1.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/ld_library_path_lib.ps1'
+[1.238s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/ld_library_path_lib.dsv'
+[1.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/ld_library_path_lib.sh'
+[1.240s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/bin'
+[1.240s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib/pkgconfig/hexapod_interfaces.pc'
+[1.240s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib/python3.10/site-packages'
+[1.240s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/bin'
+[1.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.ps1'
+[1.242s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.dsv'
+[1.242s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.sh'
+[1.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.bash'
+[1.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.zsh'
+[1.243s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_interfaces/share/colcon-core/packages/hexapod_interfaces)
+[1.344s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_interfaces)
+[1.345s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces' for CMake module files
+[1.346s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces' for CMake config files
+[1.346s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_interfaces', 'cmake_prefix_path')
+[1.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/cmake_prefix_path.ps1'
+[1.347s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/cmake_prefix_path.dsv'
+[1.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/cmake_prefix_path.sh'
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib'
+[1.349s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_interfaces', 'ld_library_path_lib')
+[1.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/ld_library_path_lib.ps1'
+[1.350s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/ld_library_path_lib.dsv'
+[1.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/hook/ld_library_path_lib.sh'
+[1.351s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/bin'
+[1.351s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib/pkgconfig/hexapod_interfaces.pc'
+[1.351s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/lib/python3.10/site-packages'
+[1.352s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_interfaces/bin'
+[1.352s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.ps1'
+[1.354s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.dsv'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.sh'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.bash'
+[1.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/package.zsh'
+[1.356s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_interfaces/share/colcon-core/packages/hexapod_interfaces)
+[1.357s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/hexapod_ws/src/hexapod_controller' with build type 'ament_cmake'
+[1.357s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/hexapod_ws/src/hexapod_controller'
+[1.357s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.357s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_controller': CMAKE_PREFIX_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces/lib:/home/bryan/pico_ws/install/whycon/lib:/home/bryan/pico_ws/install/waypoint_navigation/lib:/home/bryan/pico_ws/install/rotors_control/lib:/home/bryan/pico_ws/install/mav_planning_msgs/lib:/home/bryan/turtlesim_ws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/local/lib:/home/bryan/pico_ws/install/swift_msgs/lib:/home/bryan/pico_ws/install/pid_msg/lib:/home/bryan/pico_ws/install/mav_system_msgs/lib:/home/bryan/pico_ws/install/mav_state_machine_msgs/lib:/home/bryan/pico_ws/install/mav_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16
+[12.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_controller' returned '0': CMAKE_PREFIX_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces/lib:/home/bryan/pico_ws/install/whycon/lib:/home/bryan/pico_ws/install/waypoint_navigation/lib:/home/bryan/pico_ws/install/rotors_control/lib:/home/bryan/pico_ws/install/mav_planning_msgs/lib:/home/bryan/turtlesim_ws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/local/lib:/home/bryan/pico_ws/install/swift_msgs/lib:/home/bryan/pico_ws/install/pid_msg/lib:/home/bryan/pico_ws/install/mav_system_msgs/lib:/home/bryan/pico_ws/install/mav_state_machine_msgs/lib:/home/bryan/pico_ws/install/mav_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_controller -- -j16 -l16
+[12.680s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/hexapod_ws/build/hexapod_controller': CMAKE_PREFIX_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces/lib:/home/bryan/pico_ws/install/whycon/lib:/home/bryan/pico_ws/install/waypoint_navigation/lib:/home/bryan/pico_ws/install/rotors_control/lib:/home/bryan/pico_ws/install/mav_planning_msgs/lib:/home/bryan/turtlesim_ws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/local/lib:/home/bryan/pico_ws/install/swift_msgs/lib:/home/bryan/pico_ws/install/pid_msg/lib:/home/bryan/pico_ws/install/mav_system_msgs/lib:/home/bryan/pico_ws/install/mav_state_machine_msgs/lib:/home/bryan/pico_ws/install/mav_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_controller
+[12.698s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_controller)
+[12.698s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller' for CMake module files
+[12.699s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/hexapod_ws/build/hexapod_controller' returned '0': CMAKE_PREFIX_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/pico_ws/install/whycon:/home/bryan/pico_ws/install/swift_pico:/home/bryan/pico_ws/install/waypoint_navigation:/home/bryan/pico_ws/install/swift_pico_description:/home/bryan/pico_ws/install/rotors_swift_interface:/home/bryan/pico_ws/install/swift_msgs:/home/bryan/pico_ws/install/rotors_swift_gazebo:/home/bryan/pico_ws/install/rotors_swift_description:/home/bryan/pico_ws/install/rotors_control:/home/bryan/pico_ws/install/pid_tune:/home/bryan/pico_ws/install/pid_msg:/home/bryan/pico_ws/install/mav_comm:/home/bryan/pico_ws/install/mav_system_msgs:/home/bryan/pico_ws/install/mav_state_machine_msgs:/home/bryan/pico_ws/install/mav_planning_msgs:/home/bryan/pico_ws/install/mav_msgs:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/turtlesim_ws/install/turtlesim:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces/lib:/home/bryan/pico_ws/install/whycon/lib:/home/bryan/pico_ws/install/waypoint_navigation/lib:/home/bryan/pico_ws/install/rotors_control/lib:/home/bryan/pico_ws/install/mav_planning_msgs/lib:/home/bryan/turtlesim_ws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/local/lib:/home/bryan/pico_ws/install/swift_msgs/lib:/home/bryan/pico_ws/install/pid_msg/lib:/home/bryan/pico_ws/install/mav_system_msgs/lib:/home/bryan/pico_ws/install/mav_state_machine_msgs/lib:/home/bryan/pico_ws/install/mav_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_controller
+[12.700s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller' for CMake config files
+[12.700s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_controller', 'cmake_prefix_path')
+[12.700s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/hook/cmake_prefix_path.ps1'
+[12.702s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/hook/cmake_prefix_path.dsv'
+[12.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/hook/cmake_prefix_path.sh'
+[12.703s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/lib'
+[12.703s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/bin'
+[12.703s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/lib/pkgconfig/hexapod_controller.pc'
+[12.703s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/lib/python3.10/site-packages'
+[12.704s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/bin'
+[12.704s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.ps1'
+[12.705s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.dsv'
+[12.705s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.sh'
+[12.706s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.bash'
+[12.706s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.zsh'
+[12.706s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_controller/share/colcon-core/packages/hexapod_controller)
+[12.758s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_controller)
+[12.759s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller' for CMake module files
+[12.759s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller' for CMake config files
+[12.759s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_controller', 'cmake_prefix_path')
+[12.759s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/hook/cmake_prefix_path.ps1'
+[12.760s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/hook/cmake_prefix_path.dsv'
+[12.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/hook/cmake_prefix_path.sh'
+[12.761s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/lib'
+[12.761s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/bin'
+[12.761s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/lib/pkgconfig/hexapod_controller.pc'
+[12.761s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/lib/python3.10/site-packages'
+[12.761s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/hexapod_ws/install/hexapod_controller/bin'
+[12.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.ps1'
+[12.762s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.dsv'
+[12.762s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.sh'
+[12.763s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.bash'
+[12.763s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/package.zsh'
+[12.764s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/hexapod_ws/install/hexapod_controller/share/colcon-core/packages/hexapod_controller)
+[12.765s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[12.765s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[12.765s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[12.765s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[12.773s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[12.773s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[12.773s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[12.789s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[12.790s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/hexapod_ws/install/local_setup.ps1'
+[12.791s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bryan/hexapod_ws/install/_local_setup_util_ps1.py'
+[12.792s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/hexapod_ws/install/setup.ps1'
+[12.793s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/hexapod_ws/install/local_setup.sh'
+[12.794s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bryan/hexapod_ws/install/_local_setup_util_sh.py'
+[12.794s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/hexapod_ws/install/setup.sh'
+[12.796s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/hexapod_ws/install/local_setup.bash'
+[12.796s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/hexapod_ws/install/setup.bash'
+[12.798s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/hexapod_ws/install/local_setup.zsh'
+[12.800s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/hexapod_ws/install/setup.zsh'
