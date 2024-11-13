@@ -210,6 +210,69 @@ inverse_kinematics/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inverse_kinematics.dir/build.make CMakeFiles/inverse_kinematics.dir/build
 .PHONY : inverse_kinematics/fast
 
+#=============================================================================
+# Target rules for targets named body_pose_generator
+
+# Build rule for target.
+body_pose_generator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 body_pose_generator
+.PHONY : body_pose_generator
+
+# fast build rule for target.
+body_pose_generator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/body_pose_generator.dir/build.make CMakeFiles/body_pose_generator.dir/build
+.PHONY : body_pose_generator/fast
+
+#=============================================================================
+# Target rules for targets named tip_pose_generator
+
+# Build rule for target.
+tip_pose_generator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tip_pose_generator
+.PHONY : tip_pose_generator
+
+# fast build rule for target.
+tip_pose_generator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_pose_generator.dir/build.make CMakeFiles/tip_pose_generator.dir/build
+.PHONY : tip_pose_generator/fast
+
+#=============================================================================
+# Target rules for targets named tip_trajectory_generator
+
+# Build rule for target.
+tip_trajectory_generator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tip_trajectory_generator
+.PHONY : tip_trajectory_generator
+
+# fast build rule for target.
+tip_trajectory_generator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_trajectory_generator.dir/build.make CMakeFiles/tip_trajectory_generator.dir/build
+.PHONY : tip_trajectory_generator/fast
+
+src/body_pose_generator.o: src/body_pose_generator.cpp.o
+.PHONY : src/body_pose_generator.o
+
+# target to build an object file
+src/body_pose_generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/body_pose_generator.dir/build.make CMakeFiles/body_pose_generator.dir/src/body_pose_generator.cpp.o
+.PHONY : src/body_pose_generator.cpp.o
+
+src/body_pose_generator.i: src/body_pose_generator.cpp.i
+.PHONY : src/body_pose_generator.i
+
+# target to preprocess a source file
+src/body_pose_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/body_pose_generator.dir/build.make CMakeFiles/body_pose_generator.dir/src/body_pose_generator.cpp.i
+.PHONY : src/body_pose_generator.cpp.i
+
+src/body_pose_generator.s: src/body_pose_generator.cpp.s
+.PHONY : src/body_pose_generator.s
+
+# target to generate assembly for a file
+src/body_pose_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/body_pose_generator.dir/build.make CMakeFiles/body_pose_generator.dir/src/body_pose_generator.cpp.s
+.PHONY : src/body_pose_generator.cpp.s
+
 src/inverse_kinematics.o: src/inverse_kinematics.cpp.o
 .PHONY : src/inverse_kinematics.o
 
@@ -234,6 +297,54 @@ src/inverse_kinematics.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inverse_kinematics.dir/build.make CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.s
 .PHONY : src/inverse_kinematics.cpp.s
 
+src/tip_pose_generator.o: src/tip_pose_generator.cpp.o
+.PHONY : src/tip_pose_generator.o
+
+# target to build an object file
+src/tip_pose_generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_pose_generator.dir/build.make CMakeFiles/tip_pose_generator.dir/src/tip_pose_generator.cpp.o
+.PHONY : src/tip_pose_generator.cpp.o
+
+src/tip_pose_generator.i: src/tip_pose_generator.cpp.i
+.PHONY : src/tip_pose_generator.i
+
+# target to preprocess a source file
+src/tip_pose_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_pose_generator.dir/build.make CMakeFiles/tip_pose_generator.dir/src/tip_pose_generator.cpp.i
+.PHONY : src/tip_pose_generator.cpp.i
+
+src/tip_pose_generator.s: src/tip_pose_generator.cpp.s
+.PHONY : src/tip_pose_generator.s
+
+# target to generate assembly for a file
+src/tip_pose_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_pose_generator.dir/build.make CMakeFiles/tip_pose_generator.dir/src/tip_pose_generator.cpp.s
+.PHONY : src/tip_pose_generator.cpp.s
+
+src/tip_trajectory_generator.o: src/tip_trajectory_generator.cpp.o
+.PHONY : src/tip_trajectory_generator.o
+
+# target to build an object file
+src/tip_trajectory_generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_trajectory_generator.dir/build.make CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o
+.PHONY : src/tip_trajectory_generator.cpp.o
+
+src/tip_trajectory_generator.i: src/tip_trajectory_generator.cpp.i
+.PHONY : src/tip_trajectory_generator.i
+
+# target to preprocess a source file
+src/tip_trajectory_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_trajectory_generator.dir/build.make CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.i
+.PHONY : src/tip_trajectory_generator.cpp.i
+
+src/tip_trajectory_generator.s: src/tip_trajectory_generator.cpp.s
+.PHONY : src/tip_trajectory_generator.s
+
+# target to generate assembly for a file
+src/tip_trajectory_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tip_trajectory_generator.dir/build.make CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.s
+.PHONY : src/tip_trajectory_generator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,10 +360,22 @@ help:
 	@echo "... test"
 	@echo "... hexapod_controller_uninstall"
 	@echo "... uninstall"
+	@echo "... body_pose_generator"
 	@echo "... inverse_kinematics"
+	@echo "... tip_pose_generator"
+	@echo "... tip_trajectory_generator"
+	@echo "... src/body_pose_generator.o"
+	@echo "... src/body_pose_generator.i"
+	@echo "... src/body_pose_generator.s"
 	@echo "... src/inverse_kinematics.o"
 	@echo "... src/inverse_kinematics.i"
 	@echo "... src/inverse_kinematics.s"
+	@echo "... src/tip_pose_generator.o"
+	@echo "... src/tip_pose_generator.i"
+	@echo "... src/tip_pose_generator.s"
+	@echo "... src/tip_trajectory_generator.o"
+	@echo "... src/tip_trajectory_generator.i"
+	@echo "... src/tip_trajectory_generator.s"
 .PHONY : help
 
 

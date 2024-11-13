@@ -275,7 +275,7 @@ SITE:STRING=bryan-Aspire-A515-57G
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/humble/lib/libtf2_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/home/bryan/hexapod_ws/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for action_msgs.
 action_msgs_DIR:PATH=/opt/ros/humble/share/action_msgs/cmake
@@ -414,6 +414,9 @@ hexapod_controller_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 hexapod_controller_SOURCE_DIR:STATIC=/home/bryan/hexapod_ws/src/hexapod_controller
+
+//The directory containing a CMake configuration file for hexapod_interfaces.
+hexapod_interfaces_DIR:PATH=/home/bryan/hexapod_ws/install/hexapod_interfaces/share/hexapod_interfaces/cmake
 
 //The directory containing a CMake configuration file for libstatistics_collector.
 libstatistics_collector_DIR:PATH=/opt/ros/humble/share/libstatistics_collector/cmake

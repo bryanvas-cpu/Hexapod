@@ -1,14 +1,14 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
-#include "sensor_msgs/msg/Imu.hpp"
-#include <array>
+// #include "sensor_msgs/msg/Imu.hpp"
+// #include <array>
 #include <vector>
-#include <utility>
+// #include <utility>
 #include <cmath>
-#include <tf2/LinearMath/Quaternion.h>
-#include <tf2/LinearMath/Matrix3x3.h>
-#include "pid_controller.hpp"
+// #include <tf2/LinearMath/Quaternion.h>
+// #include <tf2/LinearMath/Matrix3x3.h>
+// #include "pid_controller.hpp"
 #include "hexapod_interfaces/msg/point_array.hpp"
 
 using namespace std::placeholders;
@@ -16,11 +16,22 @@ using namespace std::placeholders;
 class HexapodTrajectoryGenNode : public rclcpp::Node {
 public:
     HexapodTrajectoryGenNode() : Node("hexapod_trajectory_generator") {
+        RCLCPP_INFO_STREAM(this->get_logger(), "Reached constructor _1");
+
         subscription_joystick = this->create_subscription<std_msgs::msg::Float64MultiArray>(
-            "/hexapod_controller/array_commands", 10, std::bind(&HexapodTrajectoryGenNode::updateTrajectory, this, _1));
+            "/hexapod_controller/joy_commands", 10, std::bind(&HexapodTrajectoryGenNode::updateTrajectory, this, _1));
+        
+        RCLCPP_INFO_STREAM(this->get_logger(), "created subscription_joystick subscriber");
+
         publisher_ = this->create_publisher<hexapod_interfaces::msg::PointArray>("/trajectory_poses", 10);
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "created publisher_ publisher");
+
         timer_ = this->create_wall_timer(std::chrono::milliseconds((int)(1000.0 / this->publish_frequency)),
                                                 std::bind(&HexapodTrajectoryGenNode::publish_leg_positions, this));
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "created created timer");
+
     }
 
 private:
@@ -45,13 +56,15 @@ private:
 
         return point;
     }
-    void updateTrajectory(const std_msgs::msg::Float64MultiArray::SharedPtr msg)
+    void updateTrajectory(const std_msgs::msg::Float64MultiArray& msg)
     {
-        if (msg->data.size() == 11) {
+        RCLCPP_INFO_STREAM(this->get_logger(), "update trraectory calback called");
+
+        if (msg.data.size() == 11) {
             for (size_t i = 0; i < 3; i++) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw, gait, mode
-                this->velocity[i] = msg->data[i];
+                this->velocity[i] = msg.data[i];
             }
-            this->gait = gaits[msg->data[9]];
+            this->gait = this->gaits[(int)(msg.data[9])];
         } else {
             RCLCPP_WARN(this->get_logger(), "Received target pose message with incorrect size");
         }
@@ -59,10 +72,12 @@ private:
 
     void publish_leg_positions()
     {   
+        RCLCPP_INFO_STREAM(this->get_logger(), "entered publish leg positions");
+
         if(this->t_global > total_control_points)
             this->t_global = 0;
 
-        for(i=0 ; i<6 ; i++){
+        for(int i=0 ; i<6 ; i++){
             update_leg_position(i, this->t_global, this->gait);
         }
         
@@ -70,20 +85,43 @@ private:
 
         publisher_->publish(transformed_leg_positions);
         t_global++;
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "finished publish leg positions");
+
     }
 
     void update_leg_position(int leg_no, int t_g, int gait){
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "entered update leg position");
+
         generate_3_points(); // sets start, control, end points;
         set_control_point(leg_no, this->offsets[gait].second * leg_no, gait, t_g);
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "finished update leg position");
     }
 
     void generate_3_points() {
-        start = { velocity[0], velocity[1], 0.0 }; 
-        control = { 0, 0, max_step_height*hypot(velocity[0],velocity[1])/(max_step_length/2)}; 
-        end = { -velocity[0],-velocity[1],0.0 };
-    }
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "entered generate 3 points");
+
+        this->start.x = velocity[0];
+        this->start.y = velocity[1];
+        this->start.z = 0.0;
+
+        this->control.x = 0.0;
+        this->control.y = 0.0;
+        this->control.z = max_step_height * hypot(velocity[0], velocity[1]) / (max_step_length / 2);
+
+        this->end.x = -velocity[0];
+        this->end.y = -velocity[1];
+        this->end.z = 0.0;
+        RCLCPP_INFO_STREAM(this->get_logger(), "finished generate 3 points");
+}
     
     void set_control_point(int leg_no, double offset, int gait, int t_g){
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "entered set control point");
+
         geometry_msgs::msg::Point point; 
 
         if(t_g + offset > this->total_control_points){
@@ -96,38 +134,49 @@ private:
             point = quadraticBezier3D(end, control, start, t_g + offset, gait);
         }
         leg_positions[leg_no] = point;
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "finished set control point");
+
     }
 
-    hexapod_interfaces::msg::PointArray transform_leg_positions(std::vector<geometry_msgs::msg::Point> leg_positions){
+    hexapod_interfaces::msg::PointArray transform_leg_positions(std::vector<geometry_msgs::msg::Point>& leg_positions){
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "entered transform_leg_position");
+
         hexapod_interfaces::msg::PointArray transformed_leg_positions;
-        transformed_leg_positions[0].x = leg_positions[0].x += 0.093;
-        transformed_leg_positions[0].y = leg_positions[0].y += 0.161;
-        transformed_leg_positions[0].z = leg_positions[0].z -= 0.047;
+        transformed_leg_positions.points.resize(18);
+        transformed_leg_positions.points[0].x = leg_positions[0].x += 0.093;
+        transformed_leg_positions.points[0].y = leg_positions[0].y += 0.161;
+        transformed_leg_positions.points[0].z = leg_positions[0].z -= 0.047;
 
-        transformed_leg_positions[1].x = leg_positions[1].x += 0.186;
-        transformed_leg_positions[1].y = leg_positions[1].y += 0.0;
-        transformed_leg_positions[1].z = leg_positions[1].z -= 0.047;
+        transformed_leg_positions.points[1].x = leg_positions[1].x += 0.186;
+        transformed_leg_positions.points[1].y = leg_positions[1].y += 0.0;
+        transformed_leg_positions.points[1].z = leg_positions[1].z -= 0.047;
 
-        transformed_leg_positions[2].x = leg_positions[2].x += 0.093;
-        transformed_leg_positions[2].y = leg_positions[2].y -= 0.161;
-        transformed_leg_positions[2].z = leg_positions[2].z -= 0.047;
+        transformed_leg_positions.points[2].x = leg_positions[2].x += 0.093;
+        transformed_leg_positions.points[2].y = leg_positions[2].y -= 0.161;
+        transformed_leg_positions.points[2].z = leg_positions[2].z -= 0.047;
 
-        transformed_leg_positions[3].x = leg_positions[3].x -= 0.093;
-        transformed_leg_positions[3].y = leg_positions[3].y -= 0.161;
-        transformed_leg_positions[3].z = leg_positions[3].z -= 0.047;
+        transformed_leg_positions.points[3].x = leg_positions[3].x -= 0.093;
+        transformed_leg_positions.points[3].y = leg_positions[3].y -= 0.161;
+        transformed_leg_positions.points[3].z = leg_positions[3].z -= 0.047;
 
-        transformed_leg_positions[4].x = leg_positions[4].x -= 0.186;
-        transformed_leg_positions[4].y = leg_positions[4].y += 0.0;
-        transformed_leg_positions[4].z = leg_positions[4].z -= 0.047;
+        transformed_leg_positions.points[4].x = leg_positions[4].x -= 0.186;
+        transformed_leg_positions.points[4].y = leg_positions[4].y += 0.0;
+        transformed_leg_positions.points[4].z = leg_positions[4].z -= 0.047;
 
-        transformed_leg_positions[5].x = leg_positions[5].x -= 0.093;
-        transformed_leg_positions[5].y = leg_positions[5].y += 0.161;
-        transformed_leg_positions[5].z = leg_positions[5].z -= 0.047;
-        return transform_leg_positions;
+        transformed_leg_positions.points[5].x = leg_positions[5].x -= 0.093;
+        transformed_leg_positions.points[5].y = leg_positions[5].y += 0.161;
+        transformed_leg_positions.points[5].z = leg_positions[5].z -= 0.047;
+
+        RCLCPP_INFO_STREAM(this->get_logger(), "finished transform_leg_position");
+
+        return transformed_leg_positions;
     }
 
-    std::vector<geometry_msgs::msg::Point> leg_positions(6);
-
+    std::vector<geometry_msgs::msg::Point> leg_positions{geometry_msgs::msg::Point(), geometry_msgs::msg::Point(), 
+                                                     geometry_msgs::msg::Point(), geometry_msgs::msg::Point(), 
+                                                     geometry_msgs::msg::Point(), geometry_msgs::msg::Point()};
     int t_global=0;
 
     double velocity[3] = {0,0,0};
@@ -151,9 +200,9 @@ private:
     std::vector<std::pair<int,double>> offsets {{0,total_control_points/2.0},{1,total_control_points/6.0},{2,total_control_points/6.0},{3,total_control_points/3.0}};
     double offset = offsets[gait].second;
 
-    geometry_msgs::msg::Point start{0.0, 0.0, 0.0};
-    geometry_msgs::msg::Point control{0.0, 0.0, 0.0};
-    geometry_msgs::msg::Point end{0.0, 0.0, 0.0};
+    geometry_msgs::msg::Point start;
+    geometry_msgs::msg::Point control;
+    geometry_msgs::msg::Point end;
     double max_step_height = 0.08, max_step_length = 0.1;
 
 

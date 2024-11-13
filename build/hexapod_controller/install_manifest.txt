@@ -1,4 +1,8 @@
+/home/bryan/hexapod_ws/install/hexapod_controller/include/include/hexapod_controller/pid_controller.hpp
 /home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/inverse_kinematics
+/home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/body_pose_generator
+/home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/tip_pose_generator
+/home/bryan/hexapod_ws/install/hexapod_controller/lib/hexapod_controller/tip_trajectory_generator
 /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/hexapod_controllers.yaml
 /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/joy_teleop.yaml
 /home/bryan/hexapod_ws/install/hexapod_controller/share/hexapod_controller/config/joy_config.yaml
