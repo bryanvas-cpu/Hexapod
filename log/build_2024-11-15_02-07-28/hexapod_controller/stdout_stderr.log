@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target tip_trajectory_generator[0m
+[ 50%] Built target body_pose_generator
+[ 50%] Built target inverse_kinematics
+[ 75%] Built target tip_pose_generator
+[ 87%] [32mBuilding CXX object CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o[0m
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:[m[K In constructor ‘[01m[KHexapodTrajectoryGenNode::HexapodTrajectoryGenNode()[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:35:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::PointStamped_<std::allocator<void> > > > >[m[K’ has no member named ‘[01m[Kpushbback[m[K’; did you mean ‘[01m[Kpush_back[m[K’?
+   35 |         publisher_point_stamped.[01;31m[Kpushbback[m[K(this->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped0", 10));
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kpush_back[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:36:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::PointStamped_<std::allocator<void> > > > >[m[K’ has no member named ‘[01m[Kpushbback[m[K’; did you mean ‘[01m[Kpush_back[m[K’?
+   36 |         publisher_point_stamped.[01;31m[Kpushbback[m[K(this->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped1", 10));
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kpush_back[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:37:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::PointStamped_<std::allocator<void> > > > >[m[K’ has no member named ‘[01m[Kpushbback[m[K’; did you mean ‘[01m[Kpush_back[m[K’?
+   37 |         publisher_point_stamped.[01;31m[Kpushbback[m[K(this->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped2", 10));
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kpush_back[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:38:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::PointStamped_<std::allocator<void> > > > >[m[K’ has no member named ‘[01m[Kpushbback[m[K’; did you mean ‘[01m[Kpush_back[m[K’?
+   38 |         publisher_point_stamped.[01;31m[Kpushbback[m[K(this->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped3", 10));
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kpush_back[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:39:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::PointStamped_<std::allocator<void> > > > >[m[K’ has no member named ‘[01m[Kpushbback[m[K’; did you mean ‘[01m[Kpush_back[m[K’?
+   39 |         publisher_point_stamped.[01;31m[Kpushbback[m[K(this->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped4", 10));
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kpush_back[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:40:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::PointStamped_<std::allocator<void> > > > >[m[K’ has no member named ‘[01m[Kpushbback[m[K’; did you mean ‘[01m[Kpush_back[m[K’?
+   40 |         publisher_point_stamped.[01;31m[Kpushbback[m[K(this->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped5", 10));
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kpush_back[m[K
+gmake[2]: *** [CMakeFiles/tip_trajectory_generator.dir/build.make:76: CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/tip_trajectory_generator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

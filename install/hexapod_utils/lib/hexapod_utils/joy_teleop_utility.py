@@ -20,19 +20,19 @@ class JoyToFloat64MultiArray(Node):
 
         self.pos_x = 0
         self.pos_y = 0
-        self.pos_z = 0.047
+        self.pos_z = 0
 
         self.gait = 0
 
-        self.lin_vel_constant = 0.3
+        self.lin_vel_constant = 0.1
         self.angular_vel_constant = 1.0
-        self.rpy_constant = 0.25
-        self.xyz_constant = 0.05
+        self.rpy_constant = 0.15
+        self.xyz_constant = 0.025
 
-        self.rpy_limit = 0.25
-        self.xy_limit = 0.05
-        self.z_limit_low = 0.01
-        self.z_limit_high = 0.075
+        self.rpy_limit = 0.15
+        self.xy_limit = 0.025
+        self.z_limit_low = 0.0
+        self.z_limit_high = 0.04
 
         # Subscribes to the /joy topic where joystick data is published
         self.subscription = self.create_subscription(
@@ -69,7 +69,7 @@ class JoyToFloat64MultiArray(Node):
                     float(self.angular_vel_z), 
                     float(self.pos_x), 
                     float(self.pos_y), 
-                    float(self.pos_z), 
+                    float(self.pos_z), # dist btw ground and 1st femur servo axle
                     float(self.roll), 
                     float(self.pitch), 
                     float(self.yaw), 
@@ -89,7 +89,7 @@ class JoyToFloat64MultiArray(Node):
 
         self.pos_x = 0
         self.pos_y = 0
-        self.pos_z = 0.047
+        self.pos_z = 0
         
     def update_mode(self, up, down, left, right):
         if up == 1:

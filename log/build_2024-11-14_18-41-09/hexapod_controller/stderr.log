@@ -1,0 +1,19 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/body_pose_generator.cpp:1[m[K:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/body_pose_generator.cpp:[m[K In member function ‘[01m[Kvoid HexapodManualPoseNode::updateCurrentPoseValues(const Imu&)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/body_pose_generator.cpp:56:159:[m[K [01;31m[Kerror: [m[K‘[01m[Kbody_pose_xyz_received[m[K’ was not declared in this scope
+   56 |         RCLCPP_INFO(this->get_logger(),"rpy according to IMU (%.2f,%.2f,%.2f)", current_orient_values[0], current_orient_values[1], current_orient_values[2], [01;31m[Kbody_pose_xyz_received[m[K[0], body_pose_xyz_received[1], body_pose_xyz_received[2]);
+      |                                                                                                                                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/body_pose_generator.dir/build.make:76: CMakeFiles/body_pose_generator.dir/src/body_pose_generator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/body_pose_generator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

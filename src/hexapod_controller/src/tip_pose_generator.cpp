@@ -41,60 +41,60 @@ Point3D rotatePoint(const Point3D& point, double alpha, double beta, double gamm
 class HexapodTipPoseGenNode : public rclcpp::Node {
 public:
     HexapodTipPoseGenNode() : Node("hexapod_tip_pose_generator") {
-        RCLCPP_INFO_STREAM(this->get_logger(), "Reached constructor _1");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Reached constructor _1");
 
-        this->origins.points.resize(6);
+        this->leg_base_coordinates.points.resize(6);
 
-        this->origins.points[0].x = 0.093;
-        this->origins.points[0].y = 0.161;
-        this->origins.points[0].z = 0.047;
+        this->leg_base_coordinates.points[0].x = 0.0681;
+        this->leg_base_coordinates.points[0].y = 0.1180;
+        this->leg_base_coordinates.points[0].z = 0.0208;
 
-        this->origins.points[1].x = 0.186;
-        this->origins.points[1].y = 0.0;
-        this->origins.points[1].z = 0.047;
+        this->leg_base_coordinates.points[1].x = 0.1363;
+        this->leg_base_coordinates.points[1].y = 0.0;
+        this->leg_base_coordinates.points[1].z = 0.0208;
 
-        this->origins.points[2].x = 0.093;
-        this->origins.points[2].y = 0.161;
-        this->origins.points[2].z = 0.047;
+        this->leg_base_coordinates.points[2].x = 0.0681;
+        this->leg_base_coordinates.points[2].y = -0.1180;
+        this->leg_base_coordinates.points[2].z = 0.0208;
 
-        this->origins.points[3].x = 0.093;
-        this->origins.points[3].y = 0.161;
-        this->origins.points[3].z = 0.047;
+        this->leg_base_coordinates.points[3].x = -0.0681;
+        this->leg_base_coordinates.points[3].y = -0.1180;
+        this->leg_base_coordinates.points[3].z = 0.0208;
 
-        this->origins.points[4].x = 0.186;
-        this->origins.points[4].y = 0.0;
-        this->origins.points[4].z = 0.047;
+        this->leg_base_coordinates.points[4].x = -0.1363;
+        this->leg_base_coordinates.points[4].y = 0.0;
+        this->leg_base_coordinates.points[4].z = 0.0208;
 
-        this->origins.points[5].x = 0.093;
-        this->origins.points[5].y = 0.161;
-        this->origins.points[5].z = 0.047;
+        this->leg_base_coordinates.points[5].x = -0.0681;
+        this->leg_base_coordinates.points[5].y = 0.1180;
+        this->leg_base_coordinates.points[5].z = 0.0208;
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "Reached constructor _2");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Reached constructor _2");
 
         subscription_tip_trajectory = this->create_subscription<hexapod_interfaces::msg::PointArray>(
             "/trajectory_poses", 10, std::bind(&HexapodTipPoseGenNode::update_tip_points, this, _1));
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "created subscription subscription_tip_trajectory");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "created subscription subscription_tip_trajectory");
 
         subscription_body_pose = this->create_subscription<std_msgs::msg::Float64MultiArray>(
             "/pid_pose_commands", 10, std::bind(&HexapodTipPoseGenNode::update_body_pose_data, this, _1));
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "created subscription subscription_body_pose");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "created subscription subscription_body_pose");
 
         publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/tip_poses", 10);
 
-        RCLCPP_INFO_STREAM(this->get_logger(), "created publisher publisher_");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "created publisher publisher_");
 
     }
 
 private:
 
     void update_tip_points(const hexapod_interfaces::msg::PointArray& msg){
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback");
         hexapod_interfaces::msg::PointArray final_tip_poses_global;
         final_tip_poses_global.points.resize(6);
         // we shall proceed to apply various transformations to this set of points
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 1");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 1");
 
 
         for (int i = 0; i < 6; ++i) {
@@ -105,26 +105,34 @@ private:
 
         for(int i=0 ; i<6 ; i++){
             
-            // translating the body/points
-            final_tip_poses_global.points[i].x += this->body_pose_xyz_received[0];
-            final_tip_poses_global.points[i].y += this->body_pose_xyz_received[1];
-            final_tip_poses_global.points[i].z += this->body_pose_xyz_received[2];
+            // translating the body/points (moving points of legs in minus will move the body in plus direction)
+            final_tip_poses_global.points[i].x -= this->body_pose_xyz_received[0];
+            final_tip_poses_global.points[i].y -= this->body_pose_xyz_received[1];
+            final_tip_poses_global.points[i].z -= this->body_pose_xyz_received[2];
 
             // rotating the body/points
             Point3D point = {final_tip_poses_global.points[i].x, final_tip_poses_global.points[i].y, final_tip_poses_global.points[i].z};
+            // RCLCPP_INFO(this->get_logger(),"[%d] before rotn body : (%.3f, %.3f, %.3f)",i,point.x,point.y,point.z);
+
             point = rotatePoint(point, this->body_pose_rpy_received[0], this->body_pose_rpy_received[1], this->body_pose_rpy_received[2]);
+            // RCLCPP_INFO(this->get_logger(),"[%d] after rotn body : (%.3f, %.3f, %.3f)",i, point.x,point.y,point.z);
+
 
             final_tip_poses_global.points[i].x = point.x;
             final_tip_poses_global.points[i].y = point.y;
             final_tip_poses_global.points[i].z = point.z;
 
             // converting to local coordinates
-            final_tip_poses_global.points[i].x -= this->origins.points[i].x;
-            final_tip_poses_global.points[i].y -= this->origins.points[i].y;
-            final_tip_poses_global.points[i].z -= this->origins.points[i].z;
+            final_tip_poses_global.points[i].x -= this->leg_base_coordinates.points[i].x;
+            final_tip_poses_global.points[i].y -= this->leg_base_coordinates.points[i].y;
+            final_tip_poses_global.points[i].z -= this->leg_base_coordinates.points[i].z;
+
+            RCLCPP_INFO(this->get_logger(),"[%d] local coord before_rotn: (%.3f, %.3f, %.3f)",i,final_tip_poses_global.points[i].x,final_tip_poses_global.points[i].y,final_tip_poses_global.points[i].z);
+
+            
 
         }
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 2");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 2");
 
         Point3D point_leg[6];
         for(int i=0 ; i<6 ; i++){
@@ -132,7 +140,7 @@ private:
             point_leg[i].y = final_tip_poses_global.points[i].y;
             point_leg[i].z = final_tip_poses_global.points[i].z;
         }
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 3");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 3");
 
         for(int i=0 ; i< 6 ; i++){
             point_leg[i] = rotatePoint(point_leg[i], 0, 0, i*1.0472 + 0.523599);
@@ -140,12 +148,16 @@ private:
             final_tip_poses_global.points[i].x = point_leg[i].x;
             final_tip_poses_global.points[i].y = point_leg[i].y;
             final_tip_poses_global.points[i].z = point_leg[i].z;
+            RCLCPP_INFO(this->get_logger(),"[%d] local coord after_rotn: (%.3f, %.3f, %.3f)",i,final_tip_poses_global.points[i].x,final_tip_poses_global.points[i].y,final_tip_poses_global.points[i].z);
+
         }
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 4");
+
+
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 4");
 
         std_msgs::msg::Float64MultiArray final_tip_poses_local;
         final_tip_poses_local.data.resize(18);  // 6 points, each with 3 values (x, y, z)
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 5");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 5");
 
         for(int i=0 ; i<6 ; i++){
             final_tip_poses_local.data[3 * i] = final_tip_poses_global.points[i].x;
@@ -155,25 +167,26 @@ private:
         }
 
         publisher_->publish(final_tip_poses_local);
-        RCLCPP_INFO_STREAM(this->get_logger(), "exiting  update_tip_points callback");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "exiting  update_tip_points callback");
 
     }
 
     void update_body_pose_data(const std_msgs::msg::Float64MultiArray& msg){
-        RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_body_pose_data callback");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_body_pose_data callback");
 
         if (msg.data.size() >= 6) {
             for (int i = 0; i < 3; i++) { 
                 this->body_pose_rpy_received[i] = msg.data[i];
                 this->body_pose_xyz_received[i] = msg.data[i + 3];
             }
+            // RCLCPP_INFO(this->get_logger(),"rpy received (%.2f,%.2f,%.2f), xyz received (%.2f,%.2f,%.2f)", body_pose_rpy_received[0], body_pose_rpy_received[1], body_pose_rpy_received[2], body_pose_xyz_received[0], body_pose_xyz_received[1], body_pose_xyz_received[2]);
         }
     }
 
     std::vector<double> body_pose_xyz_received{0.0, 0.0, 0.0};
     std::vector<double> body_pose_rpy_received{0.0, 0.0, 0.0};
 
-    hexapod_interfaces::msg::PointArray origins;
+    hexapod_interfaces::msg::PointArray leg_base_coordinates;
 
     rclcpp::Subscription<hexapod_interfaces::msg::PointArray>::SharedPtr subscription_tip_trajectory;
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr subscription_body_pose;

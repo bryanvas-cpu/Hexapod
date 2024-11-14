@@ -30,6 +30,10 @@ private:
             double X = msg->data[3*i];
             double Y = msg->data[3*i+1];
             double Z = msg->data[3*i+2];
+
+            double J1;
+            double J2;
+            double J3;
             
             if(std::sqrt(X*X) + std::sqrt(Y*Y) + std::sqrt(Z*Z) > femur_length + tibia_length){
                 RCLCPP_INFO(this->get_logger(),"POINT OUT oF BOUNDS");
@@ -39,13 +43,13 @@ private:
                 double J2L = femur_length;
                 double J3L = tibia_length;
                 // CALCULATE INVERSE KINEMATIC SOLUTION
-                double J1 = atan(X / Y);
+                J1 = atan(X / Y);
                 double H = sqrt((Y * Y) + (X * X));
                 double L = sqrt((H * H) + (Z * Z));
-                double J3 = acos(   ((J2L * J2L) + (J3L * J3L) - (L * L))   /   (2 * J2L * J3L)   );
+                J3 = acos(   ((J2L * J2L) + (J3L * J3L) - (L * L))   /   (2 * J2L * J3L)   );
                 double B = acos(   ((L * L) + (J2L * J2L) - (J3L * J3L))   /   (2 * L * J2L)   );
                 double A = atan(Z / H);  // BECAUSE Z REST IS NEGATIVE, THIS RETURNS A NEGATIVE VALUE
-                double J2 = (B + A);  // BECAUSE 'A' IS NEGATIVE AT REST WE NEED TO INVERT '-' TO '+'
+                J2 = (B + A);  // BECAUSE 'A' IS NEGATIVE AT REST WE NEED TO INVERT '-' TO '+'
 
                 //model correction
                 J1 = std::min(std::max((60.0*3.1415/180.0 - J1),0.0),2.0944);
@@ -55,9 +59,10 @@ private:
                 cmd.data[i*3] = J1;
                 cmd.data[i*3+1] = J2;
                 cmd.data[i*3+2] = J3;
-                RCLCPP_INFO(this->get_logger(),"LEG: %d : J1 %.2f J2 %.2f J3 %.2f",i+1, J1, J2, J3);
                
             }
+            RCLCPP_INFO(this->get_logger(),"LEG: %d :xyz (%.3f, %.3f, %.3f) J1 %.2f J2 %.2f J3 %.2f",i+1,X,Y,Z, J1, J2, J3);
+
             publisher_->publish(cmd);
         }   
     }

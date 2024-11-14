@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target tip_trajectory_generator[0m
+[ 50%] Built target inverse_kinematics
+[ 50%] Built target body_pose_generator
+[ 62%] [32mBuilding CXX object CMakeFiles/tip_pose_generator.dir/src/tip_pose_generator.cpp.o[0m
+[ 87%] Built target tip_trajectory_generator

@@ -1,0 +1,67 @@
+[35m[1mConsolidate compiler generated dependencies of target tip_trajectory_generator[0m
+[ 50%] Built target inverse_kinematics
+[ 50%] Built target tip_pose_generator
+[ 75%] Built target body_pose_generator
+[ 87%] [32mBuilding CXX object CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o[0m
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:5:2:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #inclide; did you mean #include?
+    5 | #[01;31m[Kinclide[m[K "geometry_msgs/msg/point_stamped.hpp"
+      |  [01;31m[K^~~~~~~[m[K
+      |  [32m[Kinclude[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:255:43:[m[K [01;31m[Kerror: [m[K‘[01m[KPointStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’
+  255 |     rclcpp::Publisher<geometry_msgs::msg::[01;31m[KPointStamped[m[K>::SharedPtr publisher_point_stamped;
+      |                                           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:255:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  255 |     rclcpp::Publisher<geometry_msgs::msg::PointStamped[01;31m[K>[m[K::SharedPtr publisher_point_stamped;
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:255:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  255 |     rclcpp::Publisher<geometry_msgs::msg::PointStamped>::[01;31m[KSharedPtr[m[K publisher_point_stamped;
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+      |                                                                   [32m[K;[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:255:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_point_stamped[m[K’ does not name a type
+  255 |     rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr [01;31m[Kpublisher_point_stamped[m[K;
+      |                                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:[m[K In constructor ‘[01m[KHexapodTrajectoryGenNode::HexapodTrajectoryGenNode()[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:35:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_point_stamped[m[K’ was not declared in this scope
+   35 |         [01;31m[Kpublisher_point_stamped[m[K = this->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped", 10);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:35:78:[m[K [01;31m[Kerror: [m[K‘[01m[KPointStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’
+   35 |         publisher_point_stamped = this->create_publisher<geometry_msgs::msg::[01;31m[KPointStamped[m[K>("/point_stamped", 10);
+      |                                                                              [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:35:91:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KHexapodTrajectoryGenNode::create_publisher<<expression error> >(const char [15], int)[m[K’
+   35 |         publisher_point_stamped = [01;31m[Kthis->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped", 10)[m[K;
+      |                                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:35:91:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   35 |         publisher_point_stamped = [01;31m[Kthis->create_publisher<geometry_msgs::msg::PointStamped>("/point_stamped", 10)[m[K;
+      |                                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:[m[K In member function ‘[01m[Kvoid HexapodTrajectoryGenNode::publish_leg_positions()[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:107:33:[m[K [01;31m[Kerror: [m[K‘[01m[KPointStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’
+  107 |             geometry_msgs::msg::[01;31m[KPointStamped[m[K leg_point;
+      |                                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:109:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kleg_point[m[K’ was not declared in this scope; did you mean ‘[01m[Kleg_positions[m[K’?
+  109 |             [01;31m[Kleg_point[m[K.header.frame_id = "body";  // Set the frame of reference
+      |             [01;31m[K^~~~~~~~~[m[K
+      |             [32m[Kleg_positions[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:112:33:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Khexapod_interfaces::msg::PointArray HexapodTrajectoryGenNode::transform_leg_positions(std::vector<geometry_msgs::msg::Point_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Point_<std::allocator<void> > > >&)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  112 |             leg_point.point.x = [01;31m[Ktransform_leg_positions[m[K.points[i].x;
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:113:33:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Khexapod_interfaces::msg::PointArray HexapodTrajectoryGenNode::transform_leg_positions(std::vector<geometry_msgs::msg::Point_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Point_<std::allocator<void> > > >&)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  113 |             leg_point.point.y = [01;31m[Ktransform_leg_positions[m[K.points[i].y;
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:114:33:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Khexapod_interfaces::msg::PointArray HexapodTrajectoryGenNode::transform_leg_positions(std::vector<geometry_msgs::msg::Point_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Point_<std::allocator<void> > > >&)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  114 |             leg_point.point.z = [01;31m[Ktransform_leg_positions[m[K.points[i].z;
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:115:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_point_stamped[m[K’ was not declared in this scope
+  115 |             [01;31m[Kpublisher_point_stamped[m[K -> publish(leg_point);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/tip_trajectory_generator.dir/build.make:76: CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/tip_trajectory_generator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

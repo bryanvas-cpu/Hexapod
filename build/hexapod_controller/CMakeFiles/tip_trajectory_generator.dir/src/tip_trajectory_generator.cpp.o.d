@@ -611,6 +611,12 @@ CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64_multi_array__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point_stamped.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__builder.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
  /home/bryan/hexapod_ws/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/point_array.hpp \
  /home/bryan/hexapod_ws/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__struct.hpp \
  /home/bryan/hexapod_ws/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__builder.hpp \

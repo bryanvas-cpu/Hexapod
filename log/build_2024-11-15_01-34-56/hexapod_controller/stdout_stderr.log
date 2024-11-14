@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target tip_trajectory_generator[0m
+[ 25%] Built target inverse_kinematics
+[ 50%] Built target tip_pose_generator
+[ 75%] Built target body_pose_generator
+[ 87%] [32mBuilding CXX object CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o[0m
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:[m[K In member function ‘[01m[Kvoid HexapodTrajectoryGenNode::publish_leg_positions()[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:112:33:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Khexapod_interfaces::msg::PointArray HexapodTrajectoryGenNode::transform_leg_positions(std::vector<geometry_msgs::msg::Point_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Point_<std::allocator<void> > > >&)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  112 |             leg_point.point.x = [01;31m[Ktransform_leg_positions[m[K.points[i].x;
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:113:33:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Khexapod_interfaces::msg::PointArray HexapodTrajectoryGenNode::transform_leg_positions(std::vector<geometry_msgs::msg::Point_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Point_<std::allocator<void> > > >&)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  113 |             leg_point.point.y = [01;31m[Ktransform_leg_positions[m[K.points[i].y;
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/tip_trajectory_generator.cpp:114:33:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Khexapod_interfaces::msg::PointArray HexapodTrajectoryGenNode::transform_leg_positions(std::vector<geometry_msgs::msg::Point_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Point_<std::allocator<void> > > >&)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  114 |             leg_point.point.z = [01;31m[Ktransform_leg_positions[m[K.points[i].z;
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/tip_trajectory_generator.dir/build.make:76: CMakeFiles/tip_trajectory_generator.dir/src/tip_trajectory_generator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/tip_trajectory_generator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -27,13 +27,16 @@ private:
     void updateTargetPoseValues(const std_msgs::msg::Float64MultiArray::SharedPtr msg)
     {
         if (msg->data.size() == 11) {
-            for (size_t i = 6; i < 9; ++i) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw, gait, mode
-                this->target_orient_values[i-6] = msg->data[i];
-                this->target_transl_values[i-6] = msg->data[i-3];
+            for (size_t i = 0; i < 3; ++i) { // lin_vel_x, lin_vel_y, ang_vel_z trans_x, trans_y, trans_z, orient_roll, orient_pitch, orient_yaw, gait, mode
+                this->target_orient_values[i] = msg->data[i+6];
+                this->target_transl_values[i] = msg->data[i+3];
             }
         } else {
             RCLCPP_WARN(this->get_logger(), "Received target pose message with incorrect size");
         }
+
+        // RCLCPP_INFO(this->get_logger(),"rpy xyz _targets  (%.2f,%.2f,%.2f),  (%.2f,%.2f,%.2f)", target_orient_values[0], target_orient_values[1], target_orient_values[2], target_transl_values[0], target_transl_values[1], target_transl_values[2]);
+
     }
 
     void updateCurrentPoseValues(const sensor_msgs::msg::Imu& msg)
@@ -50,10 +53,10 @@ private:
         tf2::Matrix3x3 m(q);
         m.getRPY(roll, pitch, yaw);
 
-        // Update current_pose_values with roll, pitch, yaw and assume x, y, z as linear acceleration
         this->current_orient_values[0] = roll;
         this->current_orient_values[1] = pitch;
         this->current_orient_values[2] = yaw;
+        // RCLCPP_INFO(this->get_logger(),"rpy according to IMU (%.2f,%.2f,%.2f)", current_orient_values[0], current_orient_values[1], current_orient_values[2]);
     }
 
     void publish_rpy_xyz()
@@ -75,11 +78,15 @@ private:
 
         msg.data = {target_orient_values[0] - current_orient_values[0], 
                     target_orient_values[1] - current_orient_values[1], 
-                    target_orient_values[2] - current_orient_values[2],
+                    target_orient_values[2],
                     this->target_transl_values[0],
                     this->target_transl_values[1],
                     this->target_transl_values[2]
                     };
+
+        // RCLCPP_INFO(this->get_logger(),"rpy_commands_sent\n roll: %.4f,\npitch: %.4f,\nyaw: %.4f", target_orient_values[0] - current_orient_values[0], target_orient_values[1] - current_orient_values[1], target_orient_values[2]);
+        RCLCPP_INFO(this->get_logger(),"xyz_commands_sent\n roll: %.4f,\npitch: %.4f,\nyaw: %.4f", target_transl_values[0] - current_orient_values[0], target_transl_values[1] - current_orient_values[1], target_transl_values[2]);
+
 
         publisher_->publish(msg);
     }
