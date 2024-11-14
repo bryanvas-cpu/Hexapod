@@ -149,8 +149,8 @@ private:
 
         // RCLCPP_INFO_STREAM(this->get_logger(), "entered generate 3 points");
 
-        this->start.x = 0.5 * velocity[0] * this->num_stance_control_points_vec[gait].second / publish_frequency;
-        this->start.y = 0.5 * velocity[1] * this->num_stance_control_points_vec[gait].second / publish_frequency;
+        this->start.x = (0.5 * velocity[0] * this->num_stance_control_points_vec[gait].second / publish_frequency) * (num_stance_control_points_vec[0].second/num_stance_control_points_vec[gait].second); // (num_stance_control_points[0].second/num_stance_control_points[gait].second) is correction for step size when gait is not tripod. its inverse is the correction factor for vwlocity when not in tripod gate
+        this->start.y = (0.5 * velocity[1] * this->num_stance_control_points_vec[gait].second / publish_frequency) * (num_stance_control_points_vec[0].second/num_stance_control_points_vec[gait].second);
         this->start.z = 0.0;
 
         this->end.x = -this->start.x;
