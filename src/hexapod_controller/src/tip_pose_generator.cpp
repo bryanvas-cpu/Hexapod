@@ -126,7 +126,7 @@ private:
             Point3D point = {final_tip_poses_global.points[i].x, final_tip_poses_global.points[i].y, final_tip_poses_global.points[i].z};
             // RCLCPP_INFO(this->get_logger(),"[%d] before rotn body : (%.3f, %.3f, %.3f)",i,point.x,point.y,point.z);
 
-            point = rotatePoint(point, this->body_pose_rpy_received[1], -(this->body_pose_rpy_received[0]), this->body_pose_rpy_received[2]);
+            point = rotatePoint(point, this->body_pose_rpy_received[0], this->body_pose_rpy_received[1], this->body_pose_rpy_received[2]);
             // RCLCPP_INFO(this->get_logger(),"[%d] after rotn body : (%.3f, %.3f, %.3f)",i, point.x,point.y,point.z);
 
 
@@ -200,10 +200,12 @@ private:
 
         if (msg.data.size() >= 6) {
             for (int i = 0; i < 3; i++) { 
-                this->body_pose_rpy_received[i] = msg.data[i];
+                // this->body_pose_rpy_received[i] = msg.data[i];
                 this->body_pose_xyz_received[i] = msg.data[i + 3];
             }
             // RCLCPP_INFO(this->get_logger(),"rpy received (%.2f,%.2f,%.2f), xyz received (%.2f,%.2f,%.2f)", body_pose_rpy_received[0], body_pose_rpy_received[1], body_pose_rpy_received[2], body_pose_xyz_received[0], body_pose_xyz_received[1], body_pose_xyz_received[2]);
+            this->body_pose_rpy_received[0] = msg.data[1];
+            this->body_pose_rpy_received[1] = -msg.data[0];
         }
     }
 

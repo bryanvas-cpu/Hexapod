@@ -24,9 +24,9 @@ class JoyToFloat64MultiArray(Node):
 
         self.gait = 0
 
-        self.lin_vel_constant = 0.1
-        self.angular_vel_constant = 1.0
-        self.rpy_constant = 0.15
+        self.lin_vel_constant = 0.05
+        self.angular_vel_constant = 0.5
+        self.rpy_constant = 0.125
         self.xyz_constant = 0.025
 
         self.rpy_limit = 0.15
@@ -133,6 +133,11 @@ class JoyToFloat64MultiArray(Node):
             self.roll = 0
             self.pitch = 0
             self.yaw = 0
+
+        if (self.pos_z >= self.z_limit_low and self.pos_z <= self.z_limit_high) or \
+            (self.pos_z<self.z_limit_low and (0.01 * (joy_msg.buttons[6] - joy_msg.buttons[4])) > 0) or \
+            (self.pos_z>self.z_limit_low and (0.01 * (joy_msg.buttons[6] - joy_msg.buttons[4])) < 0):
+            self.pos_z += 0.002 * (joy_msg.buttons[6] - joy_msg.buttons[4])
 
     def activate_orientation_dance(self, joy_msg):
         self.pos_x = -joy_msg.axes[2] * self.xyz_constant

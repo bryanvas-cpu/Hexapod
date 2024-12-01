@@ -1,0 +1,11 @@
+[ 25%] Built target tip_pose_generator
+[ 50%] Built target inverse_kinematics
+[ 62%] [32mBuilding CXX object CMakeFiles/body_pose_generator.dir/src/body_pose_generator.cpp.o[0m
+[ 87%] Built target tip_trajectory_generator
+[01m[K/home/bryan/hexapod_ws/src/hexapod_controller/src/body_pose_generator.cpp:10:10:[m[K [01;31m[Kfatal error: [m[Kpid_controller.hpp: No such file or directory
+   10 | #include [01;31m[K"pid_controller.hpp"[m[K // not used here
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/body_pose_generator.dir/build.make:76: CMakeFiles/body_pose_generator.dir/src/body_pose_generator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/body_pose_generator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

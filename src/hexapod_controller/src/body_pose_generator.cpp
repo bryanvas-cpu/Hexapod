@@ -7,13 +7,15 @@
 #include <cmath>
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/LinearMath/Matrix3x3.h>
-// #include "pid_controller.hpp" // not used here
+#include "hexapod_controller/pid_controller.hpp"
 
 using namespace std::placeholders;
 
 class HexapodManualPoseNode : public rclcpp::Node {
 public:
-    HexapodManualPoseNode() : Node("hexapod_manual_pose_generator") {
+    HexapodManualPoseNode() : Node("hexapod_manual_pose_generator"),
+    roll(Kp[0], Ki[0], Kd[0]),
+    pitch(Kp[1], Ki[1], Kd[1]) {
         subscription_joystick = this->create_subscription<std_msgs::msg::Float64MultiArray>(
             "/hexapod_controller/joy_commands", 10, std::bind(&HexapodManualPoseNode::updateTargetPoseValues, this, _1));
         subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>(
@@ -63,26 +65,25 @@ private:
     {
         std_msgs::msg::Float64MultiArray msg;
 
-        // double control_signal_roll = this->roll.compute(target_orient_values[0], current_orient_values[0], 1.0 /this->publish_frequency);
-        // double control_signal_pitch = this->pitch.compute(target_orient_values[1], current_orient_values[1], 1.0/this->publish_frequency);
-        // double control_signal_yaw = this->yaw.compute(target_orient_values[2], current_orient_values[2], 1.0/this->publish_frequency);
+        double control_signal_roll = this->roll.compute(target_orient_values[0], current_orient_values[0], 1.0 /this->publish_frequency);
+        double control_signal_pitch = this->pitch.compute(target_orient_values[1], current_orient_values[1], 1.0/this->publish_frequency);
 
         // INCASE PID HAS TO BE USED
-        // msg.data = {current_orient_values[0] + (1/publish_frequency)*control_signal_roll, 
-        //             current_orient_values[1] + (1/publish_frequency)*control_signal_pitch, 
-        //             current_orient_values[2] + (1/publish_frequency)*control_signal_yaw,
-        //             this->target_transl_values[0],
-        //             this->target_transl_values[1],
-        //             this->target_transl_values[2]
-        //             };
-
-        msg.data = {target_orient_values[0] - current_orient_values[0], 
-                    target_orient_values[1] - current_orient_values[1], 
-                    target_orient_values[2],
+        msg.data = {this-> current_orient_values[0] + (1/publish_frequency)*control_signal_roll, 
+                    this-> current_orient_values[1] + (1/publish_frequency)*control_signal_pitch, 
+                    current_orient_values[2],
                     this->target_transl_values[0],
                     this->target_transl_values[1],
                     this->target_transl_values[2]
                     };
+
+        // msg.data = {target_orient_values[0] - current_orient_values[0], 
+        //             target_orient_values[1] - current_orient_values[1], 
+        //             target_orient_values[2],
+        //             this->target_transl_values[0],
+        //             this->target_transl_values[1],
+        //             this->target_transl_values[2]
+        //             };
         // msg.data = {target_orient_values[0] , 
         //             target_orient_values[1] , 
         //             target_orient_values[2],
@@ -103,13 +104,12 @@ private:
         publisher_->publish(msg);
     }
 
-    // double Kp[3] = {20, 20, 30}; // r p y
-    // double Ki[3] = {0, 0, 0.0};
-    // double Kd[3] = {40, 40, 50.0};
+    double Kp[2] = {125, 125}; // r p y
+    double Ki[2] = {0.1, 0.1};
+    double Kd[2] = {1.0, 1.0};
 
-    // PID roll(Kp[0], Ki[0], Kd[0]);
-    // PID pitch(Kp[1], Ki[1], Kd[1]);
-    // PID yaw(Kp[2], Ki[2], Kd[2]);
+    PID roll;
+    PID pitch;
     
     std::vector<double> target_orient_values = {0,0,0};
     std::vector<double> target_transl_values = {0,0,0};
