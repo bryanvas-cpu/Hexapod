@@ -36,7 +36,7 @@ private:
             double J3;
             
             if(std::sqrt(X*X) + std::sqrt(Y*Y) + std::sqrt(Z*Z) > femur_length + tibia_length){
-                RCLCPP_INFO(this->get_logger(),"POINT OUT oF BOUNDS");
+    //            // RCLCPP_INFO(this->get_logger(),"POINT OUT oF BOUNDS");
             }
             else{
                 double J1L = coxa_length;
@@ -61,7 +61,7 @@ private:
                 cmd.data[i*3+2] = J3;
                
             }
-            RCLCPP_INFO(this->get_logger(),"LEG: %d :xyz (%.3f, %.3f, %.3f) J1 %.2f J2 %.2f J3 %.2f",i+1,X,Y,Z, J1, J2, J3);
+    //        // RCLCPP_INFO(this->get_logger(),"LEG: %d :xyz (%.3f, %.3f, %.3f) J1 %.2f J2 %.2f J3 %.2f",i+1,X,Y,Z, J1, J2, J3);
 
             publisher_->publish(cmd);
         }   

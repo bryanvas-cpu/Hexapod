@@ -116,8 +116,8 @@ private:
             leg_point.header.frame_id = "body";  // Set the frame of reference
             leg_point.header.stamp = this->get_clock()->now();
 
-            leg_point.point.x = transformed_leg_positions.points[i].x;
-            leg_point.point.y = transformed_leg_positions.points[i].y;
+            leg_point.point.x = transformed_leg_positions.points[i].y;
+            leg_point.point.y = -transformed_leg_positions.points[i].x;
             leg_point.point.z = transformed_leg_positions.points[i].z;
             publisher_point_stamped[i]->publish(leg_point);
         }
@@ -161,7 +161,7 @@ private:
         this->control.y = 0.0;
         this->control.z = 0.5 * hypot(start.x - end.x, start.y - end.y);
 
-        RCLCPP_INFO(this->get_logger(),"start, control, end (%f, %f, %f) (%f, %f, %f) (%f, %f, %f)", this->start.x, this->start.y, this->start.z, this->control.x, this->control.y, this->control.z, this->end.x, this->end.y, this->end.z);
+  //      // RCLCPP_INFO(this->get_logger(),"start, control, end (%f, %f, %f) (%f, %f, %f) (%f, %f, %f)", this->start.x, this->start.y, this->start.z, this->control.x, this->control.y, this->control.z, this->end.x, this->end.y, this->end.z);
         // RCLCPP_INFO_STREAM(this->get_logger(), "finished generate 3 points");
 }
     

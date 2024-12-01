@@ -5,6 +5,8 @@
 // #include <utility>
 #include <cmath>
 #include "hexapod_interfaces/msg/point_array.hpp"
+#include "geometry_msgs/msg/point_stamped.hpp"
+
 
 using namespace std::placeholders;
 
@@ -85,6 +87,14 @@ public:
 
         // RCLCPP_INFO_STREAM(this->get_logger(), "created publisher publisher_");
 
+        /////////////////// rviz visualization //////////////////
+        publisher_point_stamped.push_back(this->create_publisher<geometry_msgs::msg::PointStamped>("/final_point_stamped0", 10));
+        publisher_point_stamped.push_back(this->create_publisher<geometry_msgs::msg::PointStamped>("/final_point_stamped1", 10));
+        publisher_point_stamped.push_back(this->create_publisher<geometry_msgs::msg::PointStamped>("/final_point_stamped2", 10));
+        publisher_point_stamped.push_back(this->create_publisher<geometry_msgs::msg::PointStamped>("/final_point_stamped3", 10));
+        publisher_point_stamped.push_back(this->create_publisher<geometry_msgs::msg::PointStamped>("/final_point_stamped4", 10));
+        publisher_point_stamped.push_back(this->create_publisher<geometry_msgs::msg::PointStamped>("/final_point_stamped5", 10));
+
     }
 
 private:
@@ -110,11 +120,13 @@ private:
             final_tip_poses_global.points[i].y -= this->body_pose_xyz_received[1];
             final_tip_poses_global.points[i].z -= this->body_pose_xyz_received[2];
 
+            
+
             // rotating the body/points
             Point3D point = {final_tip_poses_global.points[i].x, final_tip_poses_global.points[i].y, final_tip_poses_global.points[i].z};
             // RCLCPP_INFO(this->get_logger(),"[%d] before rotn body : (%.3f, %.3f, %.3f)",i,point.x,point.y,point.z);
 
-            point = rotatePoint(point, this->body_pose_rpy_received[0], this->body_pose_rpy_received[1], this->body_pose_rpy_received[2]);
+            point = rotatePoint(point, this->body_pose_rpy_received[1], -(this->body_pose_rpy_received[0]), this->body_pose_rpy_received[2]);
             // RCLCPP_INFO(this->get_logger(),"[%d] after rotn body : (%.3f, %.3f, %.3f)",i, point.x,point.y,point.z);
 
 
@@ -122,14 +134,26 @@ private:
             final_tip_poses_global.points[i].y = point.y;
             final_tip_poses_global.points[i].z = point.z;
 
+            /////////////// rviz visualization ////////////////////////
+            // for(int i=0; i<6 ; i++){
+                geometry_msgs::msg::PointStamped leg_point;
+
+                leg_point.header.frame_id = "body";  // Set the frame of reference
+                leg_point.header.stamp = this->get_clock()->now();
+
+                leg_point.point.x = final_tip_poses_global.points[i].y;
+                leg_point.point.y = -final_tip_poses_global.points[i].x;
+                leg_point.point.z = final_tip_poses_global.points[i].z;
+                publisher_point_stamped[i]->publish(leg_point);
+            // }
+            
+
             // converting to local coordinates
             final_tip_poses_global.points[i].x -= this->leg_base_coordinates.points[i].x;
             final_tip_poses_global.points[i].y -= this->leg_base_coordinates.points[i].y;
             final_tip_poses_global.points[i].z -= this->leg_base_coordinates.points[i].z;
 
-            RCLCPP_INFO(this->get_logger(),"[%d] local coord before_rotn: (%.3f, %.3f, %.3f)",i,final_tip_poses_global.points[i].x,final_tip_poses_global.points[i].y,final_tip_poses_global.points[i].z);
-
-            
+   //         // RCLCPP_INFO(this->get_logger(),"[%d] local coord before_rotn: (%.3f, %.3f, %.3f)",i,final_tip_poses_global.points[i].x,final_tip_poses_global.points[i].y,final_tip_poses_global.points[i].z);
 
         }
         // RCLCPP_INFO_STREAM(this->get_logger(), "entered  update_tip_points callback _ 2");
@@ -148,7 +172,7 @@ private:
             final_tip_poses_global.points[i].x = point_leg[i].x;
             final_tip_poses_global.points[i].y = point_leg[i].y;
             final_tip_poses_global.points[i].z = point_leg[i].z;
-            RCLCPP_INFO(this->get_logger(),"[%d] local coord after_rotn: (%.3f, %.3f, %.3f)",i,final_tip_poses_global.points[i].x,final_tip_poses_global.points[i].y,final_tip_poses_global.points[i].z);
+    //        // RCLCPP_INFO(this->get_logger(),"[%d] local coord after_rotn: (%.3f, %.3f, %.3f)",i,final_tip_poses_global.points[i].x,final_tip_poses_global.points[i].y,final_tip_poses_global.points[i].z);
 
         }
 
@@ -191,6 +215,9 @@ private:
     rclcpp::Subscription<hexapod_interfaces::msg::PointArray>::SharedPtr subscription_tip_trajectory;
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr subscription_body_pose;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;
+
+    std::vector<rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr> publisher_point_stamped;
+
 };
 
 int main(int argc, char *argv[]) {
