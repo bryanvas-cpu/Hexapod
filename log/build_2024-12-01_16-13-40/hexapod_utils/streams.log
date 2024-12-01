@@ -1,0 +1,33 @@
+[0.019s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16
+[0.022s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.029s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.036s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.044s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.050s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16
+[0.078s] Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils --target install -- -j16 -l16
+[0.080s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.090s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.097s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.106s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.113s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.116s] [36mInstall the project...[0m
+[0.120s] /usr/bin/cmake: /home/bryan/miniconda3/envs/isaac_gym/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[0.128s] -- Install configuration: ""
+[0.130s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/lib/hexapod_utils/keyboard_publisher.py
+[0.130s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/lib/hexapod_utils/joy_teleop_utility.py
+[0.130s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/ament_index/resource_index/package_run_dependencies/hexapod_utils
+[0.130s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/ament_index/resource_index/parent_prefix_path/hexapod_utils
+[0.130s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/environment/ament_prefix_path.sh
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/environment/ament_prefix_path.dsv
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/environment/path.sh
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/environment/path.dsv
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/local_setup.bash
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/local_setup.sh
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/local_setup.zsh
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/local_setup.dsv
+[0.131s] -- Installing: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.dsv
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/ament_index/resource_index/packages/hexapod_utils
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/cmake/hexapod_utilsConfig.cmake
+[0.131s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/cmake/hexapod_utilsConfig-version.cmake
+[0.132s] -- Up-to-date: /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/package.xml
+[0.148s] Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils --target install -- -j16 -l16
