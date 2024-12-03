@@ -1,0 +1,128 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bryan/hexapod_ws/build/hexapod_utils
+[ 50%] [32mBuilding CXX object CMakeFiles/float_32_republisher.dir/src/float_32_republisher.cpp.o[0m
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:37:38:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat32MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   37 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KFloat32MultiArray[m[K>::SharedPtr publisher_;
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:37:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   37 |     rclcpp::Publisher<std_msgs::msg::Float32MultiArray[01;31m[K>[m[K::SharedPtr publisher_;
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:37:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   37 |     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::[01;31m[KSharedPtr[m[K publisher_;
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+      |                                                                   [32m[K;[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:37:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+   37 |     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr [01;31m[Kpublisher_[m[K;
+      |                                                                    [01;31m[K^~~~~~~~~~[m[K
+      |                                                                    [32m[Krmw_publisher_t[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:41:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   38 |     rclcpp::Subscription<std_msgs::msg::[01;31m[KFloat64MultiArray[m[K>::SharedPtr subscription_;
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   38 |     rclcpp::Subscription<std_msgs::msg::Float64MultiArray[01;31m[K>[m[K::SharedPtr subscription_;
+      |                                                          [01;31m[K^[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   38 |     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::[01;31m[KSharedPtr[m[K subscription_;
+      |                                                             [01;31m[K^~~~~~~~~[m[K
+      |                                                                      [32m[K;[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:61:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint RepublisherNode::SharedPtr[m[K’
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:37:58:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint RepublisherNode::SharedPtr[m[K’
+   37 |     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::[01;36m[KSharedPtr[m[K publisher_;
+      |                                                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:38:71:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ does not name a type; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+   38 |     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr [01;31m[Ksubscription_[m[K;
+      |                                                                       [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                                       [32m[Krmw_subscription_t[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:[m[K In constructor ‘[01m[KRepublisherNode::RepublisherNode()[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:11:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+   11 |         [01;31m[Kpublisher_[m[K = this->create_publisher<std_msgs::msg::Float32MultiArray>("/esp/float32array_sub", 10);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krmw_publisher_t[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:11:60:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat32MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   11 |         publisher_ = this->create_publisher<std_msgs::msg::[01;31m[KFloat32MultiArray[m[K>("/esp/float32array_sub", 10);
+      |                                                            [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:11:78:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRepublisherNode::create_publisher<<expression error> >(const char [22], int)[m[K’
+   11 |       publisher_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Float32MultiArray>("/esp/float32array_sub", 10)[m[K;
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+  195 |   [01;36m[Kcreate_publisher[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:11:78:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   11 |       publisher_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Float32MultiArray>("/esp/float32array_sub", 10)[m[K;
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:14:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+   14 |         [01;31m[Ksubscription_[m[K = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+      |         [32m[Krmw_subscription_t[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:14:66:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   14 |         subscription_ = this->create_subscription<std_msgs::msg::[01;31m[KFloat64MultiArray[m[K>(
+      |                                                                  [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:14:84:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRepublisherNode::create_subscription<<expression error> >(const char [37], int, std::_Bind_helper<false, void (RepublisherNode::*)(std::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >), RepublisherNode*, int>::type)[m[K’
+   14 |         subscription_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64MultiArray>([m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   15 | [01;31m[K            "/simple_position_controller/commands", 10,[m[K
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                             
+   16 | [01;31m[K            std::bind(&RepublisherNode::callback, this, 1))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                         
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:14:84:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   14 |         subscription_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64MultiArray>([m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   15 | [01;31m[K            "/simple_position_controller/commands", 10,[m[K
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                             
+   16 | [01;31m[K            std::bind(&RepublisherNode::callback, this, 1))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                         
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:[m[K In member function ‘[01m[Kvoid RepublisherNode::callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:26:39:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat32MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   26 |         auto new_msg = std_msgs::msg::[01;31m[KFloat32MultiArray[m[K();
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:28:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+   28 |         for([01;31m[Ki[m[K=0 ; i<18 i++){
+      |             [01;31m[K^[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:28:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Ki[m[K’
+   28 |         for(i=0 ; i<18 [01;31m[Ki[m[K++){
+      |                        [01;31m[K^[m[K
+[01m[K/home/bryan/hexapod_ws/src/hexapod_utils/src/float_32_republisher.cpp:33:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+   33 |         [01;31m[Kpublisher_[m[K->publish(new_msg);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krmw_publisher_t[m[K
+gmake[2]: *** [CMakeFiles/float_32_republisher.dir/build.make:76: CMakeFiles/float_32_republisher.dir/src/float_32_republisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/float_32_republisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

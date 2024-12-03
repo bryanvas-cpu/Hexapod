@@ -2,18 +2,31 @@
 
 <robot name="hexapod" xmlns:xacro="http://ros.org/wiki/xacro">
     <ros2_control name="RobotSystem" type="system">
-        <xacro:if value="$(arg is_ignition)">
-            <hardware>
-                <plugin>ign_ros2_control/IgnitionSystem</plugin> 
-                <!-- i guess this is your harhware interface if ur using simulation -->
-            </hardware>
+
+        <xacro:if value="$(arg is_sim)">
+            <xacro:if value="$(arg is_ignition)">
+                <hardware>
+                    <plugin>ign_ros2_control/IgnitionSystem</plugin> 
+                    <!-- i guess this is your harhware interface if ur using simulation -->
+                </hardware>
+            </xacro:if>
+
+            <xacro:unless value="$(arg is_ignition)">
+                <hardware>
+                    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+                </hardware>
+            </xacro:unless>
         </xacro:if>
 
-        <xacro:unless value="$(arg is_ignition)">
+        <xacro:unless>
             <hardware>
-                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+                <plugin>hexapod_firmware/HexapodInterface</plugin>
+                <param name="port">/dev/ttyUSB0</param>
             </hardware>
         </xacro:unless>
+
+
+        
 
         <xacro:macro name="set_joint_interface" params="joint_name joint_min joint_max">
             <joint name="${joint_name}">

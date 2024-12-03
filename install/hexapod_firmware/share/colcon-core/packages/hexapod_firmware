@@ -1,0 +1,1 @@
+hardware_interface:libserial-dev:pluginlib:rclcpp:rclcpp_lifecycle:std_msgs

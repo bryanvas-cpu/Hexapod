@@ -1,0 +1,10 @@
+<library path="hexapod_firmware">
+    <class name="hexapod_firmware/HexapodInterface"
+      type="hexapod_firmware::HexapodInterface"
+      base_class_type="hardware_interface::SystemInterface"
+    >
+      <description>
+        Hexapod Hardware Interface
+      </description>
+    </class>
+  </library>

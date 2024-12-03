@@ -7,23 +7,20 @@ endif()
 
 # Find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(rclpy REQUIRED)
+find_package(rclcpp REQUIRED)
 
 # Uncomment to add more dependencies manually
 # find_package(<dependency> REQUIRED)
 
-if(BUILD_TESTING)
-    find_package(ament_lint_auto REQUIRED)
-    set(ament_cmake_copyright_FOUND TRUE)
-    set(ament_cmake_cpplint_FOUND TRUE)
-    ament_lint_auto_find_test_dependencies()
-endif()
+add_executable(float_32_republisher src/float_32_republisher.cpp)
+ament_target_dependencies(float_32_republisher rclcpp std_msgs)
 
-# Install the Python script (keyboard_publisher.py)
-install(PROGRAMS
-    ${PROJECT_NAME}/keyboard_publisher.py
-    ${PROJECT_NAME}/joy_teleop_utility.py
-    DESTINATION lib/${PROJECT_NAME}
+install(TARGETS
+    float_32_republisher
+  DESTINATION lib/${PROJECT_NAME}/
 )
+
 
 ament_package()

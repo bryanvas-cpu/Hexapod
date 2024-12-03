@@ -197,6 +197,43 @@ hexapod_utils_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod_utils_uninstall.dir/build.make CMakeFiles/hexapod_utils_uninstall.dir/build
 .PHONY : hexapod_utils_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named float_32_republisher
+
+# Build rule for target.
+float_32_republisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 float_32_republisher
+.PHONY : float_32_republisher
+
+# fast build rule for target.
+float_32_republisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/float_32_republisher.dir/build.make CMakeFiles/float_32_republisher.dir/build
+.PHONY : float_32_republisher/fast
+
+src/float_32_republisher.o: src/float_32_republisher.cpp.o
+.PHONY : src/float_32_republisher.o
+
+# target to build an object file
+src/float_32_republisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/float_32_republisher.dir/build.make CMakeFiles/float_32_republisher.dir/src/float_32_republisher.cpp.o
+.PHONY : src/float_32_republisher.cpp.o
+
+src/float_32_republisher.i: src/float_32_republisher.cpp.i
+.PHONY : src/float_32_republisher.i
+
+# target to preprocess a source file
+src/float_32_republisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/float_32_republisher.dir/build.make CMakeFiles/float_32_republisher.dir/src/float_32_republisher.cpp.i
+.PHONY : src/float_32_republisher.cpp.i
+
+src/float_32_republisher.s: src/float_32_republisher.cpp.s
+.PHONY : src/float_32_republisher.s
+
+# target to generate assembly for a file
+src/float_32_republisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/float_32_republisher.dir/build.make CMakeFiles/float_32_republisher.dir/src/float_32_republisher.cpp.s
+.PHONY : src/float_32_republisher.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... hexapod_utils_uninstall"
 	@echo "... uninstall"
+	@echo "... float_32_republisher"
+	@echo "... src/float_32_republisher.o"
+	@echo "... src/float_32_republisher.i"
+	@echo "... src/float_32_republisher.s"
 .PHONY : help
 
 

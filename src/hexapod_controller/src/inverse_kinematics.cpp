@@ -62,9 +62,8 @@ private:
                
             }
     //        // RCLCPP_INFO(this->get_logger(),"LEG: %d :xyz (%.3f, %.3f, %.3f) J1 %.2f J2 %.2f J3 %.2f",i+1,X,Y,Z, J1, J2, J3);
-
-            publisher_->publish(cmd);
-        }   
+        }
+        publisher_->publish(cmd);
     }
 
     float coxa_length = 0, femur_length = 0.08, tibia_length = 0.177;
