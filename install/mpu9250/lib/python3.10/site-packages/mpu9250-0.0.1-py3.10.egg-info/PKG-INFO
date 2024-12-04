@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mpu9250
+Version: 0.0.1
+Summary: Driver package for the MPU9250 sensor package
+Home-page: UNKNOWN
+Maintainer: Nils Schulte
+Maintainer-email: git@nilsschulte.de
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+

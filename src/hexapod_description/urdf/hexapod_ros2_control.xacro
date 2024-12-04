@@ -17,8 +17,8 @@
                 </hardware>
             </xacro:unless>
         </xacro:if>
-
-        <xacro:unless>
+ 
+        <xacro:unless value="$(arg is_sim)">
             <hardware>
                 <plugin>hexapod_firmware/HexapodInterface</plugin>
                 <param name="port">/dev/ttyUSB0</param>

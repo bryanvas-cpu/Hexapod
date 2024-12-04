@@ -1,0 +1,22 @@
+[0.598s] Invoking command in '/home/bryan/hexapod_ws/src/mpu9250': PYTHONPATH=/home/bryan/hexapod_ws/build/mpu9250/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bryan/hexapod_ws/install/mpu9250/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mpu9250 build --build-base /home/bryan/hexapod_ws/build/mpu9250/build install --record /home/bryan/hexapod_ws/build/mpu9250/install.log --single-version-externally-managed install_data
+[0.772s] running egg_info
+[0.772s] writing ../../build/mpu9250/mpu9250.egg-info/PKG-INFO
+[0.772s] writing dependency_links to ../../build/mpu9250/mpu9250.egg-info/dependency_links.txt
+[0.772s] writing entry points to ../../build/mpu9250/mpu9250.egg-info/entry_points.txt
+[0.772s] writing requirements to ../../build/mpu9250/mpu9250.egg-info/requires.txt
+[0.772s] writing top-level names to ../../build/mpu9250/mpu9250.egg-info/top_level.txt
+[0.773s] reading manifest file '../../build/mpu9250/mpu9250.egg-info/SOURCES.txt'
+[0.773s] adding license file 'LICENSE'
+[0.774s] writing manifest file '../../build/mpu9250/mpu9250.egg-info/SOURCES.txt'
+[0.774s] running build
+[0.774s] running build_py
+[0.774s] running install
+[0.774s] running install_lib
+[0.776s] running install_data
+[0.776s] running install_egg_info
+[0.777s] removing '/home/bryan/hexapod_ws/install/mpu9250/lib/python3.10/site-packages/mpu9250-0.0.1-py3.10.egg-info' (and everything under it)
+[0.777s] Copying ../../build/mpu9250/mpu9250.egg-info to /home/bryan/hexapod_ws/install/mpu9250/lib/python3.10/site-packages/mpu9250-0.0.1-py3.10.egg-info
+[0.777s] running install_scripts
+[0.793s] Installing mpu9250 script to /home/bryan/hexapod_ws/install/mpu9250/lib/mpu9250
+[0.793s] writing list of installed files to '/home/bryan/hexapod_ws/build/mpu9250/install.log'
+[0.813s] Invoked command in '/home/bryan/hexapod_ws/src/mpu9250' returned '0': PYTHONPATH=/home/bryan/hexapod_ws/build/mpu9250/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bryan/hexapod_ws/install/mpu9250/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mpu9250 build --build-base /home/bryan/hexapod_ws/build/mpu9250/build install --record /home/bryan/hexapod_ws/build/mpu9250/install.log --single-version-externally-managed install_data

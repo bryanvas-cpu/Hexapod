@@ -1,4 +1,5 @@
 /home/bryan/hexapod_ws/install/hexapod_bringup/share/hexapod_bringup/launch/simulated_robot.launch.py
+/home/bryan/hexapod_ws/install/hexapod_bringup/share/hexapod_bringup/launch/real_robot.launch.py
 /home/bryan/hexapod_ws/install/hexapod_bringup/share/ament_index/resource_index/package_run_dependencies/hexapod_bringup
 /home/bryan/hexapod_ws/install/hexapod_bringup/share/ament_index/resource_index/parent_prefix_path/hexapod_bringup
 /home/bryan/hexapod_ws/install/hexapod_bringup/share/hexapod_bringup/environment/ament_prefix_path.sh

@@ -1,6 +1,0 @@
-Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_utils -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/install/hexapod_utils
-Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_utils -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/install/hexapod_utils
-Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16
-Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/build/hexapod_utils -- -j16 -l16
-Invoking command in '/home/bryan/hexapod_ws/build/hexapod_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_utils
-Invoked command in '/home/bryan/hexapod_ws/build/hexapod_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/build/hexapod_utils

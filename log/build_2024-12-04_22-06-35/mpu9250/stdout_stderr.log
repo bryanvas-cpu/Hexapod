@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/mpu9250/mpu9250.egg-info/PKG-INFO
+writing dependency_links to ../../build/mpu9250/mpu9250.egg-info/dependency_links.txt
+writing entry points to ../../build/mpu9250/mpu9250.egg-info/entry_points.txt
+writing requirements to ../../build/mpu9250/mpu9250.egg-info/requires.txt
+writing top-level names to ../../build/mpu9250/mpu9250.egg-info/top_level.txt
+reading manifest file '../../build/mpu9250/mpu9250.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/mpu9250/mpu9250.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/bryan/hexapod_ws/install/mpu9250/lib/python3.10/site-packages/mpu9250-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/mpu9250/mpu9250.egg-info to /home/bryan/hexapod_ws/install/mpu9250/lib/python3.10/site-packages/mpu9250-0.0.1-py3.10.egg-info
+running install_scripts
+Installing mpu9250 script to /home/bryan/hexapod_ws/install/mpu9250/lib/mpu9250
+writing list of installed files to '/home/bryan/hexapod_ws/build/mpu9250/install.log'

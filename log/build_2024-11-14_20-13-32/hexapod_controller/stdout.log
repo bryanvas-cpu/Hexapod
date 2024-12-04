@@ -1,4 +1,0 @@
-[ 87%] Built target body_pose_generator
-[ 87%] Built target tip_trajectory_generator
-[ 75%] [32mBuilding CXX object CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o[0m
-[ 87%] Built target tip_pose_generator
