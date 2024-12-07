@@ -119,34 +119,20 @@ CallbackReturn HexapodInterface::on_deactivate(const rclcpp_lifecycle::State &pr
 
 hardware_interface::return_type HexapodInterface::read(const rclcpp::Time & time, const rclcpp::Duration & period)
 {
-    RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"READING");
+    RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"), "READING (DUMMY DATA)");
 
-    if(esp_.IsDataAvailable()){
-        std::string message;
-        esp_.ReadLine(message);
-        std::stringstream ss (message);
-        std::string res;
-        // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"message %s",message.c_str());
-        position_states_.clear();
-        velocity_states_.clear();
+    // Assign dummy values to position and velocity states
+    for (int i = 0; i < position_states_.size(); ++i) {
+        position_states_[i] = static_cast<double>(i) * 0.1; // Dummy position value
+        velocity_states_[i] = static_cast<double>(i) * 0.05; // Dummy velocity value
 
-        int i = 0;
-        while(std::getline(ss, res, ',')){
-            if(i % 2 == 0){
-                position_states_.at(i) = 0.0;
-                // position_states_.push_back(1.0);
-                // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"position states read %f", std::stod(res.c_str()));
-            }
-            else{
-                velocity_states_.at(i) = 0.0;
-                // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"position states read %s",res);
-            }
-        }
+        RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),
+                    "Joint %zu -> Position: %.2f, Velocity: %.2f", i, position_states_[i], velocity_states_[i]);
     }
-    else{
-        RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"no data available on port");
-    }
+
+    return hardware_interface::return_type::OK;
 }
+
 
 hardware_interface::return_type HexapodInterface::write(const rclcpp::Time & time, const rclcpp::Duration & period)
 {
