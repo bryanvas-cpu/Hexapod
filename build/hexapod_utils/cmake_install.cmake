@@ -63,6 +63,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hexapod_utils" TYPE PROGRAM FILES "/home/bryan/hexapod_ws/src/hexapod_utils/hexapod_utils/joy_teleop_utility.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/bryan/hexapod_ws/build/hexapod_utils/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/hexapod_utils")
 endif()
 

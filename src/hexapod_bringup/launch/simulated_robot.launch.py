@@ -35,27 +35,6 @@ def generate_launch_description():
         )
     )
 
-    group = GroupAction(
-        actions=[
-            Node(
-                package="hexapod_controller",
-                executable="inverse_kinematics"
-            ),
-            Node(
-                package="hexapod_controller",
-                executable="body_pose_generator"
-            ),
-            Node(
-                package="hexapod_controller",
-                executable="tip_pose_generator"
-            ),
-            Node(
-                package="hexapod_controller",
-                executable="tip_trajectory_generator"
-            )
-        ]
-    )
-
     rviz = Node(
         package="rviz2",
         executable="rviz2",
@@ -75,5 +54,5 @@ def generate_launch_description():
         controller,
         joystick,
         rviz,
-        group
+        # group
     ])

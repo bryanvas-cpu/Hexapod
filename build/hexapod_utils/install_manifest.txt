@@ -1,4 +1,5 @@
 /home/bryan/hexapod_ws/install/hexapod_utils/lib/hexapod_utils/float_32_republisher
+/home/bryan/hexapod_ws/install/hexapod_utils/lib/hexapod_utils/joy_teleop_utility.py
 /home/bryan/hexapod_ws/install/hexapod_utils/share/ament_index/resource_index/package_run_dependencies/hexapod_utils
 /home/bryan/hexapod_ws/install/hexapod_utils/share/ament_index/resource_index/parent_prefix_path/hexapod_utils
 /home/bryan/hexapod_ws/install/hexapod_utils/share/hexapod_utils/environment/ament_prefix_path.sh

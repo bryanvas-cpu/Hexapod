@@ -6,6 +6,8 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 
+print(" in the joystick launch file")
+
 def generate_launch_description():
 
     joy_teleop = Node(

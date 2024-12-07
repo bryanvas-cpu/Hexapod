@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-6380b4c0436a2864f357.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "hexapod_interfaces__py",
+					"jsonFile" : "directory-hexapod_interfaces__py-95e3b750526400d1aad7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/bryan/hexapod_ws/build/hexapod_interfaces/hexapod_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "hexapod_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_hexapod_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_hexapod_interfaces_egg-1cf311d520ae4eb7b30e.json",
+					"name" : "ament_cmake_python_build_hexapod_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_hexapod_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_hexapod_interfaces-1235b1b53c5839706a27.json",
+					"name" : "ament_cmake_python_copy_hexapod_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces-b79e3cec36dd027b1944.json",
+					"name" : "hexapod_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__cpp-28714fdd056e3343c4cc.json",
+					"name" : "hexapod_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "hexapod_interfaces__py::@066d3bfecf7e59686e19",
+					"jsonFile" : "target-hexapod_interfaces__py-98051162fb8923518dc2.json",
+					"name" : "hexapod_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_generator_c-056975126aa84781c894.json",
+					"name" : "hexapod_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_generator_py-63522421240a6c5c025b.json",
+					"name" : "hexapod_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_c-1531691f90971d6caa84.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_c__pyext-917e5b79ee847d6ad286.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_cpp-d4ce8de620a7e048c3ec.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_fastrtps_c-eed0999a589ff21c2072.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_fastrtps_c__pyext-bed8417769de361fcee2.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_fastrtps_cpp-7dff73ec66a493a97c90.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_introspection_c-1d5060c8f188c0ab14d9.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_introspection_c__pyext-c9db27a16fd82be52345.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces__rosidl_typesupport_introspection_cpp-427590f7843caf1c2811.json",
+					"name" : "hexapod_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_interfaces_uninstall-4e5a003049387ac12461.json",
+					"name" : "hexapod_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-84d4a0c0e076369cec2f.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bryan/hexapod_ws/build/hexapod_interfaces",
+		"source" : "/home/bryan/hexapod_ws/src/hexapod_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -267,9 +267,6 @@ ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
 //The directory containing a CMake configuration file for ament_cmake_core.
 ament_cmake_core_DIR:PATH=/opt/ros/humble/share/ament_cmake_core/cmake
 
-//The directory containing a CMake configuration file for ament_cmake_cppcheck.
-ament_cmake_cppcheck_DIR:PATH=/opt/ros/humble/share/ament_cmake_cppcheck/cmake
-
 //The directory containing a CMake configuration file for ament_cmake_export_definitions.
 ament_cmake_export_definitions_DIR:PATH=/opt/ros/humble/share/ament_cmake_export_definitions/cmake
 
@@ -291,9 +288,6 @@ ament_cmake_export_link_flags_DIR:PATH=/opt/ros/humble/share/ament_cmake_export_
 //The directory containing a CMake configuration file for ament_cmake_export_targets.
 ament_cmake_export_targets_DIR:PATH=/opt/ros/humble/share/ament_cmake_export_targets/cmake
 
-//The directory containing a CMake configuration file for ament_cmake_flake8.
-ament_cmake_flake8_DIR:PATH=/opt/ros/humble/share/ament_cmake_flake8/cmake
-
 //The directory containing a CMake configuration file for ament_cmake_gen_version_h.
 ament_cmake_gen_version_h_DIR:PATH=/opt/ros/humble/share/ament_cmake_gen_version_h/cmake
 
@@ -308,12 +302,6 @@ ament_cmake_include_directories_DIR:PATH=/opt/ros/humble/share/ament_cmake_inclu
 
 //The directory containing a CMake configuration file for ament_cmake_libraries.
 ament_cmake_libraries_DIR:PATH=/opt/ros/humble/share/ament_cmake_libraries/cmake
-
-//The directory containing a CMake configuration file for ament_cmake_lint_cmake.
-ament_cmake_lint_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake_lint_cmake/cmake
-
-//The directory containing a CMake configuration file for ament_cmake_pep257.
-ament_cmake_pep257_DIR:PATH=/opt/ros/humble/share/ament_cmake_pep257/cmake
 
 //The directory containing a CMake configuration file for ament_cmake_pytest.
 ament_cmake_pytest_DIR:PATH=/opt/ros/humble/share/ament_cmake_pytest/cmake
@@ -330,26 +318,8 @@ ament_cmake_target_dependencies_DIR:PATH=/opt/ros/humble/share/ament_cmake_targe
 //The directory containing a CMake configuration file for ament_cmake_test.
 ament_cmake_test_DIR:PATH=/opt/ros/humble/share/ament_cmake_test/cmake
 
-//The directory containing a CMake configuration file for ament_cmake_uncrustify.
-ament_cmake_uncrustify_DIR:PATH=/opt/ros/humble/share/ament_cmake_uncrustify/cmake
-
 //The directory containing a CMake configuration file for ament_cmake_version.
 ament_cmake_version_DIR:PATH=/opt/ros/humble/share/ament_cmake_version/cmake
-
-//The directory containing a CMake configuration file for ament_cmake_xmllint.
-ament_cmake_xmllint_DIR:PATH=/opt/ros/humble/share/ament_cmake_xmllint/cmake
-
-//The directory containing a CMake configuration file for ament_lint_auto.
-ament_lint_auto_DIR:PATH=/opt/ros/humble/share/ament_lint_auto/cmake
-
-//Path to a program.
-ament_lint_cmake_BIN:FILEPATH=/opt/ros/humble/bin/ament_lint_cmake
-
-//The directory containing a CMake configuration file for ament_lint_common.
-ament_lint_common_DIR:PATH=/opt/ros/humble/share/ament_lint_common/cmake
-
-//Path to a program.
-ament_xmllint_BIN:FILEPATH=/opt/ros/humble/bin/ament_xmllint
 
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake
@@ -467,9 +437,6 @@ rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_types
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
-
-//Path to a program.
-xmllint_BIN:FILEPATH=/usr/bin/xmllint
 
 
 ########################

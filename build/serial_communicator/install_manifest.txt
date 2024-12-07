@@ -1,0 +1,16 @@
+/home/bryan/hexapod_ws/install/serial_communicator/lib/serial_communicator/serial_communicator
+/home/bryan/hexapod_ws/install/serial_communicator/share/ament_index/resource_index/package_run_dependencies/serial_communicator
+/home/bryan/hexapod_ws/install/serial_communicator/share/ament_index/resource_index/parent_prefix_path/serial_communicator
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/environment/ament_prefix_path.sh
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/environment/ament_prefix_path.dsv
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/environment/path.sh
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/environment/path.dsv
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/local_setup.bash
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/local_setup.sh
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/local_setup.zsh
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/local_setup.dsv
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/package.dsv
+/home/bryan/hexapod_ws/install/serial_communicator/share/ament_index/resource_index/packages/serial_communicator
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/cmake/serial_communicatorConfig.cmake
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/cmake/serial_communicatorConfig-version.cmake
+/home/bryan/hexapod_ws/install/serial_communicator/share/serial_communicator/package.xml

@@ -31,8 +31,8 @@
         <xacro:macro name="set_joint_interface" params="joint_name joint_min joint_max">
             <joint name="${joint_name}">
                 <command_interface name="position">
-                    <param name="min">${min}</param>
-                    <param name="max">${max}</param>
+                    <param name="min">${joint_min}</param>
+                    <param name="max">${joint_max}</param>
                 </command_interface>
                 <state_interface name="position"/>
                 <state_interface name="velocity"/>

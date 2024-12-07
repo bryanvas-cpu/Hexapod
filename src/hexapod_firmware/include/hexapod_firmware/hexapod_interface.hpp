@@ -39,7 +39,6 @@ private:
   std::vector<double> position_commands_;
   std::vector<double> position_states_;
   std::vector<double> velocity_states_;
-  rclcpp::Time last_run_;
 };
 }  // namespace hexapod_firmware
 

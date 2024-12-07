@@ -1,9 +1,29 @@
 from launch import LaunchDescription
-from launch.actions import TimerAction
+from launch.actions import TimerAction, GroupAction
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    
+    group = GroupAction(
+        actions=[
+            Node(
+                package="hexapod_controller",
+                executable="inverse_kinematics"
+            ),
+            Node(
+                package="hexapod_controller",
+                executable="body_pose_generator"
+            ),
+            Node(
+                package="hexapod_controller",
+                executable="tip_pose_generator"
+            ),
+            Node(
+                package="hexapod_controller",
+                executable="tip_trajectory_generator"
+            )
+        ]
+    )
+
     joint_state_broadcaster_spawner = TimerAction(
         period=2.0,  # Delay of 2 seconds
         actions=[
@@ -36,5 +56,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         joint_state_broadcaster_spawner,
-        simple_position_controller
+        simple_position_controller,
+        group
     ])

@@ -3,12 +3,14 @@
 <package format="3">
   <name>hexapod_firmware</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Package for interfacing hexapod hardware using ROS 2 hardware interface framework</description>
   <maintainer email="bryanvas25@gmail.com">bryan</maintainer>
   <license>TODO: License declaration</license>
 
+  <!-- Build tools -->
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <!-- Dependencies -->
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>libserial-dev</depend>
@@ -16,9 +18,11 @@
   <depend>rclcpp_lifecycle</depend>
   <depend>pluginlib</depend>
 
+  <!-- Testing dependencies -->
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
+  <!-- Export -->
   <export>
     <build_type>ament_cmake</build_type>
   </export>

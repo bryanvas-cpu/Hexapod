@@ -40,32 +40,11 @@ def generate_launch_description():
                 "mpu9250.launch.py")
         ])
     )
-
-    group = GroupAction(
-        actions=[
-            Node(
-                package="hexapod_controller",
-                executable="inverse_kinematics"
-            ),
-            Node(
-                package="hexapod_controller",
-                executable="body_pose_generator"
-            ),
-            Node(
-                package="hexapod_controller",
-                executable="tip_pose_generator"
-            ),
-            Node(
-                package="hexapod_controller",
-                executable="tip_trajectory_generator"
-            )
-        ]
-    )
     
     return LaunchDescription([
         hardware_interface,
         controller,
         joystick,
-        group,
-        imu_driver
+        # group,
+        # imu_driver
     ])

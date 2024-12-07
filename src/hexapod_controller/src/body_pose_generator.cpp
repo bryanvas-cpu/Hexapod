@@ -92,9 +92,9 @@ private:
         //             this->target_transl_values[2]
         //             };
 
-        RCLCPP_INFO(this->get_logger(),"rpy_commands_target: %.4f, %.4f", target_orient_values[0], target_orient_values[1]);
+        // RCLCPP_INFO(this->get_logger(),"rpy_commands_target: %.4f, %.4f", target_orient_values[0], target_orient_values[1]);
 
-        RCLCPP_INFO(this->get_logger(),"rpy_commands_current:            %.4f, %.4f", current_orient_values[0], current_orient_values[1]);
+        // RCLCPP_INFO(this->get_logger(),"rpy_commands_current:            %.4f, %.4f", current_orient_values[0], current_orient_values[1]);
 
 
         // RCLCPP_INFO(this->get_logger(),"rpy_commands_sent\n roll: %.4f,\npitch: %.4f,\nyaw: %.4f", target_orient_values[0] - current_orient_values[0], target_orient_values[1] - current_orient_values[1], target_orient_values[2]);
