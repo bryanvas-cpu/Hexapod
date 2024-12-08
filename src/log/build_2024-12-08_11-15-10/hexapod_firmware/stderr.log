@@ -1,0 +1,32 @@
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hexapod_firmware::CallbackReturn hexapod_firmware::HexapodInterface::on_activate(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:86:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   86 | exapodInterface::on_activate([01;35m[Kconst rclcpp_lifecycle::State &previous_state[m[K)
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hexapod_firmware::CallbackReturn hexapod_firmware::HexapodInterface::on_deactivate(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:105:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  105 | apodInterface::on_deactivate([01;35m[Kconst rclcpp_lifecycle::State &previous_state[m[K)
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type hexapod_firmware::HexapodInterface::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:120:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  120 | ce::return_type HexapodInterface::read([01;35m[Kconst rclcpp::Time & time[m[K, const rclcpp::Duration & period)
+      |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:120:108:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  120 | rface::read(const rclcpp::Time & time, [01;35m[Kconst rclcpp::Duration & period[m[K)
+      |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type hexapod_firmware::HexapodInterface::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:137:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  137 | e::return_type HexapodInterface::write([01;35m[Kconst rclcpp::Time & time[m[K, const rclcpp::Duration & period)
+      |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:137:109:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  137 | face::write(const rclcpp::Time & time, [01;35m[Kconst rclcpp::Duration & period[m[K)
+      |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hexapod_firmware::CallbackReturn hexapod_firmware::HexapodInterface::on_deactivate(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:118:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  118 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K

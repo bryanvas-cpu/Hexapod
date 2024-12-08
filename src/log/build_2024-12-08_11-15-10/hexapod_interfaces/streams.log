@@ -1,0 +1,225 @@
+[0.042s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_interfaces -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/src/install/hexapod_interfaces
+[0.288s] -- The C compiler identification is GNU 11.4.0
+[0.289s] -- The CXX compiler identification is GNU 11.4.0
+[0.290s] -- Detecting C compiler ABI info
+[0.349s] -- Detecting C compiler ABI info - done
+[0.357s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.357s] -- Detecting C compile features
+[0.358s] -- Detecting C compile features - done
+[0.361s] -- Detecting CXX compiler ABI info
+[0.460s] -- Detecting CXX compiler ABI info - done
+[0.471s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.472s] -- Detecting CXX compile features
+[0.472s] -- Detecting CXX compile features - done
+[0.478s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.646s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.799s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.862s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.873s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.890s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.915s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.950s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.021s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.333s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.768s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.916s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.941s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.944s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.976s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.976s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.976s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.977s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.001s] -- Found PythonExtra: .so  
+[2.089s] -- Configuring done
+[2.114s] -- Generating done
+[2.126s] -- Build files have been written to: /home/bryan/hexapod_ws/src/build/hexapod_interfaces
+[2.140s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_interfaces -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/src/install/hexapod_interfaces
+[2.142s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/src/build/hexapod_interfaces -- -j16 -l16
+[2.193s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.206s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.219s] [  6%] Built target ament_cmake_python_copy_hexapod_interfaces
+[2.413s] [  6%] Built target hexapod_interfaces__cpp
+[2.424s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.424s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.429s] [ 16%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.481s] running egg_info
+[2.482s] creating hexapod_interfaces.egg-info
+[2.483s] writing hexapod_interfaces.egg-info/PKG-INFO
+[2.483s] writing dependency_links to hexapod_interfaces.egg-info/dependency_links.txt
+[2.484s] writing top-level names to hexapod_interfaces.egg-info/top_level.txt
+[2.484s] writing manifest file 'hexapod_interfaces.egg-info/SOURCES.txt'
+[2.488s] reading manifest file 'hexapod_interfaces.egg-info/SOURCES.txt'
+[2.488s] writing manifest file 'hexapod_interfaces.egg-info/SOURCES.txt'
+[2.534s] [ 19%] [32mBuilding C object CMakeFiles/hexapod_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hexapod_interfaces/msg/detail/point_array__functions.c.o[0m
+[2.545s] [ 19%] Built target ament_cmake_python_build_hexapod_interfaces_egg
+[2.601s] [ 22%] [32m[1mLinking C shared library libhexapod_interfaces__rosidl_generator_c.so[0m
+[2.639s] [ 25%] [32mBuilding CXX object CMakeFiles/hexapod_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hexapod_interfaces/msg/point_array__type_support.cpp.o[0m
+[2.656s] [ 25%] Built target hexapod_interfaces__rosidl_generator_c
+[2.663s] [ 29%] [32mBuilding CXX object CMakeFiles/hexapod_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hexapod_interfaces/msg/detail/dds_fastrtps/point_array__type_support.cpp.o[0m
+[2.668s] [ 35%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.668s] [ 35%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.672s] [ 38%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.760s] [ 41%] [32mBuilding CXX object CMakeFiles/hexapod_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hexapod_interfaces/msg/detail/point_array__type_support.cpp.o[0m
+[2.872s] [ 45%] [32mBuilding CXX object CMakeFiles/hexapod_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/hexapod_interfaces/msg/point_array__type_support.cpp.o[0m
+[2.882s] [ 48%] [32mBuilding C object CMakeFiles/hexapod_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hexapod_interfaces/msg/detail/point_array__type_support.c.o[0m
+[2.887s] [ 51%] [32mBuilding CXX object CMakeFiles/hexapod_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hexapod_interfaces/msg/detail/point_array__type_support_c.cpp.o[0m
+[2.908s] [ 54%] [32m[1mLinking CXX shared library libhexapod_interfaces__rosidl_typesupport_c.so[0m
+[2.923s] [ 58%] [32m[1mLinking C shared library libhexapod_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.962s] [ 58%] Built target hexapod_interfaces__rosidl_typesupport_c
+[2.964s] [ 58%] Built target hexapod_interfaces__rosidl_typesupport_introspection_c
+[2.999s] [ 61%] [32m[1mLinking CXX shared library libhexapod_interfaces__rosidl_typesupport_cpp.so[0m
+[3.049s] [ 61%] Built target hexapod_interfaces__rosidl_typesupport_cpp
+[3.126s] [ 64%] [32m[1mLinking CXX shared library libhexapod_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.130s] [ 67%] [32m[1mLinking CXX shared library libhexapod_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.138s] [ 70%] [32m[1mLinking CXX shared library libhexapod_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.235s] [ 70%] Built target hexapod_interfaces__rosidl_typesupport_introspection_cpp
+[3.249s] [ 70%] Built target hexapod_interfaces__rosidl_typesupport_fastrtps_c
+[3.249s] [ 70%] Built target hexapod_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.271s] [ 70%] Built target hexapod_interfaces
+[3.290s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.491s] [ 74%] Built target hexapod_interfaces__py
+[3.516s] [ 77%] [32mBuilding C object CMakeFiles/hexapod_interfaces__rosidl_generator_py.dir/rosidl_generator_py/hexapod_interfaces/msg/_point_array_s.c.o[0m
+[3.615s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/hexapod_interfaces/libhexapod_interfaces__rosidl_generator_py.so[0m
+[3.660s] [ 80%] Built target hexapod_interfaces__rosidl_generator_py
+[3.684s] [ 83%] [32mBuilding C object CMakeFiles/hexapod_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hexapod_interfaces/_hexapod_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.685s] [ 90%] [32mBuilding C object CMakeFiles/hexapod_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hexapod_interfaces/_hexapod_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.685s] [ 90%] [32mBuilding C object CMakeFiles/hexapod_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hexapod_interfaces/_hexapod_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[3.762s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.781s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.782s] [100%] [32m[1mLinking C shared library rosidl_generator_py/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.808s] [100%] Built target hexapod_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.822s] [100%] Built target hexapod_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.827s] [100%] Built target hexapod_interfaces__rosidl_typesupport_c__pyext
+[3.840s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/src/build/hexapod_interfaces -- -j16 -l16
+[3.841s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/src/build/hexapod_interfaces
+[3.852s] -- Install configuration: ""
+[3.852s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/ament_index/resource_index/rosidl_interfaces/hexapod_interfaces
+[3.852s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces
+[3.852s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg
+[3.852s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/point_array.h
+[3.852s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__type_support.h
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__functions.c
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__functions.h
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__struct.h
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/library_path.sh
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/library_path.dsv
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_generator_c.so
+[3.853s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_generator_c.so" to ""
+[3.853s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces
+[3.853s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg
+[3.853s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.854s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail
+[3.854s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__rosidl_typesupport_fastrtps_c.h
+[3.854s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.854s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[3.854s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces
+[3.854s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg
+[3.854s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/point_array.hpp
+[3.854s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail
+[3.854s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__struct.hpp
+[3.854s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__builder.hpp
+[3.854s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__traits.hpp
+[3.854s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces
+[3.854s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg
+[3.854s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.855s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/dds_fastrtps
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__rosidl_typesupport_fastrtps_cpp.hpp
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.855s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.855s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces
+[3.855s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg
+[3.855s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__type_support.c
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__rosidl_typesupport_introspection_c.h
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_introspection_c.so
+[3.855s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[3.855s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_c.so
+[3.856s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_c.so" to ""
+[3.856s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces
+[3.856s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg
+[3.856s] -- Up-to-date: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__type_support.cpp
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/include/hexapod_interfaces/hexapod_interfaces/msg/detail/point_array__rosidl_typesupport_introspection_cpp.hpp
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.856s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_cpp.so
+[3.856s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_typesupport_cpp.so" to ""
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/pythonpath.sh
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/pythonpath.dsv
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces-0.0.0-py3.10.egg-info
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.856s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/__init__.py
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/_hexapod_interfaces_s.ep.rosidl_typesupport_c.c
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/msg
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/msg/__init__.py
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/msg/_point_array_s.c
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/msg/_point_array.py
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/_hexapod_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/_hexapod_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/libhexapod_interfaces__rosidl_generator_py.so
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.857s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.889s] Listing '/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces'...
+[3.889s] Compiling '/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/__init__.py'...
+[3.889s] Listing '/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/msg'...
+[3.889s] Compiling '/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/msg/__init__.py'...
+[3.889s] Compiling '/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/msg/_point_array.py'...
+[3.893s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.893s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.893s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.894s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.894s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.894s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/local/lib/python3.10/dist-packages/hexapod_interfaces/hexapod_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.894s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_generator_py.so
+[3.894s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_interfaces/lib/libhexapod_interfaces__rosidl_generator_py.so" to ""
+[3.895s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/msg/PointArray.idl
+[3.895s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/msg/PointArray.msg
+[3.895s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/ament_index/resource_index/package_run_dependencies/hexapod_interfaces
+[3.895s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/ament_index/resource_index/parent_prefix_path/hexapod_interfaces
+[3.895s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/ament_prefix_path.sh
+[3.895s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/ament_prefix_path.dsv
+[3.895s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/path.sh
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/environment/path.dsv
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/local_setup.bash
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/local_setup.sh
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/local_setup.zsh
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/local_setup.dsv
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/package.dsv
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/ament_index/resource_index/packages/hexapod_interfaces
+[3.896s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_generator_cExport.cmake
+[3.897s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.897s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.897s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.897s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_generator_cppExport.cmake
+[3.897s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.897s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.897s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.898s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.898s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_cExport.cmake
+[3.898s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.898s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.898s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.898s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_cppExport.cmake
+[3.898s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_generator_pyExport.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/export_hexapod_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.899s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.900s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.900s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfacesConfig.cmake
+[3.900s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/cmake/hexapod_interfacesConfig-version.cmake
+[3.900s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_interfaces/share/hexapod_interfaces/package.xml
+[3.903s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/src/build/hexapod_interfaces

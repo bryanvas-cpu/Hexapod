@@ -1,0 +1,68 @@
+running egg_info
+creating ../build/mpu9250/mpu9250.egg-info
+writing ../build/mpu9250/mpu9250.egg-info/PKG-INFO
+writing dependency_links to ../build/mpu9250/mpu9250.egg-info/dependency_links.txt
+writing entry points to ../build/mpu9250/mpu9250.egg-info/entry_points.txt
+writing requirements to ../build/mpu9250/mpu9250.egg-info/requires.txt
+writing top-level names to ../build/mpu9250/mpu9250.egg-info/top_level.txt
+writing manifest file '../build/mpu9250/mpu9250.egg-info/SOURCES.txt'
+reading manifest file '../build/mpu9250/mpu9250.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/mpu9250/mpu9250.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/bryan/hexapod_ws/src/build/mpu9250/build
+creating /home/bryan/hexapod_ws/src/build/mpu9250/build/lib
+creating /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250
+copying mpu9250/mpu9250.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250
+copying mpu9250/__init__.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250
+creating /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor
+copying mpu9250/imusensor/__init__.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor
+creating /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters
+copying mpu9250/imusensor/filters/__init__.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters
+copying mpu9250/imusensor/filters/complimentary.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters
+copying mpu9250/imusensor/filters/madgwick.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters
+copying mpu9250/imusensor/filters/kalman.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters
+creating /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/MPU9250
+copying mpu9250/imusensor/MPU9250/__init__.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/MPU9250
+copying mpu9250/imusensor/MPU9250/config.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/MPU9250
+copying mpu9250/imusensor/MPU9250/MPU9250.py -> /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/MPU9250
+running install
+running install_lib
+creating /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/mpu9250.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/__init__.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250
+creating /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/__init__.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor
+creating /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/MPU9250
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/MPU9250/__init__.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/MPU9250
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/MPU9250/config.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/MPU9250
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/MPU9250/MPU9250.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/MPU9250
+creating /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters/__init__.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters/complimentary.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters/madgwick.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters
+copying /home/bryan/hexapod_ws/src/build/mpu9250/build/lib/mpu9250/imusensor/filters/kalman.py -> /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/mpu9250.py to mpu9250.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/MPU9250/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/MPU9250/config.py to config.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/MPU9250/MPU9250.py to MPU9250.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters/complimentary.py to complimentary.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters/madgwick.py to madgwick.cpython-310.pyc
+byte-compiling /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250/imusensor/filters/kalman.py to kalman.cpython-310.pyc
+running install_data
+creating /home/bryan/hexapod_ws/src/install/mpu9250/share/ament_index
+creating /home/bryan/hexapod_ws/src/install/mpu9250/share/ament_index/resource_index
+creating /home/bryan/hexapod_ws/src/install/mpu9250/share/ament_index/resource_index/packages
+copying resource/mpu9250 -> /home/bryan/hexapod_ws/src/install/mpu9250/share/ament_index/resource_index/packages
+copying package.xml -> /home/bryan/hexapod_ws/src/install/mpu9250/share/mpu9250
+creating /home/bryan/hexapod_ws/src/install/mpu9250/share/mpu9250/launch
+copying launch/mpu9250.launch.py -> /home/bryan/hexapod_ws/src/install/mpu9250/share/mpu9250/launch
+running install_egg_info
+Copying ../build/mpu9250/mpu9250.egg-info to /home/bryan/hexapod_ws/src/install/mpu9250/lib/python3.10/site-packages/mpu9250-0.0.1-py3.10.egg-info
+running install_scripts
+Installing mpu9250 script to /home/bryan/hexapod_ws/src/install/mpu9250/lib/mpu9250
+writing list of installed files to '/home/bryan/hexapod_ws/src/build/mpu9250/install.log'

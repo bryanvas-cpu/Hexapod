@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-db812c84b2367ffda8c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "hexapod_controller",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "body_pose_generator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-body_pose_generator-c463f7634e97dc00df21.json",
+					"name" : "body_pose_generator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hexapod_controller_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hexapod_controller_uninstall-6e6dc8eb90111a2d9d21.json",
+					"name" : "hexapod_controller_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inverse_kinematics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inverse_kinematics-107aed3541c91ff9ca39.json",
+					"name" : "inverse_kinematics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tip_pose_generator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tip_pose_generator-c26b4bf3a8fcca6fb1ee.json",
+					"name" : "tip_pose_generator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tip_trajectory_generator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tip_trajectory_generator-5908f4cf76a480975187.json",
+					"name" : "tip_trajectory_generator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-efc5113e9b50a84312dc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bryan/hexapod_ws/src/build/hexapod_controller",
+		"source" : "/home/bryan/hexapod_ws/src/hexapod_controller"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

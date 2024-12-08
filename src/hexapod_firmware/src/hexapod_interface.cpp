@@ -122,7 +122,7 @@ hardware_interface::return_type HexapodInterface::read(const rclcpp::Time & time
     RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"), "READING (DUMMY DATA)");
 
     // Assign dummy values to position and velocity states
-    for (int i = 0; i < position_states_.size(); ++i) {
+    for (size_t i = 0; i < position_states_.size(); ++i) {
         position_states_[i] = static_cast<double>(i) * 0.1; // Dummy position value
         velocity_states_[i] = static_cast<double>(i) * 0.05; // Dummy velocity value
 
@@ -138,29 +138,34 @@ hardware_interface::return_type HexapodInterface::write(const rclcpp::Time & tim
 {
     std::stringstream message_stream;
     message_stream << std::fixed << std::setprecision(2);
+
     for (size_t i = 0; i < position_commands_.size(); ++i) {
         message_stream << position_commands_[i];
         if (i < position_commands_.size() - 1) {
             message_stream << ",";
         }
+
+        RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),
+                    "Joint %s -> Command Position: %.2f", 
+                    info_.joints[i].name.c_str(), position_commands_[i]);
     }
     message_stream << "\n";
 
-    try{
-        // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"command_pos: %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f, %.2f", 
-        // position_commands_[0],position_commands_[1],position_commands_[2],position_commands_[3],position_commands_[4],position_commands_[5],position_commands_[6],position_commands_[7],position_commands_[8],position_commands_[9],position_commands_[10],position_commands_[11],position_commands_[12],position_commands_[13],position_commands_[14],position_commands_[15],position_commands_[16],position_commands_[17]);
+    try {
+        RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"), "Sending command positions...");
         std::string command_string = message_stream.str();
-        // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"trying to write %s", command_string.c_str());
         esp_.Write(command_string.c_str());
-        // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),"Position commands being set: %s",command_string.c_str());
-    }
-    catch(...){
-        RCLCPP_ERROR_STREAM(rclcpp::get_logger("HexapodInterface"), "something went wrong while sending the message " << message_stream.str() << "on the port " << port_);
+    } catch (...) {
+        RCLCPP_ERROR_STREAM(rclcpp::get_logger("HexapodInterface"), 
+                            "Something went wrong while sending the message " 
+                            << message_stream.str() << " on the port " << port_);
         return hardware_interface::return_type::ERROR;
     }
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
     return hardware_interface::return_type::OK;
 }
+
 
 }
 #include <pluginlib/class_list_macros.hpp>

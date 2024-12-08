@@ -1,0 +1,109 @@
+[0.032s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_firmware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_firmware -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/src/install/hexapod_firmware
+[0.276s] -- The C compiler identification is GNU 11.4.0
+[0.277s] -- The CXX compiler identification is GNU 11.4.0
+[0.277s] -- Detecting C compiler ABI info
+[0.345s] -- Detecting C compiler ABI info - done
+[0.353s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.353s] -- Detecting C compile features
+[0.354s] -- Detecting C compile features - done
+[0.357s] -- Detecting CXX compiler ABI info
+[0.458s] -- Detecting CXX compiler ABI info - done
+[0.463s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.463s] -- Detecting CXX compile features
+[0.464s] -- Detecting CXX compile features - done
+[0.469s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.668s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.821s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.893s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.907s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.923s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.946s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.976s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.018s] -- Found rclcpp_lifecycle: 16.0.10 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.111s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.120s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.240s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.269s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.320s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.332s] -- Looking for pthread.h
+[1.410s] -- Looking for pthread.h - found
+[1.411s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.495s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.496s] -- Found Threads: TRUE  
+[1.583s] -- Found hardware_interface: 2.43.1 (/opt/ros/humble/share/hardware_interface/cmake)
+[1.747s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[1.747s] -- Checking for module 'libserial'
+[1.762s] --   Found libserial, version 1.0.0
+[1.882s] -- Configuring done
+[1.911s] -- Generating done
+[1.915s] -- Build files have been written to: /home/bryan/hexapod_ws/src/build/hexapod_firmware
+[1.925s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_firmware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_firmware -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/src/install/hexapod_firmware
+[1.926s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_firmware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/src/build/hexapod_firmware -- -j16 -l16
+[1.982s] [ 50%] [32mBuilding CXX object CMakeFiles/hexapod_firmware.dir/src/hexapod_interface.cpp.o[0m
+[4.021s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hexapod_firmware::CallbackReturn hexapod_firmware::HexapodInterface::on_activate(const rclcpp_lifecycle::State&)[m[K’:
+[4.021s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:86:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.021s]    86 | exapodInterface::on_activate([01;35m[Kconst rclcpp_lifecycle::State &previous_state[m[K)
+[4.021s]       |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[4.021s] 
+[4.022s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hexapod_firmware::CallbackReturn hexapod_firmware::HexapodInterface::on_deactivate(const rclcpp_lifecycle::State&)[m[K’:
+[4.022s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:105:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.022s]   105 | apodInterface::on_deactivate([01;35m[Kconst rclcpp_lifecycle::State &previous_state[m[K)
+[4.023s]       |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[4.023s] 
+[4.023s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type hexapod_firmware::HexapodInterface::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[4.023s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:120:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.023s]   120 | ce::return_type HexapodInterface::read([01;35m[Kconst rclcpp::Time & time[m[K, const rclcpp::Duration & period)
+[4.023s]       |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[4.023s] 
+[4.023s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:120:108:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.023s]   120 | rface::read(const rclcpp::Time & time, [01;35m[Kconst rclcpp::Duration & period[m[K)
+[4.024s]       |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[4.024s] 
+[4.025s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type hexapod_firmware::HexapodInterface::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[4.025s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:137:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.025s]   137 | e::return_type HexapodInterface::write([01;35m[Kconst rclcpp::Time & time[m[K, const rclcpp::Duration & period)
+[4.025s]       |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[4.025s] 
+[4.025s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:137:109:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.026s]   137 | face::write(const rclcpp::Time & time, [01;35m[Kconst rclcpp::Duration & period[m[K)
+[4.026s]       |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[4.026s] 
+[4.422s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:[m[K In member function ‘[01m[Kvirtual hexapod_firmware::CallbackReturn hexapod_firmware::HexapodInterface::on_deactivate(const rclcpp_lifecycle::State&)[m[K’:
+[4.422s] [01m[K/home/bryan/hexapod_ws/src/hexapod_firmware/src/hexapod_interface.cpp:118:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[4.422s]   118 | [01;35m[K}[m[K
+[4.422s]       | [01;35m[K^[m[K
+[4.822s] [100%] [32m[1mLinking CXX shared library libhexapod_firmware.so[0m
+[4.992s] [100%] Built target hexapod_firmware
+[5.005s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_firmware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/src/build/hexapod_firmware -- -j16 -l16
+[5.007s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_firmware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/src/build/hexapod_firmware
+[5.014s] -- Install configuration: ""
+[5.014s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/hexapod_interface.xml
+[5.014s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/lib/libhexapod_firmware.so
+[5.015s] -- Set runtime path of "/home/bryan/hexapod_ws/src/install/hexapod_firmware/lib/libhexapod_firmware.so" to ""
+[5.015s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/include/include
+[5.015s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/include/include/hexapod_firmware
+[5.015s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/include/include/hexapod_firmware/hexapod_interface.hpp
+[5.015s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/launch
+[5.015s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/launch/hardware_interface.launch.py
+[5.015s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/environment/library_path.sh
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/environment/library_path.dsv
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/ament_index/resource_index/package_run_dependencies/hexapod_firmware
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/ament_index/resource_index/parent_prefix_path/hexapod_firmware
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/environment/ament_prefix_path.sh
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/environment/ament_prefix_path.dsv
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/environment/path.sh
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/environment/path.dsv
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/local_setup.bash
+[5.016s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/local_setup.sh
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/local_setup.zsh
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/local_setup.dsv
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/package.dsv
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/ament_index/resource_index/packages/hexapod_firmware
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/hexapod_firmware
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/cmake/ament_cmake_export_libraries-extras.cmake
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/cmake/hexapod_firmwareConfig.cmake
+[5.017s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/cmake/hexapod_firmwareConfig-version.cmake
+[5.018s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_firmware/share/hexapod_firmware/package.xml
+[5.020s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_firmware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/src/build/hexapod_firmware

@@ -1,0 +1,139 @@
+[0.035s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_description -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/src/install/hexapod_description
+[0.278s] -- The C compiler identification is GNU 11.4.0
+[0.279s] -- The CXX compiler identification is GNU 11.4.0
+[0.280s] -- Detecting C compiler ABI info
+[0.350s] -- Detecting C compiler ABI info - done
+[0.355s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.355s] -- Detecting C compile features
+[0.356s] -- Detecting C compile features - done
+[0.358s] -- Detecting CXX compiler ABI info
+[0.462s] -- Detecting CXX compiler ABI info - done
+[0.468s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.469s] -- Detecting CXX compile features
+[0.469s] -- Detecting CXX compile features - done
+[0.474s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.650s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.778s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.891s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.990s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.993s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.994s] -- Added test 'lint_cmake' to check CMake code style
+[0.994s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.997s] -- Added test 'xmllint' to check XML markup files
+[0.998s] -- Configuring done
+[1.000s] -- Generating done
+[1.001s] -- Build files have been written to: /home/bryan/hexapod_ws/src/build/hexapod_description
+[1.007s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/hexapod_ws/src/hexapod_description -DCMAKE_INSTALL_PREFIX=/home/bryan/hexapod_ws/src/install/hexapod_description
+[1.008s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/src/build/hexapod_description -- -j16 -l16
+[1.052s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/hexapod_ws/src/build/hexapod_description -- -j16 -l16
+[1.054s] Invoking command in '/home/bryan/hexapod_ws/src/build/hexapod_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/src/build/hexapod_description
+[1.061s] -- Install configuration: ""
+[1.061s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/launch
+[1.061s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/launch/gazebo.launch.py
+[1.061s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/launch/display.launch.py
+[1.061s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes
+[1.062s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c2.STL
+[1.063s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t6_scad.stl
+[1.064s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/body_scad.stl
+[1.064s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f3.STL
+[1.071s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t5_scad.stl
+[1.071s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c5_scad.stl
+[1.071s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e2.scad
+[1.072s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f6.scad
+[1.072s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t4.STL
+[1.077s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c5.scad
+[1.077s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f2_scad.stl
+[1.077s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c1.scad
+[1.077s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f4.STL
+[1.085s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e1_scad.stl
+[1.085s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c1.STL
+[1.087s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t5.STL
+[1.088s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f5.scad
+[1.088s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f1.scad
+[1.089s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c5.STL
+[1.090s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e4.scad
+[1.091s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t1_scad.stl
+[1.091s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e2_scad.stl
+[1.091s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e1.scad
+[1.092s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e6.scad
+[1.092s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f4_scad.stl
+[1.092s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e4_scad.stl
+[1.092s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f1_scad.stl
+[1.093s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f2.scad
+[1.093s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t2.STL
+[1.095s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e5.scad
+[1.095s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t5.scad
+[1.095s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t3_scad.stl
+[1.095s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t4.scad
+[1.096s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t2_scad.stl
+[1.096s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f5_scad.stl
+[1.096s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c6.scad
+[1.096s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t2.scad
+[1.097s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c2_scad.stl
+[1.097s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f5.STL
+[1.104s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e3.scad
+[1.104s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c6.STL
+[1.106s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f6.STL
+[1.112s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/body.STL
+[1.130s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c4.STL
+[1.132s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e5_scad.stl
+[1.132s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e6_scad.stl
+[1.132s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c1_scad.stl
+[1.133s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c6_scad.stl
+[1.133s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f2.STL
+[1.139s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t3.scad
+[1.140s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c3_scad.stl
+[1.140s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f4.scad
+[1.140s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c3.scad
+[1.140s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f3_scad.stl
+[1.141s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t3.STL
+[1.142s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/base_link.scad
+[1.143s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c4.scad
+[1.143s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c4_scad.stl
+[1.143s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f3.scad
+[1.143s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t4_scad.stl
+[1.144s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c3.STL
+[1.146s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t6.STL
+[1.148s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/e3_scad.stl
+[1.148s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/scad
+[1.149s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t1.STL
+[1.150s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t6.scad
+[1.151s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/t1.scad
+[1.151s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/c2.scad
+[1.151s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f6_scad.stl
+[1.151s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/meshes/f1.STL
+[1.158s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models
+[1.159s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/sun
+[1.159s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/sun/model-1_3.sdf
+[1.159s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/sun/model.config
+[1.159s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/sun/model-1_4.sdf
+[1.159s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/sun/model.sdf
+[1.160s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/sun/model-1_2.sdf
+[1.160s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/ground_plane
+[1.160s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/ground_plane/model-1_3.sdf
+[1.160s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/ground_plane/model.config
+[1.160s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/ground_plane/model-1_4.sdf
+[1.161s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/ground_plane/model.sdf
+[1.161s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/models/ground_plane/model-1_2.sdf
+[1.161s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/urdf
+[1.161s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/urdf/hexapod.urdf.xacro
+[1.162s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/urdf/hexapod_ros2_control.xacro
+[1.162s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/urdf/hexapod_gazebo.xacro
+[1.163s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/rviz
+[1.163s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/rviz/hexapod.rviz
+[1.163s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/ament_index/resource_index/package_run_dependencies/hexapod_description
+[1.164s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/ament_index/resource_index/parent_prefix_path/hexapod_description
+[1.164s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/environment/ament_prefix_path.sh
+[1.164s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/environment/ament_prefix_path.dsv
+[1.164s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/environment/path.sh
+[1.165s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/environment/path.dsv
+[1.165s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/local_setup.bash
+[1.165s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/local_setup.sh
+[1.165s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/local_setup.zsh
+[1.165s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/local_setup.dsv
+[1.165s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/package.dsv
+[1.166s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/ament_index/resource_index/packages/hexapod_description
+[1.166s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/cmake/hexapod_descriptionConfig.cmake
+[1.166s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/cmake/hexapod_descriptionConfig-version.cmake
+[1.166s] -- Installing: /home/bryan/hexapod_ws/src/install/hexapod_description/share/hexapod_description/package.xml
+[1.169s] Invoked command in '/home/bryan/hexapod_ws/src/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/hexapod_ws/src/build/hexapod_description

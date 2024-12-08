@@ -1,0 +1,17 @@
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/launch/simulated_robot.launch.py
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/launch/real_robot.launch.py
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/ament_index/resource_index/package_run_dependencies/hexapod_bringup
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/ament_index/resource_index/parent_prefix_path/hexapod_bringup
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/environment/ament_prefix_path.sh
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/environment/ament_prefix_path.dsv
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/environment/path.sh
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/environment/path.dsv
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/local_setup.bash
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/local_setup.sh
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/local_setup.zsh
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/local_setup.dsv
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/package.dsv
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/ament_index/resource_index/packages/hexapod_bringup
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/cmake/hexapod_bringupConfig.cmake
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/cmake/hexapod_bringupConfig-version.cmake
+/home/bryan/hexapod_ws/src/install/hexapod_bringup/share/hexapod_bringup/package.xml
