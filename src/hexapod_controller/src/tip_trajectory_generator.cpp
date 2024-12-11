@@ -159,7 +159,7 @@ private:
 
         this->control.x = 0.0;
         this->control.y = 0.0;
-        this->control.z = 1.5 * hypot(start.x - end.x, start.y - end.y);
+        this->control.z = 1.0 * hypot(start.x - end.x, start.y - end.y);
 
   //      // RCLCPP_INFO(this->get_logger(),"start, control, end (%f, %f, %f) (%f, %f, %f) (%f, %f, %f)", this->start.x, this->start.y, this->start.z, this->control.x, this->control.y, this->control.z, this->end.x, this->end.y, this->end.z);
         // RCLCPP_INFO_STREAM(this->get_logger(), "finished generate 3 points");
