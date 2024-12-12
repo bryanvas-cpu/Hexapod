@@ -206,6 +206,7 @@ private:
             // RCLCPP_INFO(this->get_logger(),"rpy received (%.2f,%.2f,%.2f), xyz received (%.2f,%.2f,%.2f)", body_pose_rpy_received[0], body_pose_rpy_received[1], body_pose_rpy_received[2], body_pose_xyz_received[0], body_pose_xyz_received[1], body_pose_xyz_received[2]);
             this->body_pose_rpy_received[0] = msg.data[1];
             this->body_pose_rpy_received[1] = -msg.data[0];
+            this->body_pose_rpy_received[2] = msg.data[2];
         }
     }
 

@@ -1,1 +1,0 @@
-rclcpp;libserial-dev;std_msgs;ros2launch;controller_manager;ament_lint_auto;ament_lint_common

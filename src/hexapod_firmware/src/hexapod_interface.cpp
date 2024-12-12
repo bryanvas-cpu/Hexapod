@@ -119,15 +119,15 @@ CallbackReturn HexapodInterface::on_deactivate(const rclcpp_lifecycle::State &pr
 
 hardware_interface::return_type HexapodInterface::read(const rclcpp::Time & time, const rclcpp::Duration & period)
 {
-    RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"), "READING (DUMMY DATA)");
+    // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"), "READING (DUMMY DATA)");
 
     // Assign dummy values to position and velocity states
     for (size_t i = 0; i < position_states_.size(); ++i) {
         position_states_[i] = static_cast<double>(i) * 0.1; // Dummy position value
         velocity_states_[i] = static_cast<double>(i) * 0.05; // Dummy velocity value
 
-        RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),
-                    "Joint %zu -> Position: %.2f, Velocity: %.2f", i, position_states_[i], velocity_states_[i]);
+        // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),
+                    // "Joint %zu -> Position: %.2f, Velocity: %.2f", i, position_states_[i], velocity_states_[i]);
     }
 
     return hardware_interface::return_type::OK;
@@ -145,14 +145,14 @@ hardware_interface::return_type HexapodInterface::write(const rclcpp::Time & tim
             message_stream << ",";
         }
 
-        RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),
-                    "Joint %s -> Command Position: %.2f", 
-                    info_.joints[i].name.c_str(), position_commands_[i]);
+        // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"),
+                    // "Joint %s -> Command Position: %.2f", 
+                    // info_.joints[i].name.c_str(), position_commands_[i]);
     }
     message_stream << "\n";
 
     try {
-        RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"), "Sending command positions...");
+        // RCLCPP_INFO(rclcpp::get_logger("HexapodInterface"), "Sending command positions...");
         std::string command_string = message_stream.str();
         esp_.Write(command_string.c_str());
     } catch (...) {

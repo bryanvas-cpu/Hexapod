@@ -1,9 +1,0 @@
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/uninstall.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/hexapod_kinematics_uninstall.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/test.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/edit_cache.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/rebuild_cache.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/list_install_components.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/install.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/install/local.dir
-/home/bryan/hexapod_ws/src/build/hexapod_kinematics/CMakeFiles/install/strip.dir

@@ -1,4 +1,0 @@
-mpu9250
-mpu9250/imusensor
-mpu9250/imusensor/MPU9250
-mpu9250/imusensor/filters

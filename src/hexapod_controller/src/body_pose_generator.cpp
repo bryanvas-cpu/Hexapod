@@ -71,7 +71,7 @@ private:
         // INCASE PID HAS TO BE USED
         msg.data = {this-> current_orient_values[0] + (1/publish_frequency)*control_signal_roll, 
                     this-> current_orient_values[1] + (1/publish_frequency)*control_signal_pitch, 
-                    current_orient_values[2],
+                    this->target_orient_values[2],
                     this->target_transl_values[0],
                     this->target_transl_values[1],
                     this->target_transl_values[2]
