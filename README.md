@@ -215,7 +215,7 @@ ros2 launch hexapod_bringup simulated_robot.launch.py
 - The simulation should automatically accept joystick input
 
 #### 🎮 You should now be able to control the simulated hexapod using the controller.
-
+---
 ## C) Explanation of File Structure
 
 This section provides an overview of the important directories and packages in the hexapod workspace, explaining their purpose and role in the overall system architecture.
