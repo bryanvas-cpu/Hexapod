@@ -30,7 +30,7 @@ Before proceeding, ensure that:
 Verify using:
 ```bash
 lsblk
-
+```
 Flashing the Image
 
 Clone the provided image onto the SD card using:
