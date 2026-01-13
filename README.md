@@ -52,7 +52,7 @@ sync
 ---
 #### Fabrication Files
 
-- STL Files (3D Printing): 👉 Link
+- STL Files (3D Printing): [Link Text](src)
 
 - DXF Files (Laser / Water-Jet Cutting): 👉 Link
   - Material: Aluminium 6061-T6
