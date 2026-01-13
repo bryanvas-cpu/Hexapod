@@ -52,11 +52,11 @@ sync
 ---
 #### Fabrication Files
 
-- STL Files (3D Printing): [Link Text](src)
+- STL Files (3D Printing): [STL](STL)
 
-- DXF Files (Laser / Water-Jet Cutting): 👉 Link
+- DXF Files (Laser Cutting): [DXF](DXF)
   - Material: Aluminium 6061-T6
-  - Thickness: 3 mm
+  - Thickness: 2 mm
 
 ℹ️ Maintain dimensional accuracy during fabrication. Small tolerances can significantly affect leg kinematics and servo load.
 
@@ -215,3 +215,112 @@ ros2 launch hexapod_bringup simulated_robot.launch.py
 - The simulation should automatically accept joystick input
 
 #### 🎮 You should now be able to control the simulated hexapod using the controller.
+
+## C) Explanation of File Structure
+
+This section provides an overview of the important directories and packages in the hexapod workspace, explaining their purpose and role in the overall system architecture.
+
+---
+
+### 1. [`~/Hexapod/src`](src)
+
+This directory contains **all individual ROS 2 packages** that make up the hexapod software stack. Key packages are listed below.
+
+---
+
+#### a) [`hexapod_bringup`](src/hexapod_bringup)
+
+- Contains all **launch files** for both **Simulation** and **Hardware**
+- Launch files are located in the `launch/` directory
+- Acts as the **single entry point** for bringing up the full system
+
+---
+
+#### b) [`hexapod_controller`](src/hexapod_controller)
+
+This package contains the **core mathematical and control logic** of the hexapod. Each file is structured around a specific responsibility.
+
+1. `inverse_kinematics.cpp`  
+   - Transforms foot-tip positions from each leg’s **local Cartesian coordinate frame**  
+   - Computes the corresponding **joint angles** for that leg
+
+2. `body_pose_generator.cpp`  
+   - ROS 2 node that reads **joystick-commanded target poses** and **IMU orientation**
+   - Runs **PID control** on roll and pitch
+   - Publishes **stabilized body pose commands** (RPY + XYZ) at a fixed rate
+
+3. `tip_trajectory_generator.cpp`  
+   - Converts **joystick velocity and gait commands** into **time-parameterized, Bezier-based foot trajectories**
+   - Generates synchronized leg trajectories for all six legs
+   - Publishes leg position targets in the **robot body frame**
+
+4. `tip_pose_generator.cpp`  
+   - Applies **body translation and rotation** to generated leg trajectories
+   - Transforms foot positions into each leg’s **local coordinate frame**
+   - Publishes final **foot-tip pose targets** for inverse kinematics
+
+5. `imu_pose_generator.cpp`  
+   - Used only when an **IMU is installed**
+   - Not active on the current laboratory hardware setup
+
+---
+
+#### c) [`hexapod_description`](src/hexapod_description)
+
+- Contains the **robot description files**
+- Structure:
+  - `urdf/` – Robot URDF files
+  - `meshes/` – Associated STL meshes
+
+Key launch files:
+1. `display.launch.py`  
+   - Visualizes the robot URDF in **RViz**
+
+2. `gazebo.launch.py`  
+   - Spawns and visualizes the hexapod in **Gazebo**
+
+---
+
+#### d) [`hexapod_firmware`](src/hexapod_description)
+
+- Contains all firmware and hardware-interface-related code
+
+Structure:
+1. `Arduino/`  
+   - ESP32 firmware code to be uploaded via Arduino IDE
+
+2. `src/`  
+   - Implements the **ROS 2 Control hardware interface**
+   - Acts as the bridge between ROS 2 and the ESP32 servo driver
+
+---
+
+#### e) [`hexapod_kinematics`](src/hexapod_kinematics)
+
+- Currently empty  
+- Reserved for future kinematics-related expansions or refactoring
+
+---
+
+#### f) [`hexapod_utils`](src/hexapod_utils)
+
+- Contains miscellaneous **utility functions and helper nodes**
+- Supports multiple packages across the stack
+
+---
+
+#### g) [`serial_communicator`](src/serial_communicator)
+
+- Implements the **serial communication protocol**
+- Handles communication between:
+  - ESP32 servo driver
+  - Raspberry Pi (ROS 2 side)
+
+---
+
+### 2. [`STL`](STL)
+
+- Contains all **STL files** required for **3D printing**
+- Used for fabricating mechanical components of the hexapod
+
+---
